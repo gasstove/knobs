@@ -1,0 +1,21 @@
+The outputs of the problem are all the $\theta$. There are ten $\theta$ for every intersection (cf figure~\ref{fig:intersection}) but each of them determines the value of the nine others. Indeed, at every intersection, there is fixed pattern of green lights coordination, design to avoid both accidents and congestion. The pattern depends on the geometry of the intersection, of the frequentation of the streets etc.... For us, the pattern will be an input. Therefore, we are only looking for one $\theta$ per intersection. All the others will be deduced from the first one by translation:\\
+$\forall i \geq 1, \forall m \in [\textbar 1,12 \textbar]$
+\begin{align*}
+\theta_{i,m}=\theta_{i,1} + \delta_{i,m}
+\end{align*}
+where $\delta_{i,m}$ is given in input.\\
+Note: At every intersection, the two signals allowing vehicles to cross the arterial while using a side street are ignored in this article because they are exterior to our problem. However their offsets are also binded to the others.
+\\ \\
+A way of seeing the bandwidth maximization problem used in \cite{bandmax} is to translate the time referential of each intersection by the travel times since the first signal light. This way, the problem is transformed into making the time of simultaneous green lights on all the signals be as long as possible (figure \ref{fig:interval}).\\
+We can define the relative offset vector $\mathbf{\omega}$:
+$\forall i \geq 2, \forall m \in [\textbar 1,12 \textbar]$,\\
+for $m$ going outbound,
+\begin{align*}
+\theta_{i,m} = \omega_{i,m} + \sum_{j=1}^{i-1} t_j\\
+\end{align*}
+for $m$ going inbound
+\begin{align*}
+\theta_{i,m} = \omega_{i,m} + \sum_{j=1}^{i-1} \bar{t_j}
+\end{align*}
+For a given path, in relative coordinate, the bandwidth is the time during which every signal on the path is simultaneously green.\\
+From now on, in order to simplify notations, we will use these relative coordinates $\omega$ and adress this new equivalent problem for the rest of this article.

@@ -1,0 +1,43 @@
+\IEEEPARstart{S}{ome} introduction\\
+\begin{itemize}
+	\item What problem we solve
+	\item History of the problem
+	\item Our method and what it contributes
+\end{itemize}
+
+\color{red}
+\begin{itemize}
+	\item What is a large traffic model, what is it for, why calibrate it.
+	\item Explain shortly how we are gonna calibrate, mention \emph{knobs, templates, fitness function to minimize, performance calculators, fitting real data}
+	\item This work is mostly empirical/experimental, it is a base.
+	\item Announce in what order we are going to proceed ('first blablabla, then blablabla ... finally blablabla).
+\end{itemize}
+we should probably insist from the beginning on the congestion pattern matching, which is the main feature.
+\color{black}
+	
+\begin{figure*}[t]
+	\centering
+	\includegraphics[width=7in]{figures/scheme.eps}
+%	\normalsize{
+%		\begin{tabular}{llll}
+%		\ \ \ \ \ \ \ \ \ \ \ \ \ \ && \ \ \ \ \ \ \ \ \ \ \ \ \ \ & \\ 
+%
+%			&$M=\llbracket 1,n \rrbracket$ && Mainline links indexes\\
+%			&$S=\{ i_{1},i_{2},...,i_{s}\}\subset{M\cup\{0\}}$ && Source links indexes (index of preceding 	mainline link)\\
+%			&$W=\{ i_{1},i_{2},...,i_{w}\}\subset{M}$ && Sink ("well") links indexes (index of preceding mainline link)\\
+%			&$T=\{ i_{1},i_{2},...,i_{\mu}\}\subset{M}$ && Monitored (T for tracked) mainline links indexes\\
+%			&$K=\{ i_{1},i_{2},...,i_{\kappa}\}\subset{S\cup W\backslash \{0,n\}}$ && Non-Monitored ramps indexes : the "knob ramps"\\
+%			&$G=(g_{i})_{i\in{\llbracket 1,\gamma \rrbracket}}$ && Knob groups\\
+%			&$k_{p}=(k_{i_{1}}^{(p)},k_{i_{2}}^{(p)}...,k_{i{\kappa}}^{(p)})$ && Knobs value vector at iteration p\\
+%			&$\sigma=(\sigma_{i_{1}},\sigma_{i_{2}}...,\sigma_{i_{\kappa}})$ && $\pm1$ : on- or off-ramp indicator for knobs\\
+%			&$(L_{i})_{i\in M}$ && Mainline link lenghts\\
+%			&$(f^{(p)}_{i}(t))_{i\in{M}}$ && Mainline out flows at iteration p\\
+%			&$(s^{(p)}_{i}(t))_{i\in{S}}$ && Source out flows at iteration p\\
+%			&$(w^{(p)}_{i}(t))_{i\in{W}}$ && Sink out flows at iteration p\\
+%			\\
+%		\end{tabular}
+%	}
+	\rule{7in}{0.3pt}
+	\caption{Freeway model and notation}
+	\label{fig:scheme}
+\end{figure*}

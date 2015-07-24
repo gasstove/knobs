@@ -1,0 +1,27 @@
+Now, we know that the weights given to the paths can work as controllers of the bandwidths but we do not know how to set them for a given traffic demand.\\
+The first thing we want to study is how the optimal bandwidths behave when we transfert a fixed amount of weight progressively from one path to an other. In this experiment, we take a random arterial just like in the previous subsection and we chose randomly two paths $P_A$ and $P_B$. We then solve the problem for the weigths $w_{P_A} = k$ and $w_{P_B} = 10 - k$ with k going from $1$ to $9$.\\
+The results seem to fall into $3$ categories:\\
+-The paths are "incompatibles" (cf figure \ref{incompatible}): the bandwidth is positive for only one of the two paths and there is a critical weight ratio from which the optimal solution switches from giving a positive bandwidth to one path to the other.\\
+\begin{figure}[!h]
+\centering
+\includegraphics[width=3.5in]{figures/incompatible.png}
+\caption{"Incompatibles" paths}
+\label{incompatible}
+\end{figure} \\
+-The paths are "fully compatible" (cf figure \ref{fullycompatible}): both paths can have their bandwidths at their maximum possible value. As a consequence, weights adjustments haven't any impact on the result.\\
+\begin{figure}[!h]
+\centering
+\includegraphics[width=3.5in]{figures/fullycompatible}
+\caption{"Fully compatibles" paths}
+\label{fullycompatible}
+\end{figure} \\
+-The paths are "partially compatible" (cf figure \ref{partiallycompatible}): the maximum possible bandwidth value of one path is compatible with a positive bandwidth value for the other path and vice versa. As in the first case, there is a critical weight ratio when the optimal solution switches from one regime to the other.\\
+\begin{figure}[!h]
+\centering
+\includegraphics[width=3.5in]{figures/partiallycompatible1}
+\includegraphics[width=3.5in]{figures/partiallycompatible2}
+\includegraphics[width=3.5in]{figures/partiallycompatible3}
+\caption{"Partially compatibles" paths}
+\label{partiallycompatible}
+\end{figure}
+\\

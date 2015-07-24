@@ -1,0 +1,39 @@
+\color{red} Consider deleting this subsection and unifying the single-knob and multiple-knob groups into one unique description. There would be no need for perfect values, the single-knob group would be a particular case where no projection is needed.\\\color{black}
+\\
+\\
+\normalsize
+Defined only for single-knob groups, the \emph{knob perfect values} are equal to the value of the corresponding knob group flow demand divided by the sum of the knobs template, in order to ensure that the flow going trough the corresponding ramp corresponds exactly to the flow demand.\\ 
+\\
+\emph{Notation:}\\
+\\
+$Knob\ perfect\ values:\ (k^*_{i})_{i\in P}$\\
+$with\ P=\big\{i\in K\ |\ \exists g\in G\ s.t.\ g=\{i\}\big\}$\\
+\\
+The perfect values are computed as follows, using that the total daily flow going trough a knob-ramp is the value of its knob times the sum of its template:\\
+\\
+$\forall i \in P,\ given\ j\ s.t.\ \ g_{j}=\{i\}\ and\ T_{i}=\sum_{t=0}^{24h} t_{i}(t)\ :$\\
+\begin{equation*}
+	\centering
+	k^{*}_{i}=\frac{\Delta_{j}}{T_{i}}\
+\end{equation*}
+The boundaries of the knobs of single-knob groups are refined (\emph{<- change this word}) as follows:\\
+\\
+$Let\ \forall i \in \llbracket 1,\kappa \rrbracket, \\
+k_{i}^{min}=max(\{min(\{\Lambda.k_i^{*};k_{i}^{*}-\frac{I^{local}}{T_{i}}\});0\})\\
+k_{i}^{max}=min(\{max(\{\lambda.k_i^{*};k_{i}^{*}+\frac{I^{local}}{T_{i}}\});m_{i}\})\\
+\\
+Then\ denoting\ \vec{k^{min}}=(k_{1}^{min},k_{2}^{min},...,k_{\kappa}^{min})\ and \\
+\vec{k^{max}}=(k_{1}^{max},k_{2}^{max},...,k_{\kappa}^{max}),\ we\ impose:\\
+\\
+\forall p\in \mathbb{N}^{*},\ \vec{k^{min}} \leq \vec{k^{(p)}} \leq \vec{k^{max}}$\\
+\\
+The preceding formulas, defining the refined boundaries for single-knob groups, are the mathematical transcriptions of the two following steps:
+\begin{enumerate}
+	\item For each knob and extremum, take the most permissive boundaries between what is obtained by multiplying the perfect value by the tolerance coefficients and what is obtained by adding/substracting the local uncertainty.
+	\item Set all the extrema obtained in 1) that exceed the physical boundaries defined in \ref{subsec:naive} to their physical boundary value. \color{red}(<- This is not clear)\color{black}
+\end{enumerate}
+
+This method allows us to quantify the freedom given to the result: the total daily flows of each non-monitored ramp is between $\lambda$ and $\Lambda$ times what has been measured by the mainline sensors, given that we accept a $100*I^{local}\%$ \color{red}\emph{(<-depends on how $I^{local}$ has been defined but this is the idea)}\color{black} uncertainty on these measures.
+
+Taking into account $I^{local}$ is indispensable as the computation of the perfect values leads sometimes to ridiculously small values. In these cases, the maximum obtained with $\Lambda.k_{i}^{*}$ corresponds often to a total daily flow of less than $50$ cars exiting the ramp, which is not acceptable.\\ 
+\emph{Example: } One of the ramps has a perfect value of $0.02$, which leads to a maximum of $??$ cars going through the ramp during the whole day if $\Lambda$ is set to $2$ (very permissive: the daily flow can double what is measured by the mainline sensors). Once $I^{local}$=$10\%$ is taken into account, the maximum of the knob becomes $0.7$, which corresponds to $??$ cars and is in an acceptable range.\\

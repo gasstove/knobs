@@ -1,0 +1,11 @@
+Let $M=\llbracket 1,n \rrbracket$ the set of \emph{mainline link} indexes, $S\subset{M\cup\{0\}}$ the set of \emph{source} indexes and $W\subset{M}$ the set of \emph{sink} indexes. Each element of $S$ and $W$ refers to the preceding mainline link of the source or sink's node (except for the entrance and exit of the mainline, which are 0 and n respectively). \\
+We denote as $T\subset{M}$ the set of monitored (T for 'tracked') mainline links and $K=\{ i_{1},i_{2},...,i_{\kappa}\}\subset{S\cup W\backslash \{0,n\}}$ the set of non-monitored ramps (K for "knobs").\\
+Let $dt$ the time step of the model and $D$ its duration. There is a total of $\frac{D}{dt}$ time steps in the scenario. We will denote the set of these times step $\tau=\llbracket 0,\frac{D}{dt}\rrbracket $\\
+$(L_{i})_{i\in M}$ are the lengths of the mainline links.\\
+$(f_{i}(t))_{i\in{M}}$, $(s_{i}(t))_{i\in{S}}$ and $(w_{i}(t))_{i\in{W}}$ are the flows exiting respectively the mainline, source and sink links, as outputed by the model.\\
+Finally, $(d_{i}(t))_{i\in{M}}$ are the densities on the mainline links, as outputed by the model.\\
+\\
+
+Fig.	 \ref{fig:scheme} summarizes the model. The notation will be introduced progressively. \\
+
+

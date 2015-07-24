@@ -1,0 +1,29 @@
+In this first experiment, we want to know how often the solution of our problem is going to lead us to several positive bandwiths.\\
+We implemented a procedure that generate randomly an arterial of a given number of intersection. The pattern of signals in each intersection ($\delta$ and $g$) are taken randomly between 3 existing paterns (given in annexe) coresponding to 3 intersections of Huntington Avenue in Pasadena, California. The cycle is $120$ seconds long. The travel times are taken randomly: $r_i$ follows a uniform law on $[100, 300]$ and $t_i$ and $-\bar{t_i}$ both follow uniform laws on $[r_i-25, r_i+25]$.\\
+Then we chose a number of paths and the procedure takes them uniformly in $\mathcal{P}$ and gives them a weight of $1$. The procedure then launch CPLEX to solve the problem and count how many positive bandwidths we obtain. \\
+\begin{figure}[!h]
+\centering
+\includegraphics[width=3.5in]{figures/randomTestn5p3.pdf}
+\caption{Number of positive bandwidths in the optimal solution}
+\label{rtn5p3}
+\end{figure}\\
+\begin{figure}[!h]
+\centering
+\includegraphics[width=3.5in]{figures/randomTestn8p3.pdf}
+\caption{Number of positive bandwidths in the optimal solution}
+\label{rtn8p3}
+\end{figure}\\
+Figures \ref{rtn5p3} and \ref{rtn8p3} are the histograms of the numbers of bandwiths for $100$ iterations of this experiment for respectively $5$ and $8$ intersections when we take $3$ as a number of paths.\\
+\begin{figure}[!h]
+\centering
+\includegraphics[width=3.5in]{figures/randomTestn5p8.pdf}
+\caption{Number of positive bandwidths in the optimal solution}
+\label{rtn5p8}
+\end{figure}\\
+\begin{figure}[!h]
+\centering
+\includegraphics[width=3.5in]{figures/randomTestn8p8.pdf}
+\caption{Number of positive bandwidths in the optimal solution}
+\label{rtn8p8}
+\end{figure}\\
+Figures \ref{rtn5p8} and \ref{rtn8p8} are the histograms of the numbers of bandwiths for $100$ iterations of this experiment for respectively $5$ and $8$ intersections when we take $8$ as a number of paths. \\

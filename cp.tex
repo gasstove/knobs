@@ -1,0 +1,17 @@
+
+\color{red}copy-pasted from slides:\color{black}\\
+\begin{itemize}
+		\item Principle : match the congested links and times into a box estimated from PeMS contour plot
+		\item Error computation from BeATS output:
+		\begin{itemize}
+			\item A congestion treshold is defined for each mainline link :
+			\begin{equation*} 
+				\frac{Link\ capacity}{Link\ freeflow\ speed}+\delta
+			\end{equation*}
+			\item The number of pixels of the contour plot that are in the wrong state is the error:
+			\begin{equation*}
+				CP(p)=\sum_{t\in{\frac{24h}{dt}}}\sum_{l\in{L}}\mathds{1}_{wrong\ congestion\ state\ links}
+			\end{equation*}
+			\end{itemize}
+		\item Relative difference : $\tau_{p}(CP)=100* \frac{CP(p)}{Total\ area\ of\ the\ boxes}$
+	\end{itemize}

@@ -1,0 +1,31 @@
+This section reduces the periodic problem to the one-cycle problem.\\
+Untill now, we considered that every signal had only one green light interval of time. Now we consider all the cycles and the bandwidth is defined as the maximum length of all the green lights intervals intersections. As the green lights intervals are C-periodic for every light, the bandwidth is C-periodic. \\
+In order to solve the general C-periodic problem, we only have to focus on one hypercube with $C$ sides. Therefore, we can replace the periodic objective function by any function that would be equal on an hypercube with $C$ sides and only look at solutions on that hypercube. Let us choose (arbitrarily) $\mathbb{H} = [-C/2, C/2[^n$. In our Mixed Binary Linear Program, this is just adding the $2n$ constrains: $\forall i \in [|1,n|]$, $-C/2 \leq \omega_i \leq C/2$\\ \\
+By linearity, we can deal with each bandwidth function separately : let us call $b_P$ the bandwidth function for a single cycle as intruduced earlier and $b^*_P$ the periodic bandwidth function. \\
+Let $I \subset [|1,n|]$ be the set of intersection crossed by $P$, let $(e_1,...,e_n)$ be the canonical base of $\Omega = \mathbb{R}^{[|1,n|]}$. \\
+\begin{lemma}
+$\forall \omega \in \Omega$,\\
+$b^*_P(\omega) = \max\limits_{k \in K} b_P(\omega + Ck)$,
+where $K = \{\sum\limits_{i \in I}z_i e_i, z_i \in \mathbb{Z}\}$
+\end{lemma}
+\begin{proof}
+First, $\forall \omega \in \Omega, \forall k \in K,$
+\begin{equation}
+b^*_P(\omega) \geq b_P(\omega + Ck)
+\label{singleinferior}
+\end{equation}
+because the left term takes into account only one particular cycle for every green light while the right term takes them all into account. This prooves the first inequality of the lemma.\\ \\
+Then $\forall \omega \in \Omega$, $\exists k \in K$,
+\begin{equation}
+b^*_P(\omega) = b_P(\omega + Ck)
+\end{equation}
+because $\forall \omega$, $b^*_P(\omega)$ is the value of one particular cycle (shifted by an integer number of times the cycle $C$) for all the signals crossed by $P$. This set of cycles' bandwidth function is $\omega \longmapsto b_P(\omega + Ck)$ with some $k \in K$.
+\end{proof}
+As we only want to look at the objective function on $\mathbb{H}$, we can keep only a finite set of cycles for every signal. In fact, with only two well chosen cycles for every signal we are sure to cover $\mathbb{H}$. Hence, there are at most $2^{|I|}$ useful terms.\\
+Note : This number might seem huge but the experience shows that there is usually a lot less of useful terms and it is easy to find them by comparing $\delta_{p_i} + g_{p_i}$ with $-C/2$ and $C/2$ for every $p_i$\\ \\
+
+To reduce the periodic problem to the one-cycle problem, we can replace each path $P$ by a set of fictive paths $\{P'_1,...,P'_f\}$ and add the constraint:
+\begin{equation}
+\sum\limits_{i = 1}^{f} \alpha_{P'_i} \leq 1
+\end{equation}
+This way, for a given $\omega$, the only $b_{P'_i}(\omega)$ that is going to be postive is the biggest one if it is positive and none of them otherwise.

@@ -1,0 +1,19 @@
+In order to solve our Mixed Binary Bilinear Program, we can apply the linearisation method presented in  \cite{glover}
+
+Our bilinear problem is\\
+\begin{tabular}{rll}
+maximize & $\sum w_P b_P$ & \\
+subject to & $b_P \leq \alpha_P K_{i,j}$ & $i,j \in \{1,...,k\}$\\
+ & $\alpha_P \in \{0,1\}$ & \\
+  & & \\
+\end{tabular}\\
+where $K_{i,j} = g_{p_i,p_j}+\omega_{p_i} - \omega_{p_j}$\\
+In fact, $K_{i,j}$ bounded (let say by M), we can replace\\
+\begin{center}
+\begin{tabular}{llll}
+$b_P \leq \alpha_P K_{i,j}$ & by &
+$b_P \leq$ & $\alpha_P M$\\
+ & & $b_P \leq$ & $(1-\alpha_P)M + K_{i,j}$
+\end{tabular}
+\end{center}
+This is now a Mixed Binary Linear Program.

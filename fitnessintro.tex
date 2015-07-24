@@ -1,0 +1,41 @@
+The fitness function to minimize, $\Phi$, is the weighted sum of 4 component functions: 3 error calculators, each coming from a different performance calculator (see \ref{subsec:pcs}), and the penalization mentioned in \ref{subsec:multiple}.\\
+We define here these components as functions of a knobs values vector.\\
+We normalize each component function in percentage following a criteria that is proper to it (see next 4 sub-sections). The common principle is to compute a relative difference using the PeMS data as reference.\\
+
+%\emph{Notation:}
+ 	\color{red}
+Still didn't found an elegant way to note \& index the components / PCs\color{black}\\
+\\
+$\Pi_{2}$: Relative difference of Vehicle Miles Travelled on monitored mainline links, comparing BeATS output to PeMS data.\\
+$\Pi_{3}$: Relative difference of Vehicle Hours Travelled on monitored mainline links, comparing BeATS output to PeMS data.\\
+$\Pi_{4}$: Normalized number of links \& times with the wrong congestion state (CP is for \emph{congestion pattern}).\\
+\\
+$Let\ \big(\Pi_{i})_{i\in\llbracket 1, 4 \rrbracket}\ the\ components\ of\ the\ error\ function$\\
+$and\ \text{\cursive S}\ the\ search\ space.$\\
+\begin{displaymath}
+		\forall\ i\in\ \llbracket 1,4 \rrbracket,\ \Pi_{i}:
+		\left|
+  		\begin{array}{rcl}
+    	\text{\cursive S} & \longrightarrow &[0,100] \\
+    	\vec{k}^{(p)} & \longmapsto & \Pi_{i}(\vec{k}^{(p)}) \\
+  	\end{array}
+	\right.
+	\end{displaymath}
+\color{red}Should we define the PCs as function of p instead of $\vec{k}^{(p)}$ ?\color{black}\\
+\\
+$I^{global}$, described in \ref{subsec:data}, defines a tolerance threshold for the error calculator results: the error results below $I^{global}$ are set to zero, in order to avoid any differentiation between them (we do not have a level of precision below $I^{global}$).
+We call \emph{contributions} the final contribution of every performance calculator in the sum composing the fitness function: the value in percentage multiplied by its weight, once the preceding tolerance has been applied.\\
+\\ 
+$Let\ (\rho_{i})_{i\in\llbracket 1,4 \rrbracket}\ the\ weights.$\\
+$We\ have:\ \sum_{i=1}^{4} \rho_{i}=1\ and\ \forall i \in,\ \llbracket 1,4 \rrbracket,\ \rho_{i}>0$\\
+\begin{displaymath}
+		\Phi:
+		\left|
+  		\begin{array}{rcl}
+    	\text{\cursive S} & \longrightarrow &[0,100] \\
+    	\vec{k}^{(p)} & \longmapsto & \sum_{i=1}^{4}\rho_{i}.\Pi_{i}(\vec{k}^{(p)}).\mathds{1}_{(i=1)\cup(\Pi_{i}(\vec{k}^{(p)})>I^{global})}\\ 
+  		\end{array}
+		\right.\\
+\end{displaymath}
+This definition as a weighted sum of percentages implies that the values of $\Phi$ can be interpreted as a \emph{global error percentage}. The weight given to each component is equivalent to the importance we want to give to each one of them. In fact, due to the very good performance of CMA-ES giving a significant weight to each one is enough to ensure that the result will be the best possible \color{red}(<- this is bullshit)\color{black}.\\
+Below is a description of the computation of each component.

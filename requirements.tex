@@ -1,0 +1,16 @@
+\color{red}{\emph{Keywords and ideas: non-convex, ruggued search landscape(i.e.:sharp bends, discontinuities, outliers, noise, local optima), badly scaled and/or highly non-separable, convergence, adaptive, Black-Box, evaluated search points are the only accessible information on f, Randomized/stochastic works well, Robust, imputation, continuous domain.}}
+\color{black}
+\begin{itemize}
+	\item The performance calculator errors are irregular functions. In particular, the congestion pattern fitting reflects congestion phenomena. These present numerous thresholds in their non-smooth behavior.\\
+Another component of the error function is a distance involving a randomly generated point: derivative methods can't be applied to stochastic functions. We can also point out that the performance calculators described in \ref{subsec:pcs} aren't always correlated.\\
+Furthermore, each evaluation of the error function requires the execution of a simulation (around 5 seconds on a desktop computer), and this evaluation is the only thing accessible of f: there is no way of quickly computing its value or its gradient .\\
+Therefore, the fitness function is a black box (it is the weighted sum of the performance calculators errors).\\
+We deduce from these observations that convex optimization methods and derivative-based methods are not adapted to our case.\\
+The search space is a continuous hypercube, as explained in \ref{subsec:parameters}.\\
+We can conclude that we study a non-linear, non-convex black-box imputation problem in continuous domain. 	\color{red}
+(<- rewrite all this)	\color{black}
+
+	\item \emph{Plus, the algorithm has to be adaptive, few parameters to tune if possible, no prior optimization knowledge required if possible}
+	\item What kind of algorithm is suitable
+	\item Why we only wanted one that works instead of testing several. Time is not a constraint. Quality is the goal.
+\end{itemize}

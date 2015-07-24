@@ -1,0 +1,92 @@
+
+\newcommand{\slfrac}[2]{\left.#1\middle/#2\right.}
+
+\def\onetonminusone{\{1\hdots n-1\}}
+\def\oneton{\{1\hdots n\}}
+\def\twoton{\{2\hdots n\}}
+
+\def\Gammaoneton{\Gamma_{1\hdots n}}
+\def\gammaoneton{\gamma_{1\hdots n}}
+\def\muoneton{\mu_{1\hdots n}}
+\def\sigmasqoneton{\sigma^2_{1\hdots n}}
+\def\barGammaoneton{\bar\Gamma_{1\hdots n}}
+
+
+\def\Ao{A^o}
+\def\As{A^*}
+\def\Bo{B^o}
+\def\Bs{B^*}
+
+\def\intCoverTwo{[-\nicefrac{C}{2},\nicefrac{C}{2}]}
+\def\modx{\text{ mod}^*}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\refsec}[1]{\ref{#1}}
+\newcommand{\Srefsec}[1]{Section \ref{#1}}
+\newcommand{\srefsec}[1]{Sec. \ref{#1}}
+\newcommand{\Srefsecs}[1]{Sections \ref{#1}}
+\newcommand{\srefsecs}[1]{Secs. \ref{#1}}
+
+\newcommand{\refeq}[1]{(\ref{#1})}
+\newcommand{\Erefeq}[1]{Equation (\ref{#1})}
+\newcommand{\erefeq}[1]{Eq. (\ref{#1})}
+\newcommand{\Erefeqs}[1]{Equations (\ref{#1})}
+\newcommand{\erefeqs}[1]{Eqs. (\ref{#1})}
+
+\newcommand{\reffig}[1]{\ref{#1}}
+\newcommand{\freffig}[1]{Figure \ref{#1}}
+\newcommand{\Freffig}[1]{Figure \ref{#1}}
+\newcommand{\freffigs}[1]{Figures \ref{#1}}
+\newcommand{\Freffigs}[1]{Figures \ref{#1}}
+
+\newcommand{\reftab}[1]{\ref{#1}}
+\newcommand{\treftab}[1]{Table \ref{#1}}
+\newcommand{\Treftab}[1]{Table \ref{#1}}
+\newcommand{\treftabs}[1]{Tables \ref{#1}}
+\newcommand{\Treftabs}[1]{Tables \ref{#1}}
+
+% IEEE FLOATS --------------------------------------------
+
+
+% An example of a floating figure using the graphicx package.
+% Note that \label must occur AFTER (or within) \caption.
+% For figures, \caption should occur after the \includegraphics.
+% Note that IEEEtran v1.7 and later has special internal code that
+% is designed to preserve the operation of \label within \caption
+% even when the captionsoff option is in effect. However, because
+% of issues like this, it may be the safest practice to put all your
+% \label just after \caption rather than within \caption{}.
+%
+% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
+% option should be used if it is desired that the figures are to be
+% displayed while in draft mode.
+%
+
+% An example of a floating table. Note that, for IEEE style tables, the
+% \caption command should come BEFORE the table. Table text will default to
+% \footnotesize as IEEE normally uses this smaller font for tables.
+% The \label must come after \caption as always.
+%
+\newcommand{\ieeetable}[4]{
+    \begin{table}[!t]
+    \renewcommand{\arraystretch}{1.3}
+     if using array.sty, it might be a good idea to tweak the value of
+     \extrarowheight as needed to properly center the text within the cells
+    \caption{#2}
+    \label{#3}
+    \centering
+    % Some packages, such as MDW tools, offer better commands for making tables
+    % than the plain LaTeX2e tabular which is used here.
+    \begin{tabular}{#1}
+    \hline
+    One & Two\\
+    \hline
+    Three & Four\\
+    \hline
+    \end{tabular}
+    \end{table}
+}

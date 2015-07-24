@@ -1,0 +1,56 @@
+The CMA-ES source code handles box constraints natively using the "repair and penalize" policy. This consists in repairing non-feasible sampled points and penalizing (i.e. increasing the value of the fitness function) proportionally to the distance between the unfeasible point and the search space. This policy forces the algorithm to eventually enter and stay in the feasible domain while avoiding evaluating non-allowed points.\\
+As we will see, this policy is more widely applied in our method, in order to add linear constraints to the variables, reducing the size of the search space.\\
+
+
+\emph{On single-knob groups:}\\
+These boundaries are 1-D box constraints, they are directly handled by the CMA-ES implementation as explained in \ref{subsec:cmaes}.\\
+\\
+\emph{On multiple-knob groups:}\\
+For the multiple-knob groups, the boundaries are refined using the same idea as in \ref{subsec:single} applied to the \emph{knob group flow demands}. The CMA-ES code requires however to implement ourselves a repair \& penalize process instead of changing the knob boundaries, as the constraints will not be box but linear. \color{red}(<- rephrase this)\color{black}.\\
+\\
+For each multiple-knob group, we want to impose that the total flow brought by the knobs is in a range based on its \emph{flow demand} and computed similarly to \ref{subsec:single}.\\
+The implementation is done by leaving the knob boundaries to their physical value (see \ref{subsec:naive}) but \emph{repairing} the points sampled by CMA-ES before imputing them to the simulator.\\
+This reparation consists in a projection of the sampled point to the closest point on the feasible space, which is the intersection of the hypercube formed by the physical constraints and the volume between the two hyperplans defined by the range of the flow demands.\color{red}(<- rewrite this)\color{black}\\
+\\
+\emph{Repairing:}\\
+\\
+Let $\underline{\vec{k}}^{(p)}$ the knobs vector sampled by CMA-ES at iteration p (i.e. before repairment).\\
+Let $J=\{j\in \llbracket 1,\gamma \rrbracket\ |\ Card(g_{j}>1)\}$\\
+\\
+$\forall j\in J,\ \Delta_{j}^{min}=\min{\{\lambda.\Delta_{j};\Delta_{j}-I^{local}\}}$\\
+$\ and\ \Delta_{j}^{max}=\max{\{\Lambda.\Delta_{j};\Delta_{j}+I^{local}\}}$\\
+\\
+The projection is implemented using the following program:\\
+\\
+$minimize \ \ \ \ \ \ \norm{\vec{k}^{(p)}-\underline{\vec{k}}^{(p)}}_{2}$\color{red} <- Define norm 2 ?\color{black}\\
+$s.t.$\\
+$\forall j\in{J}, \ \ \Delta_{j}^{min}< \sum_{i\in{g_{j}}} \sigma_{i}.k_{i}.T_{i}<\Delta_{j}^{max}$\\
+$and\ \vec{0} \leq \vec{k}^{(p)} \leq \vec{m}$\\
+\\
+Fig. \ref{fig:proj} above illustrates this projection and the two \emph{tolerance hyper-plans} on a two-knobs group $g_{l}=\{i,j\}$, formed by on-ramp $i$ and off-ramp $j$.\\
+In this figure, the external square is the hyper-cube corresponding to the physical boundaries. 
+$D$ is the hyper-plan (straight line) on which the knob group flow will have the exact value $\Delta_{l}$.
+The two tolerance hyper-plans on which the knob group flow value will be $\Delta_{l}^{max}$ and $\Delta_{l}^{min}$ are respectively $D_{+}$ and $D_{-}$. The points sampled in the feasible space (inside the doted line trapezium) remain untouched while the others are projected on the nearest point of the edge of the feasible space.\\
+This repair ensures that only feasible values of the input are tested and that the algorithm will not get stuck in an unfeasible well of the physical boundaries hyper-cube.\\
+\begin{figure}
+\centering
+\includegraphics[width=3in]{figures/proj.eps}
+\caption{Example of projection on a two-knobs group}
+\label{fig:proj}
+\end{figure}
+\\
+\emph{Penalizing:}\\
+\\
+A penalization proportional to the distance between the projected and original points is added to the fitness function (see \ref{subsec:kd}). This ensures that the algorithm will come closer to the feasible space at every iteration until eventually entering and staying inside it. This feature is important as it avoids two imbalances on the sampling:
+\begin{itemize}
+	\item Testing more points on the edges than we should: if the algorithm is left sampling points far from the edges, without penalization, it will have no incentive to prefer sampling next to the feasible space than far. This is an obstacle from entering the feasible space, as all the points on the straight lines perpendicular to the edges would be equivalent. This would lead to a situation where it is common that too much (or all) of the points are sampled on the edges, CMA-ES converging far from the feasible space.\color{red}(<- rewrite this)\color{black}.
+	\item Imbalance between the edge points tested: the edge points which are the projection of more unfeasible hyper-cube points than others will be sampled unfairly more often.\\
+	\emph{Example:} in Fig. \ref{fig:proj}, the points on the mediator of the segment formed by the intersections of D and the square while inside the square are more numerous than the points on any other straight with same slope.\\
+The points on one of these straights and below the feasible space are all projected to the same point of the edge of the feasible space. Therefore, without penalization, the middle of the segment cited above would be sampled more often than the other points of its edge, for a reason that is not the simulation output it leads to. 
+\end{itemize}
+
+The penalization due to the projection of the knobs in multiple-knob groups is proportional to the distance between the projected and originally sampled points.
+The normalizing factor is the distance between the maximums and minimums vectors, reflecting the \emph{order of magnitude} of the search space.
+\begin{equation*}
+	\Pi_{1}(\vec{k}^{(p)})=100.\frac{\norm{\vec{k}^{(p)}-\underline{\vec{k}}^{(p)}}_{2}}{\norm{\vec{k}^{max}-\vec{k}^{min}}_{2}}
+\end{equation*}

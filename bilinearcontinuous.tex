@@ -1,0 +1,5 @@
+Now let us do an observation: the cost function is linear in $\alpha$, therefore the optimal $\alpha$ is on a vertex of its feasable polytope.\\
+Hence, if we relax the constraint $\mathbf{\alpha} \in \{0,1\}^{|P|}$ to $\mathbf{\alpha} \in [0,1]^{|P|}$ one of the solution will also be a solution of the non relaxed problem.
+\\
+This makes our problem a Bilinear Program.\\
+We can use a solver to find a solution to this problem, but a second approach seems to better, as it reduces the computation time and gives us an exact solution. Therefore we won't develop this first approach any further.

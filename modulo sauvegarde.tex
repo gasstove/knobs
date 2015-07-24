@@ -1,0 +1,58 @@
+This section reduces the periodic problem to the one-cycle problem.\\
+Untill now, we considered that every signal had only one green light interval of time. In order to solve the general C-periodic problem, we only have to focus on one hypercube with $C$ sides. Therefore, we can replace the periodic objective function by any function that would be equal on an hypercube with $C$ sides and only look at solutions on that hypercube. Let us choose $\mathbb{H} = [-C/2, C/2[^n$ for example.\\
+By linearity, we can deal with each bandwidth function separately : let us call $b_P$ the bandwidth function for a single cycle as intruduced earlier and $b^*_P$ the periodic bandwidth function. \\
+Let $I \subset [|1,n|]$ be the set of intersection crossed by $P$, let $(e_1,...,e_n)$ be the canonical base of $\Omega = \mathbb{R}^{[|1,n|]}$. Let $V = vect({e_i, i \in I})$ and $W = vect({e_i, i \in [|1,n|]\backslash I})$. Let $e = \sum\limits_{i=1}^{n}e_i$. \\
+\begin{lemma}
+$\forall \omega \in \Omega$,\\
+$b^*_P(\omega) = \sum\limits_{k \in K} b_P(\omega + Ck)$,
+where $K = \{\sum\limits_{i \in I}z_i e_i, z_i \in \mathbb{Z}\} - \mathbb{Z}e$
+\end{lemma}
+\begin{proof}
+First, $\forall \omega \in \Omega, \forall k \in K,$
+\begin{equation}
+b^*_P(\omega) \geq b_P(\omega + Ck)
+\end{equation}
+because the left term consider one particular cycle for every green light while the right term consider all of them. This prooves the lemma for the case $b^*_P(\omega) = 0$ \\ \\
+Then $\forall \omega \in \Omega$,
+\begin{equation*}
+b_P(\omega) > 0 \Rightarrow (\forall k \in K-\{0\},~b_P(\omega + Ck) = 0)
+\end{equation*}
+because if we take two green light interval, both shorter than $C$, with a non-empty inersection, and we shift them of two different integer numbers of times the cycle $C$, they must have an empty intersection.\\
+Therefore, $\forall \omega \in \Omega$, there exists at most one $k \in K$ such that $b_P(\omega + Ck) > 0$. \\ \\
+As we built $b_P$ for one specific cycle, $\exists \Delta_P \in \Omega,~\forall \omega \in \mathbb{H}+\Delta_P,$
+\begin{equation}
+\label{eq:hypercube}
+b_P(\omega) = b^*_P(\omega)
+\end{equation}
+Also, $\forall \omega \in \Omega,~\exists! z \in \mathbb{Z}^{[|1,n|]}$,
+\begin{equation*}
+(\omega + C z) \in \mathbb{H}+\Delta_P
+\end{equation*}
+with $z = z_V + z_W$, $z_V \in V$ and $z_W \in W$. \\
+Now,
+\begin{equation}
+b^*_P(\omega) = b^*_P(\omega + Cz)
+\end{equation}
+because $b^*_P$ is periodic
+\begin{equation}
+b^*_P(\omega) = b_P(\omega + Cz)
+\end{equation}
+because of the equation (\ref{eq:hypercube})
+\begin{equation*}
+b^*_P(\omega) = b_P(\omega + z_V C + z_W C)
+\end{equation*}
+\begin{equation}
+b^*_P(\omega) = b_P(\omega + z_V C)
+\end{equation}
+Because changing signals offset on an uncrossed intersections does not change the bandwidth of the path $P$. \\
+-Either $z_V = \lambda e$,~$\lambda \in \mathbb{R}$, and then $b_P(\omega +z_V C) = b_P(\omega)$ because shifting all the green ligths intervals of the same displacement will not change their intersection.\\
+-Or $z_V \in K$.\\
+In both cases, if $b^*_P(\omega) > 0$ we can add all the others terms, equals to zero:\\
+\begin{equation*}
+b^*_P(\omega) = \sum\limits_{k \in K} b_P(\omega + Ck)
+\end{equation*}
+which finishes to proove the lemma.
+\end{proof}
+As we only want to look at the objective function on $\mathbb{H}$, we can eliminate all the terms which supports don't intersect $\mathbb{H}$. Their are at most $2^{|I|}-1$ of them.\\
+Note : This number might seem huge but the experience shows that there is usually a lot less of usefull terms and it is very easy to find them.\\
+From now on, we will consider all the terms as different paths and come back to our previous single-cycle approach.

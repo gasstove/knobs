@@ -1,0 +1,91 @@
+$\mathcal{P}$ is the set of all possible paths on the arterial. As a path is determined by the entry and the exit, $|\mathcal{P}| = (2n+2)(2n+1) - 2n$ as it is the number of possible choices of two ordered elements in a set of cardinal $2n+2$ minus all the paths corresponding to crossing the arterial following a side street (cf Figure \ref{fig:intersection}). For all $P \in \mathcal{P}$, let $w_P$ be the weight given to the path $P$ as said at the beginning of subsection \ref{subsec:formulation}.\\ \\
+The function we want to maximize in our problem is:
+\begin{align}
+f_{\mathcal{P}}  (\mathbf{\omega}) = \sum_{P \in \mathcal{P}} w_{P} b_P(\omega)
+\end{align}
+which can be writen
+\begin{align}
+f_{\mathcal{P}} (\mathbf{\omega}) = \underset{P = (p_1,...,p_k) \in \mathcal{P}}{\sum w_P \; \max}(\underset{i,j\in\{1,...,k\}}{0,~ \min}(\omega_{p_i}-\omega_{p_j}+g_{p_i,p_j}))
+\end{align}
+$f_\mathcal{P}$ is non-convex and non-differentiable. Therefore, conventional convex or gradient methods are not going to help us. In what follows, we construct a proxy Mixed Binary Linear Program which solution will also solve $P$.\\
+Here is a representation of the differents intermediate problems and the different steps we are going to follow in order to obtain this simpler problem:\\
+\begin{center}
+\begin{tabular}{c}
+Non-convex problem\\
+$\downarrow$\\
+A set of Linear Programs\\
+$\downarrow$\\
+Mixed Binary Bilinear Program\\
+$\downarrow$\\
+Mixed Binary Linear Program\\
+\\
+\end{tabular}
+\end{center}
+First, we define $\forall \mathcal{U} \subset \mathcal{P}$, $\forall \omega \in \Omega$, 
+\begin{align}
+f_{\mathcal{U}} (\omega) = \sum_{P \in \mathcal{U}} w_P b_P(\omega)
+\end{align}
+or again
+\begin{align}
+f_{\mathcal{U}} (\mathbf{\omega}) = \underset{P = (p_1,...,p_k) \in \mathcal{U}}{\sum w_p ~ \max}(\underset{i,j\in\{1,...,k\}}{0,~ \min}(\omega_{p_i}-\omega_{p_j}+g_{p_i,p_j}))
+\label{eq:sousproblem}
+\end{align}
+Now, we define $f_{\mathcal{U},r} (\omega)$ by removing the lower bounds from (\ref{eq:sousproblem}),
+\begin{align}
+f_{\mathcal{U},r} (\mathbf{\omega}) = \underset{P = (p_1,...,p_k) \in \mathcal{U}}{\sum ~~~ w_P} ~\underset{i,j\in\{1,...,k\}}{\min~(\omega_{p_i}}-\omega_{p_j}+g_{p_i,p_j})
+\end{align}
+$f_{\mathcal{U},r}$ is concave (being the sum of concave functions) and defines a linear function.
+
+We will now connect these relaxed sub-problems to our initial problem.\\
+\begin{theorem}
+\begin{align}
+\underset{\omega \in \Omega}{\max~}f_{\mathcal{P}}(\omega) = \underset{\mathcal{U} \subset \mathcal{P}}{\max~} \underset{\omega \in \Omega}{\max~} f_{\mathcal{U},r} (\omega)
+\end{align}
+and if we call this value $f^*$, $\forall \omega' \in \Omega$
+\begin{align}
+f_{\mathcal{P}}(\omega') = f^*
+\Leftrightarrow
+\exists \mathcal{U} \subset \mathcal{P},~ f_{\mathcal{U},r} (\omega') = f^*
+\end{align}
+\end{theorem}
+\begin{proof}[Proof of the equality]
+$\forall \mathcal{U} \subset \mathcal{P}$,
+\begin{align*}
+f_{\mathcal{P}} \geq f_{\mathcal{U}} \geq f_{\mathcal{U},r}
+\end{align*}
+which gives us the first inequality:
+\begin{align*}
+\underset{\omega \in \Omega}{\max~}f_{\mathcal{P}}(\omega) \geq \underset{\mathcal{U} \subset \mathcal{P}}{\max~} \underset{\omega \in \Omega}{\max~} f_{\mathcal{U},r} (\omega)
+\end{align*}
+
+Now, let us define $\forall \mathbf{\omega} \in \Omega$,~
+$\mathcal{V}(\omega) = \{P \in \mathcal{P}, b_P(\omega) >0\}$
+\\
+We have $\forall \omega \in\Omega$,
+\begin{align}
+f_{\mathcal{P}}(\omega) = f_{\mathcal{V}(\omega)}(\omega) = f_{\mathcal{V}(\omega),r}(\omega)
+\label{eq:vegal}
+\end{align}
+which, applied in $\omega_{\mathcal{P}}^*$, proves the equality
+\end{proof}
+\begin{proof}[Proof of the equivalence]
+$\forall \omega \in \Omega$, $\forall \mathcal{U} \in \mathcal{P}$,
+\begin{align*}
+f_{\mathcal{U},r}(\omega) = f^* \Rightarrow
+f_{\mathcal{V}(\omega),r}(\omega) = f^*
+\end{align*}
+because $f_{\mathcal{U},r}(\omega) \leq f_{\mathcal{V}(\omega),r}(\omega)$. And then 
+\begin{align*}
+f_{\mathcal{U},r}(\omega) = f^* \Rightarrow
+f_{\mathcal{P}}(\omega) = f^*\\
+\end{align*}
+because of (\ref{eq:vegal}). The other implication is an immediate consequence of (\ref{eq:vegal}).
+\end{proof}
+
+Now, we cannot try to solve all the linear programs associated to the subset of $\mathcal{P}$ because their number is exponential($\Theta(2^{4n^{2}})$), but we can formulate a bilinear problem that will lead us to the solution.\\
+Looking for
+\begin{align} \max \limits_{\underset{\mathcal{U} \subset P}{\mathbf{\omega} \in \Omega}} f_{\mathcal{U},r} (\mathbf{\omega}) \end{align}
+is the same as looking for
+\begin{align} \max \limits_{\underset{\mathbf{\alpha} \in \{0,1\}^{|\mathcal{P}|}}{\mathbf{\omega} \in \Omega}} \sum_{P \in \mathcal{P}} \alpha_P w_P b_P(\omega) \end{align}
+$\alpha_P$ representing whether $P$ belongs to $\mathcal{U}$.\\
+This formulation is a Mixed Binary Bilinear Program.

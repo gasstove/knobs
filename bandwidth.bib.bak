@@ -1,0 +1,15 @@
+% This file was created with JabRef 2.10.
+% Encoding: Cp1252
+
+
+@Article{bandmax,
+  Title                    = {Bandwidth maximization using vehicle arrival functions},
+  Author                   = {Gabriel Gomes},
+  Journal                  = {IEEE Transactions on Intelligent Transportation Systems},
+  Year                     = {2015},
+  Volume                   = {16},
+
+  Owner                    = {Marc},
+  Timestamp                = {2015.03.31}
+}
+

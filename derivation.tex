@@ -1,0 +1,47 @@
+\begin{figure}[!h]
+\centering
+\includegraphics[width=1.5in]{figures/band_relative.eps}
+\caption{An interval intersection problem}
+\label{fig:interval}
+\end{figure}
+
+The bandwidth is an interval intersection length and it can be derived by a linear program. For a finite set of interval: $\{[\alpha_{i},\beta_{i}] , i \in \{1,...,n\}\}$. The length $l$ of its intersection satisfies, $\forall i,j \in \{1,...,n\},$
+\begin{align*}
+l \leq max(0,\beta_{j}-\alpha_{i})
+\end{align*}
+$l$ is the largest non negative number satisfying  all these constraints, which is
+\begin{align*}
+l = \max(0, (\min_{i\in\{1,...,n\}}\beta_{i})-(\max_{j\in\{1,...,n\}}\alpha_{j})))
+\end{align*}
+By replacing $\beta$ with $\omega+g/2$ and $\alpha$ with $\omega-g/2$ for every signal of the path, we obtain the formula for the bandwidth:
+\begin{align}
+b_P(\omega) = max(\underset{i,j\in\{1,...,k\}}{0,~ \min}(\omega_{p_i}-\omega_{p_j}+g_{p_i,p_j}))
+\end{align}
+where $g_{p_i,p_j}=\frac{g_{p_i}+g_{p_j}}{2}$\\
+Then, for every path $P = (p_1,...,p_k)$ we can state its bandwidth maximization problem as follows,\\
+\begin{tabular}{lll}
+maximize & $\max (b, 0)$ & \\
+subject to & $b \leq g_{p_i,p_j}+\omega_{p_i} - \omega_{p_j}$ & $i,j \in \{1,...,k\}$\\
+  & & \\
+\end{tabular}\\
+Some of the constraints are redundant: the problem can be simplified by gathering the $k$ cases where $i = j$ into a single constraint $b \leq g_P^{*}$, where $g_P^{*} = \min_{i}(g_{p_i})$.\\ \\
+Note: As in \cite{bandmax}, we could also eliminate redundant solutions if we set $\omega_{p_1} = 0$ because it is just a choice of origin. However, in our case, we intend to mix the bandwidth problems for all the paths on the arterial and all the $\omega$ must have the same origin. Unlike in the usual two bandwidth maximization problem, there is not any intersection on the arterial that is part of all paths. That is why we will chose arbitrarily the signal $(1,6)$ and set $\omega_{(1,6)}=0$ (it is the first signal of the end-to-end path in the outbound direction).\\
+\begin{figure}[!h]
+\centering
+\includegraphics[width=3.5in]{one_frustum}
+\caption{Feasable region with $n=3$.}
+\label{fig:frustum}
+\end{figure}\\
+Let us look at the geometry of the problem (Figure \ref{fig:frustum}) by adressing the simple path $P = (p_{1}, p_{2}, p_{3})$. The feasable region is a frustrum with sides:
+\begin{flalign}
+b \geq &~ 0 \\
+b \leq &~ g^{*} \\
+b \leq &~ g_{p_1,p_2} + \omega_{p_2} \\
+b \leq &~ g_{p_1,p_2} - \omega_{p_2} \\
+b \leq &~ g_{p_1,p_3} + \omega_{p_3} \\
+b \leq &~ g_{p_1,p_3} - \omega_{p_3} \\
+b \leq &~ g_{p_2,p_3} + \omega_{p_2} - \omega_{p_3} \\
+b \leq &~ g_{p_2,p_3} + \omega_{p_3} - \omega_{p_2}
+\end{flalign}
+and zero everywhere else. \\
+The projection of this shape onto the $\omega_{p_2}/\omega_{p_3}$ plane is shown on the right side of the figure. The larger and smaller shaded areas, $\Bo$ and $\Bs$, are the projections of the base and top of the frustum.

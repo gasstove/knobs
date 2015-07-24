@@ -1,0 +1,144 @@
+ \input{_beforestuff}
+
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{units}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{afterpage,natbib,lipsum}
+
+\input{_defines}
+
+\begin{document}
+
+\title{Automatic Calibration of Large Traffic Models}
+
+\author{Félix Mézière* \thanks{*Ecole polytechnique [felix.meziere@polytechnique.edu]} \and Gabriel Gomes** \thanks{**University of California Berkeley [gomes@path.berkeley.edu]} \\California PATH Program \\ University of California Berkeley} 
+
+\maketitle
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+\begin{IEEEkeywords}
+Large traffic, calibration, imputation, optimization, black box, evolutionnary algorithm, freeway model, CTM.
+\end{IEEEkeywords}
+
+\IEEEpeerreviewmaketitle
+
+\section*{Introduction}
+\input{introduction}
+
+\section{Modeling and notation}
+\subsection{Freeway model}
+\label{subsec:freeway_model}
+\input{freeway_model}
+\subsection{Traffic model}
+\label{subsec:traffic_model}
+\input{traffic_model}
+\subsection{Data}
+\label{subsec:data}
+\input{data}
+\subsection{Notation}
+\label{subsec:notation}
+\input{notation}
+
+
+\section{Uncertainty}
+\label{sec:uncertainty}
+\input{uncertainty}
+
+
+\section{Problem formulation}
+\subsection{Generalities(<-find a better name)}
+\label{subsec:problem_formulation_intro}
+\input{problem_formulation_intro}
+\subsection{Constraints on the parameters}
+\label{subsec:constraintsintro}
+\input{constraintsintro}
+\subsubsection{Physical boundaries}
+\label{subsubsec:naive}
+\input{naive}
+\subsubsection{Knob groups and flow balance}
+\label{subsubsec:knob_groups}
+\input{knob_groups}
+\subsubsection{Refined knob boundaries}
+\label{subsubsec:refined}
+\input{refined}
+\color{red}THIS IS WHERE IVE STOPPED WORKING TODAY\color{black}
+\subsection{Performance calculators}
+\label{subsec:pcs}
+\input{pcs}
+\subsection{Fitness function}
+\label{fitnessintro}
+\input{fitnessintro}
+\subsubsection{Total Vehicle Miles}
+\label{subsubsec:tvm}
+\input{tvm}
+\subsubsection{Total Vehicle Hours}
+\label{subsubsec:tvh}
+\input{tvh}
+\subsubsection{Congestion Pattern}
+\label{subsubsec:cp}
+\input{cp}
+\subsubsection{Optimization problem statement}
+\label{subsubsec:statement}
+\input{statement}
+
+
+\section{Numerical method}
+\subsection{Requirements}
+\label{subsec:requirements}
+\input{requirements}
+\subsection{Co-variance Matrix Adaptation - Evolution Strategy (CMA-ES)}
+\label{subsec:cmaes}
+\input{cmaes}
+\subsection{Constraints implementation}
+\label{subsec:implementation}
+\input{implementation}
+\subsection{Large traffic simulator}
+\label{subsec:simulator}
+\input{simulator}
+\subsection{Context: Origin and reliability of the data}
+\label{subsec:pems}
+\input{pems}
+
+\subsection{Parameters of the imputation}
+\label{subsec:parameters}
+\input{parameters}
+
+
+
+
+
+
+\section{Results}
+\label{sec:results}
+\input{results}
+
+\section{Conclusion}
+\input{conclusion}
+
+\section{deprecated paragraphs}
+\input{old}
+
+\section*{Acknowledgment}
+\input{acknowledgement}
+
+
+\appendix[Model figure]
+\label{sec:appendix}
+\input{appendix}
+
+
+
+
+\bibliographystyle{IEEEtran}
+%\bibliography{bandwidth}
+
+\end{document}

@@ -1,0 +1,32 @@
+We call \emph{knob group} each set of knob indices verifying:
+\begin{itemize}
+	\item there is no mainline sensor between any of the knobs of the group.
+	\item in linear order, there is at least one mainline sensor before the first knob of the group but after the preceding knob of the scenario. Similarly, there is at least one mainline sensor after the last knob of the group but before the next knob of the scenario.
+\end{itemize}
+Each of these groups is associated to a \emph{monitored segment}, which is the set of links between the closest monitored mainline link before the first knob and the closest monitored mainline link after the last knob.\\
+We can deduce the value of the daily flow brought by the knobs of each group from the \emph{knob group flow demands}: the difference between the flow entering and exiting their monitored segment.\\
+If a group is single-knob, then the knob value is uniquely determined by this principle. We will call it \emph{perfect value} of the knob.\\
+If, on the contrary, it is a multiple-knob group, then the knobs of the group are linked by one linear equation. That is: their values are on a hyperplan of the space formed by their value as coordinates in an orthonormal base.\\
+\emph{Notation:}\\
+\\
+\begin{tabular}{l}
+	Denoting $\gamma$ the total number of knob groups, we have:\\
+	\\
+
+	Monitored segments: $\Sigma =(\beta_{i},\eta_{i})_{i \in \llbracket 1,\gamma \rrbracket} $ \\
+	with, $\forall i\in \llbracket 1, \gamma \rrbracket $\\
+		i) $ \llbracket \beta_{i},\eta_{i} \rrbracket \cap M=\{\beta_{i},\eta_{i}\} $\\
+		ii)  $\llbracket \beta_{i}, \eta_{i} \rrbracket \cap K\not= \{\emptyset \}$\\
+	\\
+		Knob groups:$\ G=(g_{i})_{i\in \llbracket 1,\gamma \rrbracket}$\\
+	with $\forall i \in \llbracket 1, \gamma \rrbracket,\ g_{i}=\llbracket \beta_{i}, \eta_{i} \rrbracket \cap K $\\
+	\\
+	Knob group flow demands: $ (\Delta_{i})_{i\in \llbracket 1,\gamma \rrbracket} $\\
+	with $\forall i \in \llbracket 1,\gamma \rrbracket,\  \Delta_{i} =\bar{f}_{\eta_{i}}-\bar{f}_{\beta_{i}}$\\
+	\\
+\end{tabular}
+
+\emph{
+Introduce knob groups notation and perfect values. Explain why setting the knobs to these exact values obviously does not work.\\
+->Introduce under/over-evaluation tolerance coefficients and use $I^{local}$}
+

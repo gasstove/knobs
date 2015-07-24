@@ -1,0 +1,12 @@
+Vehicle Hours traveled is computed using the classic relative difference formula.\\
+\\
+Value computation from BeATS monitored mainline links output and PeMS data:
+\begin{equation*}
+	 VHT(\vec{k}^{(p)})=\sum_{i\in{T}}\sum_{t=0}^{24h/dt}d^{(p)}_{i}(t.dt)*\frac{dt}{1h}
+\end{equation*}\color{red} define dt (5min) \color{black}
+\\
+$VHT^{PeMS}$ is the value computed from the PeMS data.
+\\
+\begin{equation*}
+	\Pi_{3}(\vec{k}^{(p)})=100.\frac{|VHT(\vec{k}^{(p)})-VHT^{PeMS}|}{VHT^{PeMS}}
+\end{equation*}
