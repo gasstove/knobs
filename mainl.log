@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2015.7.7)  24 JUL 2015 11:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2015.8.8)  10 AUG 2015 18:15
 entering extended mode
 **mainl.tex
-(C:\Users\Felix\Documents\paper\mainl.tex
+(C:\Users\felix\code\knobs\mainl.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,8 +13,8 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-(C:\Users\Felix\Documents\paper\_beforestuff.tex
-(C:\Users\Felix\Documents\paper\IEEEtran.cls
+(C:\Users\felix\code\knobs\_beforestuff.tex
+(C:\Users\felix\code\knobs\IEEEtran.cls
 Document Class: IEEEtran 2012/12/27 V1.8 by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -745,10 +745,9 @@ LaTeX Info: Redefining \citenum on input line 708.
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count112
 )
-(C:\Users\Felix\Documents\paper\_defines.tex
+(C:\Users\felix\code\knobs\_defines.tex
 \c@theorem=\count113
-)
-(C:\Users\Felix\Documents\paper\mainl.aux)
+) (C:\Users\felix\code\knobs\mainl.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
@@ -779,8 +778,8 @@ Package caption Info: End \AtBeginDocument code.
 
 ** WARNING: \and is valid only when in conference or peerreviewca
 modes (line 22).
-(C:\Users\Felix\Documents\paper\abstract.tex)
-(C:\Users\Felix\Documents\paper\introduction.tex
+(C:\Users\felix\code\knobs\abstract.tex)
+(C:\Users\felix\code\knobs\introduction.tex
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 3.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
@@ -825,33 +824,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--3
  []
 
 File: figures/scheme.eps Graphic file (type eps)
-<figures/scheme.eps>) (C:\Users\Felix\Documents\paper\freeway_model.tex)
-(C:\Users\Felix\Documents\paper\traffic_model.tex)
-(C:\Users\Felix\Documents\paper\data.tex)
-(C:\Users\Felix\Documents\paper\notation.tex
-Underfull \hbox (badness 2189) in paragraph at lines 1--8
-\T1/lmr/m/n/10 re-spec-tively the main-line, source and sink links, as
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--8
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--8
-
- []
-
-[1
+<figures/scheme.eps>) (C:\Users\felix\code\knobs\freeway_model.tex)
+(C:\Users\felix\code\knobs\traffic_model.tex)
+(C:\Users\felix\code\knobs\data.tex)
+(C:\Users\felix\code\knobs\freeway_notation.tex) [1
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
+(C:\Users\felix\code\knobs\traffic_notation.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 1--54
 
  []
 
-) (C:\Users\Felix\Documents\paper\uncertainty.tex
+(C:\Users\felix\code\knobs\data_notation.tex
+Underfull \hbox (badness 1939) in paragraph at lines 1--7
+\T1/lmr/m/n/10 Measured main-line exit flows are de-noted $\OT1/lmr/m/n/10 ([](
+\OML/lmm/m/it/10 t\OT1/lmr/m/n/10 ))[]$
+ []
+
+
+Underfull \hbox (badness 5133) in paragraph at lines 1--7
+\T1/lmr/m/n/10 Mea-sured main-line den-si-ties are de-noted $\OT1/lmr/m/n/10 ([
+](\OML/lmm/m/it/10 t\OT1/lmr/m/n/10 ))[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--7
+
+ []
+
+
+Underfull \hbox (badness 1418) in paragraph at lines 1--7
+\T1/lmr/m/n/10 Fig. 1[] sum-ma-rizes the model. The miss-ing no-ta-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--7
+
+ []
+
+) (C:\Users\felix\code\knobs\uncertainty.tex
 Underfull \hbox (badness 10000) in paragraph at lines 15--18
 
  []
@@ -894,77 +906,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--26
 
  []
 
-) (C:\Users\Felix\Documents\paper\problem_formulation_intro.tex
+) (C:\Users\felix\code\knobs\problem_formulation_intro.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
 
-
-Underfull \hbox (badness 2057) in paragraph at lines 6--14
-\T1/lmr/m/n/10 For each of the non-monitored ramps, we de-fine a
- []
-
-
-Underfull \hbox (badness 1721) in paragraph at lines 6--14
-\T1/lmr/m/n/10 of the tem-plate. We in-put as exit flow de-mand of
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--14
-
- []
-
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 15--21
+Underfull \hbox (badness 10000) in paragraph at lines 5--13
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--21
+Underfull \hbox (badness 10000) in paragraph at lines 14--19
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--21
+Underfull \hbox (badness 10000) in paragraph at lines 14--19
 
  []
 
-) (C:\Users\Felix\Documents\paper\constraintsintro.tex)
-Underfull \hbox (badness 6396) in paragraph at lines 1--64
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--19
+
+ []
+
+) (C:\Users\felix\code\knobs\constraintsintro.tex)
+Underfull \hbox (badness 6396) in paragraph at lines 1--71
 []\T1/lmr/m/n/10 We de-fine here the con-straints ver-i-fied by the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--64
+Underfull \hbox (badness 10000) in paragraph at lines 1--71
 
  []
 
 
-Underfull \hbox (badness 3240) in paragraph at lines 1--64
+Underfull \hbox (badness 3240) in paragraph at lines 1--71
 [] \OT1/lmr/m/n/10 = (\OML/lmm/m/it/10 k[]; k[]; :::; k[]\OT1/lmr/m/n/10 )$ \T1
 /lmr/m/n/10 is the vec-tor con-tain-ing the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--64
+Underfull \hbox (badness 10000) in paragraph at lines 1--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--64
+Underfull \hbox (badness 10000) in paragraph at lines 1--71
 
  []
 
-(C:\Users\Felix\Documents\paper\naive.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--19
+(C:\Users\felix\code\knobs\naive.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--21
 
  []
 
-)
-Underfull \vbox (badness 1377) has occurred while \output is active []
 
+Overfull \hbox (22.7812pt too wide) in paragraph at lines 1--21
+[] 
+ []
 
-(C:\Users\Felix\Documents\paper\knob_groups.tex
+) (C:\Users\felix\code\knobs\knob_groups.tex
 Underfull \hbox (badness 1424) in paragraph at lines 1--17
  \T1/lmr/m/it/10 2) Knob groups and flow bal-ance: [][] \T1/lmr/m/n/10 We de-fi
 ne here
@@ -1074,8 +1077,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--55
  []
 
 
-Underfull \hbox (badness 2762) in paragraph at lines 20--55
-\T1/lmr/m/n/10 As stated in [][], the model-output flows ex-it-ing
+Underfull \hbox (badness 2073) in paragraph at lines 20--55
+\T1/lmr/m/n/10 As stated in eq. 1[], the model-output flows ex-it-ing
  []
 
 
@@ -1113,7 +1116,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--62
 
  []
 
-) (C:\Users\Felix\Documents\paper\refined.tex
+) (C:\Users\felix\code\knobs\refined.tex
 Underfull \hbox (badness 1902) in paragraph at lines 1--8
  \T1/lmr/m/it/10 3) Re-fined knob bound-aries: [][] \T1/lmr/m/n/10 The lo-cal u
 n-cer-tainty
@@ -1130,24 +1133,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--8
  []
 
 )
-Underfull \hbox (badness 1466) in paragraph at lines 11--74
+Underfull \hbox (badness 1466) in paragraph at lines 11--81
 \T1/lmr/m/n/10 bal-ance of each knob-groups is be-tween $\OT1/lmr/m/n/10 (1 \OM
 S/lmsy/m/n/10   \OML/lmm/m/it/10 U[]\OT1/lmr/m/n/10 )$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--74
+Underfull \hbox (badness 10000) in paragraph at lines 11--81
 
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 11--74
+Underfull \hbox (badness 1546) in paragraph at lines 11--81
 \T1/lmr/m/it/10 Example: \T1/lmr/m/n/10 One of the ramps has a per-fect value o
 f
  []
 
-(C:\Users\Felix\Documents\paper\pcs.tex [4])
-(C:\Users\Felix\Documents\paper\fitnessintro.tex
+(C:\Users\felix\code\knobs\pcs.tex [4])
+(C:\Users\felix\code\knobs\fitnessintro.tex
 
 LaTeX Warning: Reference `subsec:multiple' on page 5 undefined on input line 1.
 
@@ -1203,7 +1206,7 @@ Overfull \hbox (3.6784pt too wide) detected at line 39
 \OT1/lmr/m/n/10  : [] [] 
  []
 
-) (C:\Users\Felix\Documents\paper\tvm.tex
+) (C:\Users\felix\code\knobs\tvm.tex
 Underfull \hbox (badness 3735) in paragraph at lines 1--4
  \T1/lmr/m/it/10 1) To-tal Ve-hi-cle Miles: [][] \T1/lmr/m/n/10 Ve-hi-cle miles
  trav-eled is
@@ -1303,16 +1306,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--44
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 46--83
+Underfull \hbox (badness 10000) in paragraph at lines 46--90
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--83
+Underfull \hbox (badness 10000) in paragraph at lines 46--90
 
  []
 
-(C:\Users\Felix\Documents\paper\tvh.tex
+(C:\Users\felix\code\knobs\tvh.tex
 Underfull \hbox (badness 1776) in paragraph at lines 1--4
  \T1/lmr/m/it/10 2) To-tal Ve-hi-cle Hours: [][] \T1/lmr/m/n/10 Ve-hi-cle Hours
  trav-eled is
@@ -1333,7 +1336,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--10
 
  []
 
-) (C:\Users\Felix\Documents\paper\cp.tex
+) (C:\Users\felix\code\knobs\cp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
  []
@@ -1344,10 +1347,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 \OML/lmm/m/it/10 CP\OT1/lmr/m/n/10 ) = 100 \OMS/lmsy/m/n/10 
  []
 
-) (C:\Users\Felix\Documents\paper\statement.tex)
-(C:\Users\Felix\Documents\paper\requirements.tex)
-(C:\Users\Felix\Documents\paper\cmaes.tex)
-(C:\Users\Felix\Documents\paper\implementation.tex
+) (C:\Users\felix\code\knobs\statement.tex)
+(C:\Users\felix\code\knobs\requirements.tex)
+(C:\Users\felix\code\knobs\cmaes.tex)
+(C:\Users\felix\code\knobs\implementation.tex
 Underfull \hbox (badness 4582) in paragraph at lines 1--3
 \T1/lmr/m/n/10 pe-nal-iz-ing (i.e. in-creas-ing the value of the fit-ness
  []
@@ -1452,13 +1455,11 @@ Underfull \hbox (badness 1571) in paragraph at lines 5--46
 \T1/lmr/m/n/10 A pe-nal-iza-tion pro-por-tional to the dis-tance be-tween
  []
 
-[7]) (C:\Users\Felix\Documents\paper\simulator.tex)
-(C:\Users\Felix\Documents\paper\pems.tex)
-(C:\Users\Felix\Documents\paper\parameters.tex)
-(C:\Users\Felix\Documents\paper\results.tex)
-(C:\Users\Felix\Documents\paper\conclusion.tex)
-(C:\Users\Felix\Documents\paper\old.tex
-(C:\Users\Felix\Documents\paper\single.tex
+[7]) (C:\Users\felix\code\knobs\simulator.tex)
+(C:\Users\felix\code\knobs\pems.tex) (C:\Users\felix\code\knobs\parameters.tex)
+(C:\Users\felix\code\knobs\results.tex)
+(C:\Users\felix\code\knobs\conclusion.tex) (C:\Users\felix\code\knobs\old.tex
+(C:\Users\felix\code\knobs\single.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--15
 
  []
@@ -1564,36 +1565,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--32
 LaTeX Warning: Reference `subsec:naive' on page 9 undefined on input line 33.
 
 ))
-Underfull \hbox (badness 1609) in paragraph at lines 38--129
+Underfull \hbox (badness 1609) in paragraph at lines 38--136
 []\T1/lmr/m/n/10 Taking into ac-count $\OML/lmm/m/it/10 I[]$ \T1/lmr/m/n/10 is 
 in-dis-pens-able as the
  []
 
 
-Underfull \hbox (badness 1655) in paragraph at lines 38--129
+Underfull \hbox (badness 1655) in paragraph at lines 38--136
 \T1/lmr/m/n/10 by the main-line sen-sors). Once $\OML/lmm/m/it/10 I[]$\T1/lmr/m
 /n/10 =$\OT1/lmr/m/n/10 10%$ \T1/lmr/m/n/10 is taken
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--129
+Underfull \hbox (badness 10000) in paragraph at lines 38--136
 
  []
 
-(C:\Users\Felix\Documents\paper\acknowledgement.tex)
-(C:\Users\Felix\Documents\paper\appendix.tex) [9]
-(C:\Users\Felix\Documents\paper\mainl.aux)
+(C:\Users\felix\code\knobs\acknowledgement.tex)
+(C:\Users\felix\code\knobs\appendix.tex) [9]
+(C:\Users\felix\code\knobs\mainl.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5539 strings out of 493922
- 80657 string characters out of 3147306
- 228111 words of memory out of 3000000
- 8573 multiletter control sequences out of 15000+200000
+ 5547 strings out of 493922
+ 80587 string characters out of 3147306
+ 228144 words of memory out of 3000000
+ 8575 multiletter control sequences out of 15000+200000
  228649 words of font info for 164 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
  38i,15n,38p,689b,263s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on mainl.dvi (9 pages, 70488 bytes).
+Output written on mainl.dvi (9 pages, 69792 bytes).

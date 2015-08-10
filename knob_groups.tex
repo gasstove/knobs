@@ -1,17 +1,17 @@
-We define here objects and notation to describe a simple situation: the knobs are closely monitored by nearby mainline sensors, leading often to a situation where a knob is the only non-monitored ramp between two mainline sensors. This is equivalent to it being monitored, if it was not for the uncertainties.\\
+We define here objects and notation to describe a simple situation: the knobs are closely monitored by nearby mainline sensors, leading often to a situation where a ramp is the only non-monitored ramp between two mainline sensors. This is equivalent to it being monitored, if it was not for the uncertainties.\\
 \\
 We call \emph{segment} the set of links between two consecutive mainline sensors, including the links containing these sensors. \\
-We call \emph{knob group} each set of knobs connected to same monitored segment (i.e. the node each knob of the group is connected to is preceded by a mainline link belonging to the segment).
+We call \emph{knob group} each set of knobs whose corresponding ramp is connected to the same monitored segment.
 This definition is illustrated in Fig. \ref{fig:scheme}.\\
 We call \emph{partially monitored segment} the monitored segments associated with a knob group i.e. containing at least one non-monitored ramp.\\
 \\
 Denoting $\gamma$ the total number of knob groups, we have:\\
 \\
-$Partially\ monitored\ segments:\ (p_{i})_{i \in \llbracket 1,\gamma \rrbracket}$\\ 
+$Partially\ monitored\ segments:\ (P_{i})_{i \in \llbracket 1,\gamma \rrbracket}$\\ 
 \\
 Formal definition:\\
 $\exists\ !\ \gamma\in M,\ \exists\ !\ ((\beta_{i},\eta_{i}))_{i\in\llbracket 1,\gamma\rrbracket}\in (T^2)^{\llbracket 1,\gamma\rrbracket}\ s.t.,$\\
-$denoting\ p_{i}=\llbracket \beta_{i},\eta_{i} \rrbracket\ and\ P=\underset{i\in \llbracket 1,\gamma \rrbracket}{\bigcup}  p_{i}:$\\
+$denoting\ P_{i}=\llbracket \beta_{i},\eta_{i} \rrbracket\ and\ P=\underset{i\in \llbracket 1,\gamma \rrbracket}{\bigcup}  P_{i}:$\\
 $\forall i\in\llbracket 1,\gamma \rrbracket,$
 \begin{enumerate}
 	\item $\llbracket \beta_{i},\eta_{i} \rrbracket \cap T=\{\beta_{i},\eta_{i}\}$
@@ -32,30 +32,30 @@ We can deduce the value of the daily flow brought by the knobs of each group fro
 $Knob\ group\ flow\ balances:\ (\Delta_{i})_{i\in \llbracket 1,\gamma \rrbracket} $\\
 \\
 Formal definition:\\
-$\forall i \in \llbracket 1,\gamma \rrbracket,$\\
-$\Delta_{i} =$\small $\mathlarger{\sum\limits_{t\in \tau}}\bigg[ \widetilde{f}_{\beta_{i}}(t)-\widetilde{f}_{\eta_{i}}(t)+\sum\limits_{j\in (S\backslash K)\cap p_{i}}\widetilde{s_{j}}(t)-\sum\limits_{j\in (W\backslash K)\cap p_{i}}\widetilde{w_{j}}(t)\bigg]$\normalsize 
+$\forall i \in \llbracket 1,\gamma \rrbracket,\ \forall t\in \tau,$\\
+$\Delta_{i} =$\small $\mathlarger{\sum\limits_{t\in \tau}}\bigg[\widetilde{f}_{\beta_{i}}(t)-\widetilde{f}_{\eta_{i}}(t)+\sum\limits_{j\in (R\backslash K)\cap P_{i}}\sigma_{i}.\widetilde{r_{j}}(t)\bigg]$\normalsize 
 \\
 \\
 \\
 The balance equation of each partially monitored segment is:\\
 \\
-$0=\mathlarger{\sum\limits_{t\in \tau}}\bigg[f_{\beta_{i}}(t)-f_{\eta_{i}}(t)+\sum\limits_{j\in S\cap p_{i}}s_{j}(t)-\sum\limits_{j\in W\cap p_{i}}w_{j}(t)\bigg]$\\
+$0=\mathlarger{\sum\limits_{t\in \tau}}\bigg[f_{\beta_{i}}(t)-f_{\eta_{i}}(t)+\sum\limits_{j\in R\cap P_{i}}\sigma_{i}.r_{j}(t)\bigg]$\\
 \\
-As stated in \ref{subsec:problem_formulation_intro}, the model-output flows exiting the monitored ramps are equal to their measured flows. The balance equation becomes therefore:\\
+As stated in eq. \ref{eq:noqueue}, the model-output flows exiting the ramps are equal to their demand flows. The balance equation becomes therefore:\\
 \\
-$0=\Delta_{i}+\mathlarger{\sum\limits_{t\in \tau}}\bigg[\sum\limits_{j\in S\cap K\cap p_{i}}s_{j}(t)-\sum\limits_{j\in W\cap K\cap p_{i}}w_{j}(t)\bigg]$\\
+$0=\Delta_{i}+\mathlarger{\sum\limits_{t\in \tau}}\bigg[\sum\limits_{j\in K\cap P_{i}}\sigma_{i}.r_{j}(t)\bigg]$\\
 \\
 Leading to:\\
 \\
-$\Delta_{i}=\mathlarger{\sum\limits_{t\in \tau}}\bigg[\sum\limits_{j\in S\cap K\cap p_{i}}w_{j}(t)-\sum\limits_{j\in W\cap K\cap p_{i}}s_{j}(t)\bigg]$\\
+$\Delta_{i}=\mathlarger{-\sum\limits_{t\in \tau}}\bigg[\sum\limits_{j\in K\cap P_{i}}r_{j}(t)\bigg]$\\
 \\
-$\Leftrightarrow \Delta_{i}=\mathlarger{\sum\limits_{j\in S\cap K\cap p_{i}}}\bigg[\sum\limits_{t\in \tau}w_{j}(t)\bigg]-\mathlarger{\sum\limits_{j\in W\cap K\cap p_{i}}}\bigg[\sum\limits_{t\in \tau}s_{j}(t)\bigg]$\\
+$\Leftrightarrow \Delta_{i}=\mathlarger{-\sum\limits_{j\in K\cap P_{i}}}\sigma_{i}\bigg[\sum\limits_{t\in \tau}r_{j}(t)\bigg]$\\
 \\ 
-$\Leftrightarrow \Delta_{i}=\sum\limits_{j\in S\cap K\cap p_{i}}k_{i}.T_{i}-\sum\limits_{j\in W\cap K\cap p_{i}}k_{i}.T_{i}$
+and thanks to eq. \ref{eq:noqueuetemplate}:
 \begin{equation}
 \centering
 \label{eq:balance}
-\Leftrightarrow\ \ \Delta_{i}=\sum\limits_{j\in K\cap p_{i}}\sigma_{j}.k_{j}.T_{j}
+\Leftrightarrow\ \ \Delta_{i}=-\sum\limits_{j\in K\cap P_{i}}\sigma_{j}.k_{j}.\Theta
 \end{equation}
 Eq. \ref{eq:balance} shows that, for every knob group, the knobs composing it are linked by one linear equation.\\
 This equation determines uniquely the value of the single-knob groups and links the multiple-knob groups with one linear constraint. The next paragraph describes how we apply uncertainties to this equation in order to produce new, closer to reality knob boundaries.\\

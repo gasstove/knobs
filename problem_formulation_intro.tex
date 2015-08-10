@@ -1,24 +1,22 @@
 For every monitored source or sink (except the mainline sink), we input the measured flow to the model as exit flow demand.\\ The assumptions made in \ref{subsec:traffic_model} imply that this demand is approximately equal to the actual flow going through the ramp, for all times and above mentioned links:\\
-\begin{align}
+\begin{equation}
 	\label{eq:noqueue}
-	\forall i\in S\backslash K,\ \forall t\in \tau,\ s_{i}(t)\approx\bar{s_{i}}(t)\\
-	\forall i\in W\backslash(K+\{n\}),\ \forall t\in \tau,\ w_{i}(t)\approx\bar{w_{i}}(t)
-\end{align}
-The only missing parameters to our model are the flows of the non monitored ramps: $(s_{i})_{i\in K}$ and $(w_{i})_{i\in K}$.\color{red}<- differentiating w and s is pointless, unify them in r\color{black}
+	\forall i\in R\backslash K,\ \forall t\in \tau,\ \widetilde{r_{i}}(t)=\bar{r_{i}}(t)\approx {r_{i}}(t)\\
+\end{equation}
+The only missing parameters to our model are the flow demand profiles of the non monitored ramps: $(\bar{r_{i}}(t))_{\stackrel{i\in K}{t \in{\tau}}}$.
 Our method consists in mapping these $\kappa$ flow profiles into one parameter each.\\
-To do that, a duration-long flow \emph{template} is built for every non-monitored ramp. These templates, denoted $(t_{i}(t))_{i\in{K}}$, consist in a normalized flow profile: a flow value is given to each element of $\tau$ ($dt$ during $D$), and the resulting profile is normalized to a reasonable value for the ramp it concerns.\color{red}here, we should actually normalize them all to the same value, but then I'll have to write $T$ instead of $T_{i}$=change to do\color{black}\\
-For each of the non-monitored ramps, we define a multiplicative factor called \emph{knob} that will set the intensity of the template. 
-We input as exit flow demand of each non-monitored ramp the corresponding template multiplied by the ramp knob.\\
+To do that, a flow profile called \emph{template} is built for every non-monitored ramp. These templates, denoted $(t_{i}(t))_{\stackrel{i\in{K}}{t \in{\tau}}}$, consist in a normalized flow profile: a flow value is given to each element of $\tau$ ($dt$ during $D$), and the resulting profile is normalized to a reasonable value $T$.
+For each of the non-monitored ramps $i$, we define a multiplicative factor $k_{i}$ called \emph{knob} that will set the intensity of the template. 
+That is, we input as exit flow demand of the ramp its corresponding template multiplied by the ramp knob : $k_{i}.t_{i}(t)$.\\
 \\
 The parameters of our imputation problem are therefore the \textbf{$\kappa$ knobs}, corresponding to the $\kappa$ non-monitored ramps.
 
-In addition, for the assumptions that gave Eq. \ref{eq:noqueue}, we have :\\
+In addition, due the same assumptions that gave Eq. \ref{eq:noqueue}, we have :\\
 \\
-$\forall i \in K\cap S,\ \forall t\in \tau,\ s_{i}(t)\approx t_{i}(t)$\\
-$\forall i \in K\cap W,\ \forall t\in \tau,\ w_{i}(t)\approx t_{i}(t)$\\
-$and,\ especially, with\ T_{i}=\sum\limits_{t\in\tau}t_{i}(t):$\\
+$\forall i \in K,\ \forall t\in \tau,\ k_{i}.t_{i}(t)=\bar{r_{i}}(t)\approx r_{i}(t)$\\
+$and,\ especially, with\ \Theta=\sum\limits_{t\in\tau}t_{i}(t):$\\
 \\
-\begin{align}
+\begin{equation}
 	\label{eq:noqueuetemplate}
-	\sum\limits_{t \in \tau} r_{i}(t)=k_{i}.T_{i}\\
-\end{align}\color{red}$r_{i}$ is the new notation for the ramp flows that we should adopt, assuming there is only one ramp per node\color{black}
+	\sum\limits_{t \in \tau} r_{i}(t)=k_{i}.\Theta\\
+\end{equation}
