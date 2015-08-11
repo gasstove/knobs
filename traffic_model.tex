@@ -3,13 +3,13 @@ The \emph{large traffic model} to calibrate is characterized by the following in
 	\item \emph{Input:} 
 	\begin{itemize}
 		\item   duration of the scenario and time step.
-		\item   value of the exit flow demand at every source and non-mainline sink for every time step.\color{red}
+		\item   value of the exit flow demand at every source and non-mainline sink for every time step (total over the time step).
 		\item	other parameters proper to the model, assumed to be already calibrated
 	\end{itemize}
 	\item \emph{Output:}
 	\begin{itemize}
-		\item   value of the exit flow on every link, for every time step.
-		\item	value of the density on every link, for every time step.		
+		\item   value of the exit flow on every link, for every time step (total over the time step).
+		\item	value of the density on every link, for every time step (average over the time step).		
 	\end{itemize}
 \end{itemize}
 \emph{Traffic model assumptions:} \color{red}Describe here the assumptions we've made on the traffic model:\color{black}

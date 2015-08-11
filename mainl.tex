@@ -78,21 +78,21 @@ Large traffic, calibration, imputation, optimization, black box, evolutionnary a
 \label{subsubsec:refined}
 \input{refined}
 \color{red}THIS IS WHERE IVE STOPPED WORKING TODAY\color{black}
-\subsection{Performance calculators}
-\label{subsec:pcs}
-\input{pcs}
-\subsection{Fitness function}
-\label{fitnessintro}
-\input{fitnessintro}
-\subsubsection{Total Vehicle Miles}
-\label{subsubsec:tvm}
-\input{tvm}
-\subsubsection{Total Vehicle Hours}
+\subsection{Performance metrics and error calculators}
+\label{subsec:pcs_intro}
+\input{pcs_intro}
+\subsubsection{Vehicle Hours Travelled (VHT)}
 \label{subsubsec:tvh}
 \input{tvh}
+\subsubsection{Vehicle Miles Travelled (VMT)}
+\label{subsubsec:tvm}
+\input{tvm}
 \subsubsection{Congestion Pattern}
 \label{subsubsec:cp}
 \input{cp}
+\subsection{Objective function}
+\label{fitnessintro}
+\input{fitnessintro}
 \subsubsection{Optimization problem statement}
 \label{subsubsec:statement}
 \input{statement}
@@ -108,12 +108,21 @@ Large traffic, calibration, imputation, optimization, black box, evolutionnary a
 \subsection{Constraints implementation}
 \label{subsec:implementation}
 \input{implementation}
-\subsection{Large traffic simulator}
-\label{subsec:simulator}
-\input{simulator}
+\section{Experiment}
+\subsection{The traffic model : CTM}
+\label{ctm}
+\input{ctm}
+\subsection{The large traffic simulator : BeATS}
+\label{subsec:beats}
+\input{beats}
 \subsection{Context: Origin and reliability of the data}
 \label{subsec:pems}
 \input{pems}
+\subsection{Implementation of the congestion pattern}
+\label{subsec:cpimplementation}
+\input{cpimplementation}
+
+
 
 \subsection{Parameters of the imputation}
 \label{subsec:parameters}

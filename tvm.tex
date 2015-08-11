@@ -1,48 +1,29 @@
-Vehicle miles traveled is computed using the classic relative difference formula.\\
+This quantity is the sum of the distance traveled on the mainline by each car, over the whole duration.
+Obviously, it is computed using only the monitored mainline links, for the comparison with the data to be relevant.
+\emph{Explain why it is important in traffic study, why we have chosen it} 
 \\
-Value computation from BeATS monitored mainline links output and PeMS data:
+VMT computation on monitored mainline links output and data:
 \begin{equation*}
-	 VMT(\vec{k}^{(p)})=\sum_{i\in{T}}\sum_{t=0}^{24h/dt}f^{(p)}_{i}(t.dt)*L_{i}
-\end{equation*}\color{red} define dt (5min) \color{black}\\
-
-\emph{Reduction of the search space:} we present here a method used to reduce the search space size forcing the VMT value, thanks to an input pre-processing.\\
-VMT is the result of a simple \emph{a priori} calculation that does not need the simulation to run, if we know the boundary conditions at 0:00am and 12:00pm. As exposed in \ref{subsec:model}, we assume that these conditions are $0\ cars$ on every link (the actual values are very small in comparison with the total daily vehicle miles traveled).\\
-\\
-Let $VMT^{a priori}(\vec{k}^{(p)})$ the expected VMT value computed from $\vec{k}^{(p)}$.\\
-\\
-$VMT^{a\ priori}(\vec{k}^{(p)})=VMT^{ref}+\sum \limits_{i\in K}\biggl[\sigma_{i}.T_{i}.k_{i}.\sum\limits_{\underset{j>i}{j\in T}}L_{j}\biggr]$\\
-\\	
-The \emph{a-priori} calculation above relies on anticipating the changes on VMT((1,...,1)) caused by changing the knobs from (1,...,1) to $\vec{k}^{(p)}$. For each ramp, the flow change is multiplied by the remaining mainline length and the "on/off-ramp indicator". All these contributions are then summed.\\
-\\
-This \emph{a priori} calculation empowers us to project the input $\vec{k}^{(p)}$ in order to ensure $VMT(\vec{k}^{(p)})\approx VMT^{PeMS}$.\\
-
-\color{red} Where should the following part go? \color{black}\\
-Furthermore, in addition to the contribution of $\Pi_{2}$, a penalization proportional to the distance traveled by the projection is added to the fitness function. This implements a project \& penalize process, for the same reasons as in \ref{subsec:multiple}.\\
-\emph{Repairing:}\\
-\\
-The uncertainty $I^{global}$ acts on this projection: the knobs vector will be projected on the space between 2 hyperplans of  \text{\cursive S} defined by\\
-$VMT^{PeMS}.(1-I^{global})=VMT^{apriori}(\vec{k}^{(p)})$ and\\
-$VMT^{PeMS}.(1+I^{global})=VMT^{apriori}(\vec{k}^{(p)})$\\
-and limited by the physical boundaries.
-The projection is done with the following program:\\
-\\
-$minimize \ \ \ \ \ \norm{\vec{k}^{(p)}-\underline{\vec{k}}^{(p)}}_{2}$\\ \color{red}<- define $\underline{\vec{k}}^{(p)}$, clarify the three notations corresponding to the steps of the two input projections\color{black}\\
-$s.t.$\\
-\\
-$VMT^{apriori}(\vec{k}^{(p)})>VMT^{PeMS}.(1-I^{global})$\\
-$VMT^{apriori}(\vec{k}^{(p)})<VMT^{PeMS}.(1+I^{global})$\\
-$k^{(p)}\in{[\vec{0},\vec{m}}]$\\
-\\
-\emph{Penalizing:}\\
-\\
-The penalization is proportional to the distance between the original point and projected point, normalized by the same \emph{order of magnitude} as in \ref{subsec:multiple}.
-
-
-
-$VMT^{PeMS}$ is the value computed from the PeMS data. \color{red}<- We should think about when to introduce this notation and, more generally, the performance calculators value notation \color{black}
-\\
-\begin{equation*}
-	\Pi_{2}(\vec{k}^{(p)})=100.\frac{|VMT(\vec{k}^{(p)})-VMT^{PeMS}|}{VMT^{PeMS}}+\Pi_{2}^{'}
+	 VMT(\vec{k})=\sum_{i\in{T}}L_{i}\sum_{t\in \tau}f_{i}(t)
 \end{equation*}
 \\
+Denoting $\widetilde{VMT}$ the value computed from the data using the same formula, the error is the relative difference :\\
 \\
+\begin{equation*}
+	E_{VMT}(\vec{k})=\frac{|VMT(\vec{k})-\widetilde{VMT}|}{\widetilde{VMT}}
+\end{equation*}
+
+\emph{Reduction of the feasible space:} we present here a method used to reduce the feasible space size by forcing the knobs to match the correct VMT value.\\
+VMT is the result of a simple \emph{a priori} calculation that does not need the simulation to run, if we know the boundary conditions at t=0 and t=D. As exposed in \ref{subsec:model}, we assume that these conditions are $0\ cars$ on every link (D as to be big enough for these conditions to be very small in comparison with the total number of vehicles during D).\\
+\\
+Let $VMT^{a priori}(\vec{k})$ the expected VMT value computed from $\vec{k}$.\\
+Let $VMT^{ref}=VMT(\vec{k}^{ref})$, a certain $VMT$ reference value output by the model. We suppose that $\vec{k}^{ref}$ is some feasible knobs vector (in our case, we used $\vec{k}^{ref}=(1,...,1)$).\\
+\begin{equation}
+	\label{eq:TVMapriori}
+	VMT^{a\ priori}(\vec{k})=VMT^{ref}+\mathlarger{\sum\limits_{i\in K}}\biggl[\sigma_{i}.k_{i}.\Theta.	\sum\limits_{\underset{j>i}{j\in T}}L_{j}\biggr]
+\end{equation}	
+The \emph{a-priori} calculation above relies on anticipating the changes from $VMT^{ref}$ caused by changing the knobs from $\vec{k^{ref}}$ to $\vec{k}$. For each knob, the flow change resulting from its modification is multiplied by the remaining mainline length and the "on/off-ramp indicator". All these contributions are then summed.\\
+\\
+
+
+The linear equation \ref{eq:TVMapriori} empowers us to constrain the input $\vec{k}$ in order to ensure $VMT(\vec{k})\approx \widetilde{VMT}$, thus reducing the size of the feasible space by one dimension.\\

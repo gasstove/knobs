@@ -1,12 +1,14 @@
-Vehicle Hours traveled is computed using the classic relative difference formula.\\
+This quantity is the sum of the time spent on the mainline by each car, over the whole duration.
+Obviously, it is computed using only the monitored mainline links, for the comparison with the data to be relevant.
+\emph{explain why it is important in traffic study, why we have chosen it}\\ 
 \\
-Value computation from BeATS monitored mainline links output and PeMS data:
+VHT computation on monitored mainline links output and data:
 \begin{equation*}
-	 VHT(\vec{k}^{(p)})=\sum_{i\in{T}}\sum_{t=0}^{24h/dt}d^{(p)}_{i}(t.dt)*\frac{dt}{1h}
-\end{equation*}\color{red} define dt (5min) \color{black}
+	 VHT(\vec{k})=\frac{dt}{[1\ hour]}\sum_{i\in{T}}L_{i}\sum_{t\in \tau}d_{i}(t)
+\end{equation*}
 \\
-$VHT^{PeMS}$ is the value computed from the PeMS data.
+Denoting $\widetilde{VHT}$ the value computed from the data using the same formula, the error is the relative difference :\\
 \\
 \begin{equation*}
-	\Pi_{3}(\vec{k}^{(p)})=100.\frac{|VHT(\vec{k}^{(p)})-VHT^{PeMS}|}{VHT^{PeMS}}
+	E_{VHT}(\vec{k})=\frac{|VHT(\vec{k})-\widetilde{VHT}|}{\widetilde{VHT}}
 \end{equation*}

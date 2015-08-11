@@ -54,3 +54,35 @@ The normalizing factor is the distance between the maximums and minimums vectors
 \begin{equation*}
 	\Pi_{1}(\vec{k}^{(p)})=100.\frac{\norm{\vec{k}^{(p)}-\underline{\vec{k}}^{(p)}}_{2}}{\norm{\vec{k}^{max}-\vec{k}^{min}}_{2}}
 \end{equation*}
+
+
+
+
+\color{red} from tvm \color{black}
+
+
+
+
+
+This \emph{a priori} calculation empowers us to project the input $\vec{k}^{(p)}$ in order to ensure $VMT(\vec{k}^{(p)})\approx VMT^{PeMS}$.\\
+
+\color{red} Where should the following part go? \color{black}\\
+Furthermore, in addition to the contribution of $\Pi_{2}$, a penalization proportional to the distance traveled by the projection is added to the fitness function. This implements a project \& penalize process, for the same reasons as in \ref{subsec:multiple}.\\
+\emph{Repairing:}\\
+\\
+The uncertainty $I^{global}$ acts on this projection: the knobs vector will be projected on the space between 2 hyperplans of  \text{\cursive S} defined by\\
+$VMT^{PeMS}.(1-I^{global})=VMT^{apriori}(\vec{k}^{(p)})$ and\\
+$VMT^{PeMS}.(1+I^{global})=VMT^{apriori}(\vec{k}^{(p)})$\\
+and limited by the physical boundaries.
+The projection is done with the following program:\\
+\\
+$minimize \ \ \ \ \ \norm{\vec{k}^{(p)}-\underline{\vec{k}}^{(p)}}_{2}$\\ \color{red}<- define $\underline{\vec{k}}^{(p)}$, clarify the three notations corresponding to the steps of the two input projections\color{black}\\
+$s.t.$\\
+\\
+$VMT^{apriori}(\vec{k}^{(p)})>VMT^{PeMS}.(1-I^{global})$\\
+$VMT^{apriori}(\vec{k}^{(p)})<VMT^{PeMS}.(1+I^{global})$\\
+$k^{(p)}\in{[\vec{0},\vec{m}}]$\\
+\\
+\emph{Penalizing:}\\
+\\
+The penalization is proportional to the distance between the original point and projected point, normalized by the same \emph{order of magnitude} as in \ref{subsec:multiple}.\\
