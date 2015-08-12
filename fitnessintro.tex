@@ -1,29 +1,18 @@
-The fitness function to minimize, $\Phi$, is the weighted sum of 4 component functions: 3 error calculators, each coming from a different performance calculator (see \ref{subsec:pcs}), and the penalization mentioned in \ref{subsec:multiple}.\\
-We define here these components as functions of a knobs values vector.\\
-We normalize each component function in percentage following a criteria that is proper to it (see next 4 sub-sections). The common principle is to compute a relative difference using the PeMS data as reference.\\
-
-%\emph{Notation:}
- 	\color{red}
-Still didn't found an elegant way to note \& index the components / PCs\color{black}\\
-\\
-$\Pi_{2}$: Relative difference of Vehicle Miles Travelled on monitored mainline links, comparing BeATS output to PeMS data.\\
-$\Pi_{3}$: Relative difference of Vehicle Hours Travelled on monitored mainline links, comparing BeATS output to PeMS data.\\
-$\Pi_{4}$: Normalized number of links \& times with the wrong congestion state (CP is for \emph{congestion pattern}).\\
-\\
-$Let\ \big(\Pi_{i})_{i\in\llbracket 1, 4 \rrbracket}\ the\ components\ of\ the\ error\ function$\\
-$and\ \text{\cursive S}\ the\ search\ space.$\\
-\begin{displaymath}
-		\forall\ i\in\ \llbracket 1,4 \rrbracket,\ \Pi_{i}:
+The calibration method consists in minimizing jointly the three errors described in \ref{subsec:pcs_intro}. We accomplish this goal by minimizing an \emph{objective function} $\Phi$, which is the weighted sum of the three errors, in percentage :
+	\begin{displaymath}
+		\Phi:
 		\left|
   		\begin{array}{rcl}
-    	\text{\cursive S} & \longrightarrow &[0,100] \\
-    	\vec{k}^{(p)} & \longmapsto & \Pi_{i}(\vec{k}^{(p)}) \\
+    	\mathscr{B} & \longrightarrow &[0,100] \\
+    	\vec{k} & \longmapsto & w_{1}.E_{VHT}(\vec{k})+w_{2}.E_{VMT}(\vec{k})+w_{3}.E_{CP}(\vec{k}) \\
   	\end{array}
 	\right.
 	\end{displaymath}
-\color{red}Should we define the PCs as function of p instead of $\vec{k}^{(p)}$ ?\color{black}\\
+$with\ w_{1}+w_{2}+w_{3}=100\ and\ \forall i\in \{1,2,3\},\ w_{i}\geq 0.$\\
 \\
-$I^{global}$, described in \ref{subsec:data}, defines a tolerance threshold for the error calculator results: the error results below $I^{global}$ are set to zero, in order to avoid any differentiation between them (we do not have a level of precision below $I^{global}$).
+\emph{Note : the errors can lead to values superior to 1 thus giving values of $\Phi$ superior to 100\% but, to simplify, we will ignore these cases that are very far from the objective.}\\
+\\
+\emph{Uncertainty handling :} $I^{global}$, described in \ref{subsec:data}, defines a tolerance threshold for the error results. the error results below $I^{global}$ are set to zero, in order to avoid any differentiation between them (we do not have a level of precision below $I^{global}$).
 We call \emph{contributions} the final contribution of every performance calculator in the sum composing the fitness function: the value in percentage multiplied by its weight, once the preceding tolerance has been applied.\\
 \\ 
 $Let\ (\rho_{i})_{i\in\llbracket 1,4 \rrbracket}\ the\ weights.$\\

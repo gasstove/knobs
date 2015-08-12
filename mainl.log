@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2015.8.8)  12 AUG 2015 12:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2015.8.8)  12 AUG 2015 17:28
 entering extended mode
 **mainl.tex
 (C:\Users\felix\code\knobs\mainl.tex
@@ -972,8 +972,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--21
  []
 
 
-Overfull \hbox (22.7812pt too wide) in paragraph at lines 1--21
-[] 
+Underfull \hbox (badness 10000) in paragraph at lines 1--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--26
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 27.
+("C:\Program Files\MiKTeX 2.9\tex\latex\dstroke\udsrom.fd"
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 28--30
+
  []
 
 ) (C:\Users\felix\code\knobs\knob_groups.tex
@@ -1142,24 +1180,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--8
  []
 
 )
-Underfull \hbox (badness 1466) in paragraph at lines 11--81
-\T1/lmr/m/n/10 bal-ance of each knob-groups is be-tween $\OT1/lmr/m/n/10 (1 \OM
-S/lmsy/m/n/10   \OML/lmm/m/it/10 U[]\OT1/lmr/m/n/10 )$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--81
+Underfull \hbox (badness 10000) in paragraph at lines 11--80
 
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 11--81
+Underfull \hbox (badness 10000) in paragraph at lines 11--80
+
+ []
+
+
+Underfull \hbox (badness 1546) in paragraph at lines 11--80
 \T1/lmr/m/it/10 Example: \T1/lmr/m/n/10 One of the ramps has a per-fect value o
 f
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--80
+
+ []
+
 (C:\Users\felix\code\knobs\pcs_intro.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1--84
+Underfull \hbox (badness 10000) in paragraph at lines 1--83
 
  []
 
@@ -1206,86 +1248,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--21
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--27
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--27
-
- []
-
 )
-Underfull \hbox (badness 10000) in paragraph at lines 29--90
+Underfull \hbox (badness 10000) in paragraph at lines 24--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--89
 
  []
 
 (C:\Users\felix\code\knobs\cp.tex
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 28.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\dstroke\udsrom.fd"
-File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-)
 Underfull \hbox (badness 10000) in paragraph at lines 15--29
 
  []
 
-
-Underfull \hbox (badness 3482) in paragraph at lines 15--29
-\T1/lmr/m/n/10 de-noted $\OML/lmm/m/it/10 E[]$ \T1/lmr/m/n/10 as the nor-mal-iz
-ed num-ber of wrong
+) (C:\Users\felix\code\knobs\fitnessintro.tex [5]
+Overfull \hbox (7.28314pt too wide) detected at line 10
+\OT1/lmr/m/n/10  : []
  []
 
-) (C:\Users\felix\code\knobs\fitnessintro.tex
 
-LaTeX Warning: Reference `subsec:pcs' on page 5 undefined on input line 1.
-
-
-LaTeX Warning: Reference `subsec:multiple' on page 5 undefined on input line 1.
-
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--4
+Underfull \hbox (badness 10000) in paragraph at lines 10--20
 
  []
 
-[5]
-LaTeX Font Info:    Try loading font information for T1+frc on input line 14.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\frcursive\t1frc.fd"
+
+Underfull \hbox (badness 1783) in paragraph at lines 10--20
+\T1/lmr/m/it/10 Note : the er-rors can lead to val-ues su-pe-rior to 1
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--20
+
+ []
+
+LaTeX Font Info:    Try loading font information for T1+frc on input line 24.
+("C:\Program Files\MiKTeX 2.9\tex\latex\frcursive\t1frc.fd"
 File: t1frc.fd 2004/06/12 French Cursive font definition
 )
-Underfull \hbox (badness 10000) in paragraph at lines 7--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--31
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--31
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--31
-
- []
-
-
-Overfull \hbox (3.6784pt too wide) detected at line 39
+Overfull \hbox (3.6784pt too wide) detected at line 28
 \OT1/lmr/m/n/10  : [] [] 
  []
 
@@ -1305,20 +1317,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
  []
 
-[6]
 
-LaTeX Warning: Reference `subsec:single' on page 7 undefined on input line 9.
-
-
-LaTeX Warning: Reference `subsec:single' on page 7 undefined on input line 11.
+LaTeX Warning: Reference `subsec:single' on page 6 undefined on input line 9.
 
 
-LaTeX Warning: Reference `subsec:naive' on page 7 undefined on input line 12.
+LaTeX Warning: Reference `subsec:single' on page 6 undefined on input line 11.
+
+
+LaTeX Warning: Reference `subsec:naive' on page 6 undefined on input line 12.
 
 File: figures/proj.eps Graphic file (type eps)
 <figures/proj.eps>
 
-LaTeX Warning: Reference `subsec:kd' on page 7 undefined on input line 44.
+LaTeX Warning: Reference `subsec:kd' on page 6 undefined on input line 44.
 
 
 Underfull \hbox (badness 1552) in paragraph at lines 5--46
@@ -1400,7 +1411,10 @@ Underfull \hbox (badness 1571) in paragraph at lines 5--46
 \T1/lmr/m/n/10 A pe-nal-iza-tion pro-por-tional to the dis-tance be-tween
  []
 
-[7]
+[6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
 Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
@@ -1414,38 +1428,38 @@ LaTeX Warning: Reference `subsec:multiple' on page 8 undefined on input line 88
 .
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 69--111
+Underfull \hbox (badness 10000) in paragraph at lines 69--110
 
  []
 
 
-Underfull \hbox (badness 2142) in paragraph at lines 69--111
+Underfull \hbox (badness 2142) in paragraph at lines 69--110
 \T1/lmr/m/n/10 The un-cer-tainty $\OML/lmm/m/it/10 I[]$ \T1/lmr/m/n/10 acts on 
 this pro-jec-tion: the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--111
+Underfull \hbox (badness 10000) in paragraph at lines 69--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--111
+Underfull \hbox (badness 10000) in paragraph at lines 69--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--111
+Underfull \hbox (badness 10000) in paragraph at lines 69--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--111
+Underfull \hbox (badness 10000) in paragraph at lines 69--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--111
+Underfull \hbox (badness 10000) in paragraph at lines 69--110
 
  []
 
@@ -1457,8 +1471,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 \OML/lmm/m/it/10 CP\OT1/lmr/m/n/10 ) = 100 \OMS/lmsy/m/n/10 
  []
 
-) (C:\Users\felix\code\knobs\parameters.tex [8])
-(C:\Users\felix\code\knobs\results.tex)
+) (C:\Users\felix\code\knobs\parameters.tex)
+(C:\Users\felix\code\knobs\results.tex [8])
 (C:\Users\felix\code\knobs\conclusion.tex) (C:\Users\felix\code\knobs\old.tex
 (C:\Users\felix\code\knobs\single.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--15
@@ -1562,24 +1576,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--32
 \T1/lmr/m/n/10 for single-knob groups, are the math-e-mat-i-cal
  []
 
-[9]
 
-LaTeX Warning: Reference `subsec:naive' on page 10 undefined on input line 33.
+LaTeX Warning: Reference `subsec:naive' on page 9 undefined on input line 33.
 
-))
-Underfull \hbox (badness 1609) in paragraph at lines 38--145
+[9]))
+Underfull \hbox (badness 1609) in paragraph at lines 38--144
 []\T1/lmr/m/n/10 Taking into ac-count $\OML/lmm/m/it/10 I[]$ \T1/lmr/m/n/10 is 
 in-dis-pens-able as the
  []
 
 
-Underfull \hbox (badness 1655) in paragraph at lines 38--145
+Underfull \hbox (badness 1655) in paragraph at lines 38--144
 \T1/lmr/m/n/10 by the main-line sen-sors). Once $\OML/lmm/m/it/10 I[]$\T1/lmr/m
 /n/10 =$\OT1/lmr/m/n/10 10%$ \T1/lmr/m/n/10 is taken
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--145
+Underfull \hbox (badness 10000) in paragraph at lines 38--144
 
  []
 
@@ -1593,12 +1606,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5589 strings out of 493922
- 81471 string characters out of 3147306
- 227273 words of memory out of 3000000
- 8601 multiletter control sequences out of 15000+200000
- 229968 words of font info for 172 fonts, out of 3000000 for 9000
+ 5598 strings out of 493922
+ 81599 string characters out of 3147306
+ 230281 words of memory out of 3000000
+ 8609 multiletter control sequences out of 15000+200000
+ 230640 words of font info for 179 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 38i,15n,38p,689b,263s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,11n,38p,640b,263s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on mainl.dvi (10 pages, 74048 bytes).
+Output written on mainl.dvi (10 pages, 73872 bytes).
