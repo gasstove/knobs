@@ -3,9 +3,9 @@ For every monitored source or sink (except the mainline sink), we input the meas
 	\label{eq:noqueue}
 	\forall i\in R\backslash K,\ \forall t\in \tau,\ \widetilde{r_{i}}(t)=\bar{r_{i}}(t)\approx {r_{i}}(t)\\
 \end{equation}
-The only missing parameters to our model are the flow demand profiles of the non monitored ramps: $(\bar{r_{i}}(t))_{\stackrel{i\in K}{t \in{\tau}}}$.
+Therefore, the only missing parameters to the model are the flow demand profiles of the non monitored ramps: $(\bar{r_{i}}(t))_{\stackrel{i\in K}{t \in{\tau}}}$.
 Our method consists in mapping these $\kappa$ flow profiles into one parameter each.\\
-To do that, a flow profile called \emph{template} is built for every non-monitored ramp. These templates, denoted $(t_{i}(t))_{\stackrel{i\in{K}}{t \in{\tau}}}$, consist in a normalized flow profile: a flow value is given to each element of $\tau$ ($dt$ during $D$), and the resulting profile is normalized to a reasonable value $T$.
+To do that, a flow profile called \emph{template} is built for every non-monitored ramp. These templates, denoted $(t_{i}(t))_{\stackrel{i\in{K}}{t \in{\tau}}}$, consist in a normalized flow profile: a flow value is given to each element of $\tau$ and the resulting profile is normalized to a reasonable value $T$.
 For each of the non-monitored ramps $i$, we define a multiplicative factor $k_{i}$ called \emph{knob} that will set the intensity of the template. 
 That is, we input as exit flow demand of the ramp its corresponding template multiplied by the ramp knob : $k_{i}.t_{i}(t)$.\\
 \\

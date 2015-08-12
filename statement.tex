@@ -1,1 +1,7 @@
-enter statement here
+The optimization problem that we solve can now be stated :\\
+\begin{align}
+	&minimize\ \ \ \ \Phi(\vec{k}) \\
+	&s.t.\ \ \ \ 	\forall i\in \llbracket 1,\gamma \rrbracket,\ \Delta_{i}^{-}\leq |\sum\limits_{j\in K\cap S_{i}}\sigma_{j}.k_{j}.\Theta| \leq \Delta_{i}^{+} \nonumber\\
+	&and\ \widetilde{VMT}^{-}\leq\mathlarger{\sum\limits_{i\in K}}\biggl[\sigma_{i}.k_{i}.\Theta.	\sum\limits_{\underset{j>i}{j\in T}}L_{j}\biggr]+VMT^{ref}\leq \widetilde{VMT}^{+}\nonumber \\	
+	&and\ \vec{k} \in \mathscr{B} \nonumber
+\end{align}
