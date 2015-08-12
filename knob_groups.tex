@@ -7,17 +7,17 @@ We call \emph{partially monitored segment} the monitored segments associated wit
 \\
 Denoting $\gamma$ the total number of knob groups, we have:\\
 \\
-$Partially\ monitored\ segments:\ (P_{i})_{i \in \llbracket 1,\gamma \rrbracket}$\\ 
+$Partially\ monitored\ segments:\ (S_{i})_{i \in \llbracket 1,\gamma \rrbracket}$\\ 
 \\
 Formal definition:\\
 $\exists\ !\ \gamma\in M,\ \exists\ !\ ((\beta_{i},\eta_{i}))_{i\in\llbracket 1,\gamma\rrbracket}\in (T^2)^{\llbracket 1,\gamma\rrbracket}\ s.t.,$\\
-$denoting\ P_{i}=\llbracket \beta_{i},\eta_{i} \rrbracket\ and\ P=\underset{i\in \llbracket 1,\gamma \rrbracket}{\bigcup}  P_{i}:$\\
+$denoting\ S_{i}=\llbracket \beta_{i},\eta_{i} \rrbracket\ and\ S=\underset{i\in \llbracket 1,\gamma \rrbracket}{\bigcup}  S_{i}:$\\
 $\forall i\in\llbracket 1,\gamma \rrbracket,$
 \begin{enumerate}
 	\item $\llbracket \beta_{i},\eta_{i} \rrbracket \cap T=\{\beta_{i},\eta_{i}\}$
 	\item $\llbracket \beta_{i}, \eta_{i} \rrbracket \cap K\not= \{\emptyset \}$
 \end{enumerate}
-$and\ \forall k\in K, k\in P.$\\
+$and\ \forall k\in K, k\in S.$\\
 \\
 and\\
 \\
@@ -33,29 +33,29 @@ $Knob\ group\ flow\ balances:\ (\Delta_{i})_{i\in \llbracket 1,\gamma \rrbracket
 \\
 Formal definition:\\
 $\forall i \in \llbracket 1,\gamma \rrbracket,\ \forall t\in \tau,$\\
-$\Delta_{i} =$\small $\mathlarger{\sum\limits_{t\in \tau}}\bigg[\widetilde{f}_{\beta_{i}}(t)-\widetilde{f}_{\eta_{i}}(t)+\sum\limits_{j\in (R\backslash K)\cap P_{i}}\sigma_{i}.\widetilde{r_{j}}(t)\bigg]$\normalsize 
+$\Delta_{i} =$\small $\mathlarger{\sum\limits_{t\in \tau}}\bigg[\widetilde{f}_{\beta_{i}}(t)-\widetilde{f}_{\eta_{i}}(t)+\sum\limits_{j\in (R\backslash K)\cap S_{i}}\sigma_{i}.\widetilde{r_{j}}(t)\bigg]$\normalsize 
 \\
 \\
 \\
 The balance equation of each partially monitored segment is:\\
 \\
-$0=\mathlarger{\sum\limits_{t\in \tau}}\bigg[f_{\beta_{i}}(t)-f_{\eta_{i}}(t)+\sum\limits_{j\in R\cap P_{i}}\sigma_{i}.r_{j}(t)\bigg]$\\
+$0=\mathlarger{\sum\limits_{t\in \tau}}\bigg[f_{\beta_{i}}(t)-f_{\eta_{i}}(t)+\sum\limits_{j\in R\cap S_{i}}\sigma_{i}.r_{j}(t)\bigg]$\\
 \\
 As stated in eq. \ref{eq:noqueue}, the model-output flows exiting the ramps are equal to their demand flows. The balance equation becomes therefore:\\
 \\
-$0=\Delta_{i}+\mathlarger{\sum\limits_{t\in \tau}}\bigg[\sum\limits_{j\in K\cap P_{i}}\sigma_{i}.r_{j}(t)\bigg]$\\
+$0=\Delta_{i}+\mathlarger{\sum\limits_{t\in \tau}}\bigg[\sum\limits_{j\in K\cap S_{i}}\sigma_{i}.r_{j}(t)\bigg]$\\
 \\
 Leading to:\\
 \\
-$\Delta_{i}=\mathlarger{-\sum\limits_{t\in \tau}}\bigg[\sum\limits_{j\in K\cap P_{i}}r_{j}(t)\bigg]$\\
+$\Delta_{i}=\mathlarger{-\sum\limits_{t\in \tau}}\bigg[\sum\limits_{j\in K\cap S_{i}}r_{j}(t)\bigg]$\\
 \\
-$\Leftrightarrow \Delta_{i}=\mathlarger{-\sum\limits_{j\in K\cap P_{i}}}\sigma_{i}\bigg[\sum\limits_{t\in \tau}r_{j}(t)\bigg]$\\
+$\Leftrightarrow \Delta_{i}=\mathlarger{-\sum\limits_{j\in K\cap S_{i}}}\sigma_{i}\bigg[\sum\limits_{t\in \tau}r_{j}(t)\bigg]$\\
 \\ 
 and thanks to eq. \ref{eq:noqueuetemplate}:
 \begin{equation}
 \centering
 \label{eq:balance}
-\Leftrightarrow\ \ \Delta_{i}=-\sum\limits_{j\in K\cap P_{i}}\sigma_{j}.k_{j}.\Theta
+\Leftrightarrow\ \ \Delta_{i}=-\sum\limits_{j\in K\cap S_{i}}\sigma_{j}.k_{j}.\Theta
 \end{equation}
 Eq. \ref{eq:balance} shows that, for every knob group, the knobs composing it are linked by one linear equation.\\
 This equation determines uniquely the value of the single-knob groups and links the multiple-knob groups with one linear constraint. The next paragraph describes how we apply uncertainties to this equation in order to produce new, closer to reality knob boundaries.\\

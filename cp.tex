@@ -1,14 +1,32 @@
-We define the congested links as the links where the density exceeds some \emph{critical density} deduced from the traffic model. The main feature of our calibration method is to fit the locations and times of these congested links to what the measurements indicate.\\
-\\
 We call \emph{contour plot} the graph representing the value of a quantity on every mainline link at all times: the mainline links as absciss and time steps as ordinates.
 Below is an example of a density contour plot for one day on a 135 links freeway (time is descending).\\
 %\begin{figure}
 %	\caption{Example of a contour plot}
 %	\includegraphics[width=1in]{figures/contourexample.eps}
 %\end{figure}
-This plot is used to monitor easily where and when the congestion is : here, it is contained in the framed part. In what follows, by analogy, we will call \emph{density contour plot} the set $\big\{d_{i}(t)|i\in M,\ t\in\tau\big\}$ and \emph{pixel} each of its elements (i.e. each value of the density).
-
-			\begin{equation*}
-				CP(p)=\sum_{t\in{\frac{24h}{dt}}}\sum_{l\in{L}}\mathds{1}_{wrong\ congestion\ state\ links}
-			\end{equation*}
-Relative difference : $\tau_{p}(CP)=100* \frac{CP(p)}{Total\ area\ of\ the\ boxes}$
+This plot is used to monitor easily where and when the congestion is : here, it is contained in the framed part.\\
+In what follows, by analogy, we will call \emph{contour domain} the set $\mathscr{P}$=$\big\{(i,t)|\ i\in M,\ t\in\tau\big\}$ and \emph{pixel} each of its elements.\\
+On the model output, we define the \emph{congested} pixels as the ones where the density exceeds some \emph{critical density} deduced for each link from the freeway and traffic models. The main feature of our calibration method is to fit the locations and times of these congested pixels to what the measurements indicate.\\
+For each mainline link $i\in{M}$, we denote $d_{i}^{*}$ the critical density.
+\\
+We define the \emph{output congested domain} $\mathscr{C}\in\mathscr{P}$ containing the congested pixels :
+\begin{equation*}
+	\mathscr{C}=\big\{ (i,t)\in{\mathscr{P}}\ |\ {d_{i}(t) \geq d_{i}^{*}}\big\}
+\end{equation*}
+%We also define the \emph{congestion pattern} performance metric $CP$ as the signaling matrix 
+%of $\mathscr{C}$ :
+%\begin{equation*}
+%	CP=\big(\mathds{1}_{(i,j.dt)\in \mathscr{C}}\big)_{\stackrel{i\in M}{j\in \llbracket 0,\frac{D}{dt}\rrbracket}}
+%\end{equation*}
+To define an error calculator based on $\mathscr{C}$, a domain supposed to contain the congestion as to be defined.
+From the data \emph{density contour plot} (partial, obtained only on the monitored links), we define a domain $\widetilde{\mathscr{C}}\subset\mathscr{P}$ fitting the congested pixels as best as it can following some criteria (how this domain is built depends on the amount of data the operator possesses and on his goals. In our case, $\widetilde{\mathscr{C}}$ was a set of rectangles containing all the congestion seen in the data contour plot).\\
+%The same way we defined $CP$, we define $\widetilde(CP)$ as the signaling matrix of $\widetilde{C}$:
+%\begin{equation*}
+%	\widetilde{CP}=\big(\mathds{1}_{(i,j.dt)\in \mathscr{\widetilde{C}}\big)_{\stackrel{i\in M}{j\in \llbracket 0,\frac{D}{dt}\rrbracket}}
+%\end{equation*}
+\\
+We can now define the congestion pattern error calculator denoted $E_{CP}$ as the normalized number of wrong congestion state pixels. That is, we add one to $E_{CP}$ for each pixel that is not congested but should and for each pixel that is congested but shouldn't. We then divide this result by the number of pixels that should be congested (i.e. $Card(\widetilde{\mathscr{C}})=\sum_{t\in{\tau}}\sum_{i\in{M}}\mathds{1}_{(i,t)\in{\widetilde{\mathscr{C}}}}$).
+\begin{equation*}
+	E_{CP}(\vec{k})=\frac{\sum_{t\in{\tau}}\sum_{i\in{M}}\mathds{1}_{\{(i,t)\in{(\widetilde{\mathscr{C}}\backslash \mathscr{C})\cup(\mathscr{C}\backslash \widetilde{\mathscr{C}} })\}}}{\sum_{t\in{\tau}}\sum_{i\in{M}}\mathds{1}_{(i,t)\in{\widetilde{\mathscr{C}}}}}
+\end{equation*}
+Note that this error becomes very sensible if the data does not contain much congestion ($Card(\widetilde{\mathscr{C}})<<Card(\mathscr{P})$).

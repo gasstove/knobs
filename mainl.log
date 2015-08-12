@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2015.8.8)  11 AUG 2015 19:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2015.8.8)  12 AUG 2015 12:26
 entering extended mode
 **mainl.tex
 (C:\Users\felix\code\knobs\mainl.tex
@@ -583,6 +583,10 @@ File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
 Package: relsize 2003/07/04 ver 3.1
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\jknappen\mathrsfs.sty"
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup5
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -610,8 +614,8 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks25
-\symAMSa=\mathgroup5
-\symAMSb=\mathgroup6
+\symAMSa=\mathgroup6
+\symAMSb=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
@@ -809,6 +813,11 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    Try loading font information for U+stmry on input line 3.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\stmaryrd\ustmry.fd")
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 3.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
@@ -1213,15 +1222,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--90
  []
 
 (C:\Users\felix\code\knobs\cp.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--10
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 28.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\dstroke\udsrom.fd"
+File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 15--29
 
  []
 
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 11.
-("C:\Program Files\MiKTeX 2.9\tex\latex\dstroke\udsrom.fd"
-File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-))
-(C:\Users\felix\code\knobs\fitnessintro.tex
+
+Underfull \hbox (badness 3482) in paragraph at lines 15--29
+\T1/lmr/m/n/10 de-noted $\OML/lmm/m/it/10 E[]$ \T1/lmr/m/n/10 as the nor-mal-iz
+ed num-ber of wrong
+ []
+
+) (C:\Users\felix\code\knobs\fitnessintro.tex
 
 LaTeX Warning: Reference `subsec:pcs' on page 5 undefined on input line 1.
 
@@ -1234,8 +1250,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--4
 
  []
 
+[5]
 LaTeX Font Info:    Try loading font information for T1+frc on input line 14.
-("C:\Program Files\MiKTeX 2.9\tex\latex\frcursive\t1frc.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\frcursive\t1frc.fd"
 File: t1frc.fd 2004/06/12 French Cursive font definition
 )
 Underfull \hbox (badness 10000) in paragraph at lines 7--15
@@ -1267,7 +1284,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--31
 
  []
 
-[5]
+
 Overfull \hbox (3.6784pt too wide) detected at line 39
 \OT1/lmr/m/n/10  : [] [] 
  []
@@ -1288,19 +1305,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
  []
 
+[6]
 
-LaTeX Warning: Reference `subsec:single' on page 6 undefined on input line 9.
-
-
-LaTeX Warning: Reference `subsec:single' on page 6 undefined on input line 11.
+LaTeX Warning: Reference `subsec:single' on page 7 undefined on input line 9.
 
 
-LaTeX Warning: Reference `subsec:naive' on page 6 undefined on input line 12.
+LaTeX Warning: Reference `subsec:single' on page 7 undefined on input line 11.
+
+
+LaTeX Warning: Reference `subsec:naive' on page 7 undefined on input line 12.
 
 File: figures/proj.eps Graphic file (type eps)
 <figures/proj.eps>
 
-LaTeX Warning: Reference `subsec:kd' on page 6 undefined on input line 44.
+LaTeX Warning: Reference `subsec:kd' on page 7 undefined on input line 44.
 
 
 Underfull \hbox (badness 1552) in paragraph at lines 5--46
@@ -1382,17 +1400,17 @@ Underfull \hbox (badness 1571) in paragraph at lines 5--46
 \T1/lmr/m/n/10 A pe-nal-iza-tion pro-por-tional to the dis-tance be-tween
  []
 
-[6]
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
 
-LaTeX Warning: Reference `subsec:multiple' on page 7 undefined on input line 70
+LaTeX Warning: Reference `subsec:multiple' on page 8 undefined on input line 70
 .
 
 
-LaTeX Warning: Reference `subsec:multiple' on page 7 undefined on input line 88
+LaTeX Warning: Reference `subsec:multiple' on page 8 undefined on input line 88
 .
 
 )
@@ -1431,7 +1449,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--111
 
  []
 
-[7] (C:\Users\felix\code\knobs\ctm.tex) (C:\Users\felix\code\knobs\beats.tex)
+(C:\Users\felix\code\knobs\ctm.tex) (C:\Users\felix\code\knobs\beats.tex)
 (C:\Users\felix\code\knobs\pems.tex)
 (C:\Users\felix\code\knobs\cpimplementation.tex
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
@@ -1439,8 +1457,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 \OML/lmm/m/it/10 CP\OT1/lmr/m/n/10 ) = 100 \OMS/lmsy/m/n/10 
  []
 
-) (C:\Users\felix\code\knobs\parameters.tex)
-(C:\Users\felix\code\knobs\results.tex [8])
+) (C:\Users\felix\code\knobs\parameters.tex [8])
+(C:\Users\felix\code\knobs\results.tex)
 (C:\Users\felix\code\knobs\conclusion.tex) (C:\Users\felix\code\knobs\old.tex
 (C:\Users\felix\code\knobs\single.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--15
@@ -1544,8 +1562,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--32
 \T1/lmr/m/n/10 for single-knob groups, are the math-e-mat-i-cal
  []
 
+[9]
 
-LaTeX Warning: Reference `subsec:naive' on page 9 undefined on input line 33.
+LaTeX Warning: Reference `subsec:naive' on page 10 undefined on input line 33.
 
 ))
 Underfull \hbox (badness 1609) in paragraph at lines 38--145
@@ -1564,7 +1583,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--145
 
  []
 
-[9] (C:\Users\felix\code\knobs\acknowledgement.tex)
+(C:\Users\felix\code\knobs\acknowledgement.tex)
 (C:\Users\felix\code\knobs\appendix.tex) [10
 
 ]
@@ -1574,12 +1593,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5557 strings out of 493922
- 80829 string characters out of 3147306
- 228181 words of memory out of 3000000
- 8579 multiletter control sequences out of 15000+200000
- 228649 words of font info for 164 fonts, out of 3000000 for 9000
+ 5589 strings out of 493922
+ 81471 string characters out of 3147306
+ 227273 words of memory out of 3000000
+ 8601 multiletter control sequences out of 15000+200000
+ 229968 words of font info for 172 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 38i,15n,38p,689b,270s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,15n,38p,689b,263s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on mainl.dvi (10 pages, 71888 bytes).
+Output written on mainl.dvi (10 pages, 74044 bytes).
