@@ -24,11 +24,11 @@ Denoting $VMT^{a priori}(\vec{k})$ the expected VMT value computed from $\vec{k}
 \end{equation}	
 The \emph{a-priori} calculation above relies on anticipating the changes from $VMT^{ref}$ caused by changing the knobs from $\vec{k^{ref}}$ to $\vec{k}$. For each knob, the flow change resulting from its modification is multiplied by the remaining mainline length and the "on/off-ramp indicator". All these contributions are then summed.\\
 \\
-The linear equation \ref{eq:TVMapriori} empowers us to constrain the input $\vec{k}$ in order to ensure $VMT(\vec{k})\approx \widetilde{VMT}$, thus reducing the size of the feasible space by one dimension:
+The linear equation \ref{eq:TVMapriori} empowers us to constrain the input $\vec{k}$ in order to ensure $\widetilde{VMT}=VMT^{a\ priori}(\vec{k})\approx VMT(\vec{k})$, thus reducing the size of the feasible space by one dimension:
 \begin{equation*}
-	\mathlarger{\sum\limits_{i\in K}}\biggl[\sigma_{i}.k_{i}.\Theta.	\sum\limits_{\underset{j>i}{j\in T}}L_{j}\biggr]=\widetilde{VMT}-VMT^{ref}
+	\mathlarger{\sum\limits_{i\in K}}\biggl[\sigma_{i}.k_{i}.\Theta.	\sum\limits_{\underset{j>i}{j\in T}}L_{j}\biggr]+VMT^{ref}=\widetilde{VMT}
 \end{equation*}
-However, the global uncertainty applied on TVM (which is a global quantity computed from the sum over the whole time and space) forces us to loosen this constraint equation.\\
+However, the global uncertainty applied on VMT (which is a global quantity computed from the sum over the whole time and space) forces us to loosen this constraint equation.\\
 Denoting $\widetilde{VMT}^{-}=\widetilde{VMT}.(1-U^{global})$ and\\ $\widetilde{VMT}^{+}=\widetilde{VMT}.(1+U^{global})$, it becomes:\\
 \begin{equation}	
 	\label{eq:TVMineq}

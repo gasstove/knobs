@@ -1,4 +1,4 @@
-The CMA-ES source code handles box constraints natively using the "repair and penalize" procedure. This consists in repairing non-feasible sampled points and penalizing (i.e. increasing the value of the fitness function) proportionally to the distance between the unfeasible point and the search space. This method forces the algorithm to eventually enter and stay in the feasible domain while avoiding evaluating non-allowed points.\\
+The CMA-ES source code handles box constraints natively using the "repair and penalize" procedure. This consists in repairing non-feasible sampled points before inputing them to the model; and penalizing (i.e. increasing the value of the fitness function) proportionally to the distance between the unfeasible point and the feasible space. This method forces the algorithm to eventually enter and stay in the feasible domain while avoiding evaluating non-allowed points.\\
 However, the source code does not handle linear constraints. We describe here how we apply manually this repair \& penalize procedure to reflect the two linear constraints shown in \ref{subsec:statement}.\\
 \\
 
@@ -24,10 +24,11 @@ $s.t.\ \ \ \forall i\in{G}, \ \ \Delta_{i}^{-}< \sum_{j\in{g_{i}}} \sigma_{j}.k_
 $and\ \widetilde{VMT}^{-}\leq\mathlarger{\sum\limits_{i\in K}}\biggl[\sigma_{i}.k_{i}.\Theta.	\sum\limits_{\underset{j>i}{j\in T}}L_{j}\biggr]+VMT^{ref}\leq \widetilde{VMT}^{+}\nonumber $\\
 $and\ \ \ \ \vec{k}^{(p)}\in \mathscr{B}$\\
 \\
-Fig. \ref{fig:proj} above illustrates this projection and the two \emph{tolerance hyper-plans} on a two-knobs group $g_{l}=\{i,j\}$, formed by on-ramp $i$ and off-ramp $j$.\\
-In this figure, the external square is the hyper-cube corresponding to the physical boundaries. 
-$D$ is the hyper-plan (straight line) on which the knob group flow will have the exact value $\Delta_{l}$.
-The two tolerance hyper-plans on which the knob group flow value will be $\Delta_{l}^{max}$ and $\Delta_{l}^{min}$ are respectively $D_{+}$ and $D_{-}$. The points sampled in the feasible space (inside the doted line trapezium) remain untouched while the others are projected on the nearest point of the edge of the feasible space.\\
+Let us illustrate the effect of this program with an example. We suppose that the $\widetilde{TVM}^{\pm}$ condition above is enough loose for the condition to be respected without influencing the projection (often verified in practice).\\
+Fig. \ref{fig:proj} above displays, for a two-knobs group $g_{l}={i,j}$, the projection of several sampled points due to the two remaining conditions ($\Delta_{l}^{\pm}$ and $\mathscr{B}$). $D$ is the hyper-plan (straight line in dimension 2) on which the knob group flow will have the exact value $\Delta_{l}$.
+The two tolerance hyper-plans on which the knob group flow value will be $\Delta_{l}^{+}$ and $\Delta_{l}^{-}$ are respectively $D^{+}$ and $D^{-}$.
+In addition, the external square is the hyper-cube corresponding to the physical boundaries. 
+The points sampled in the feasible space (inside the doted line trapezium) remain untouched while the others are projected on the nearest point of the edge of the feasible space.\\
 This repair ensures that only feasible values of the input are tested and that the algorithm will not get stuck in an unfeasible well of the physical boundaries hyper-cube.\\
 \begin{figure}
 \centering
@@ -38,7 +39,7 @@ This repair ensures that only feasible values of the input are tested and that t
 \\
 \emph{Penalizing:}\\
 \\
-A penalization proportional to the distance between the projected and original points is added to the fitness function (see \ref{subsec:kd}). This ensures that the algorithm will come closer to the feasible space at every iteration until eventually entering and staying inside it. This feature is important as it avoids two imbalances on the sampling:
+At each evaluation, a penalization proportional to the distance between the projected and original point is added to the fitness function. This ensures that the algorithm will come closer to the feasible space at every iteration until eventually entering and staying inside it. This feature is important as it avoids two imbalances on the sampling:
 \begin{itemize}
 	\item Testing more points on the edges than we should: if the algorithm is left sampling points far from the edges, without penalization, it will have no incentive to prefer sampling next to the feasible space than far. This is an obstacle from entering the feasible space, as all the points on the straight lines perpendicular to the edges would be equivalent. This would lead to a situation where it is common that too much (or all) of the points are sampled on the edges, CMA-ES converging far from the feasible space.\color{red}(<- rewrite this)\color{black}.
 	\item Imbalance between the edge points tested: the edge points which are the projection of more unfeasible hyper-cube points than others will be sampled unfairly more often.\\
@@ -46,45 +47,30 @@ A penalization proportional to the distance between the projected and original p
 The points on one of these straights and below the feasible space are all projected to the same point of the edge of the feasible space. Therefore, without penalization, the middle of the segment cited above would be sampled more often than the other points of its edge, for a reason that is not the simulation output it leads to. 
 \end{itemize}
 
-The penalization due to the projection of the knobs in multiple-knob groups is proportional to the distance between the projected and originally sampled points.
-The normalizing factor is the distance between the maximums and minimums vectors, reflecting the \emph{order of magnitude} of the search space.
+The penalization is normalized by a factor which is the distance between the physical maximums and minimums vectors, reflecting the \emph{order of magnitude} of the search space.
 \begin{equation*}
-	\Pi_{1}(\vec{k}^{(p)})=100.\frac{\norm{\vec{k}^{(p)}-\underline{\vec{k}}^{(p)}}_{2}}{\norm{\vec{k}^{max}-\vec{k}^{min}}_{2}}
+	E_{proj}(\underline{\vec{k}}^{(p)},\vec{k}^{(p)})=\frac{\norm{\vec{k}^{(p)}-\underline{\vec{k}}^{(p)}}_{2}}{\norm{\begin{bmatrix}m_{1}\\m_{2}\\\vdots\\m_{\kappa}\end{bmatrix}-\begin{bmatrix}0\\0\\\vdots\\0\end{bmatrix}}_{2}}
 \end{equation*}
-
-
-
-
-\color{red} from tvm \color{black}
-
-
-
-
-
-This \emph{a priori} calculation empowers us to project the input $\vec{k}^{(p)}$ in order to ensure $VMT(\vec{k}^{(p)})\approx VMT^{PeMS}$.\\
-
-\color{red} Where should the following part go? \color{black}\\
-Furthermore, in addition to the contribution of $\Pi_{2}$, a penalization proportional to the distance traveled by the projection is added to the fitness function. This implements a project \& penalize process, for the same reasons as in \ref{subsec:multiple}.\\
-\emph{Repairing:}\\
+A fourth contribution $w_{4}.E_{proj}(\underline{\vec{k}}^{(p)},\vec{k}^{(p)})$ is therefore added to the fitness function.\\
 \\
-The uncertainty $I^{global}$ acts on this projection: the knobs vector will be projected on the space between 2 hyperplans of  \text{\cursive S} defined by\\
-$VMT^{PeMS}.(1-I^{global})=VMT^{apriori}(\vec{k}^{(p)})$ and\\
-$VMT^{PeMS}.(1+I^{global})=VMT^{apriori}(\vec{k}^{(p)})$\\
-and limited by the physical boundaries.
-The projection is done with the following program:\\
+With the same definitions as in \ref{subsec:fitnessintro} and\\
+$\sum_{i=1}^{4} w_{i}=1\ and\ \forall i\in\llbracket 1,4\rrbracket\ w_{i}\geq 0$,\\
 \\
-$minimize \ \ \ \ \ \norm{\vec{k}^{(p)}-\underline{\vec{k}}^{(p)}}_{2}$\\ \color{red}<- define $\underline{\vec{k}}^{(p)}$, clarify the three notations corresponding to the steps of the two input projections\color{black}\\
-$s.t.$\\
+the final fitness function used is $J$ defined by :\\
+\begin{equation*}
+		J:
+		\left|
+  		\begin{array}{rcl}
+    	\mathscr{B} & \longrightarrow &[0,100] \\
+    	\underline{\vec{k}}^{(p)} & \longmapsto &  \Phi(\vec{k}^{(p)})+w_{4}.E_{proj}(\underline{\vec{k}}^{(p)},\vec{k}^{(p)}) \\
+  	\end{array}
+	\right.
+\end{equation*}
 \\
-$VMT^{apriori}(\vec{k}^{(p)})>VMT^{PeMS}.(1-I^{global})$\\
-$VMT^{apriori}(\vec{k}^{(p)})<VMT^{PeMS}.(1+I^{global})$\\
-$k^{(p)}\in{[\vec{0},\vec{m}}]$\\
 \\
-\emph{Penalizing:}\\
+\emph{Single-knob group specificity:} For a single-knob group, the condition Eq. \ref{eq:ineq} is equivalent to hard boundaries for the concerned knob (one equation in one dimension). In this case, the projection due to Eq. \ref{eq:ineq} is not implemented but the physical boundaries (from $\mathscr{B}$) of the knob input to CMA-ES are replaced by these new boundaries, if they are narrower :\\
 \\
-The penalization is proportional to the distance between the original point and projected point, normalized by the same \emph{order of magnitude} as in \ref{subsec:multiple}.\\
-
-\emph{Single-knob group specificity:}\\
-These boundaries are 1-D box constraints, they are directly handled by the CMA-ES implementation as explained in \ref{subsec:cmaes}.\\
-\\
-\emph{On multiple-knob groups:}\\
+$\forall\ i\in G\ s.t.\ Card(g_{i})=1,\ i.e.\ g_{i}=\{j\}\ :$
+\begin{equation}
+	\frac{\max{\big\{0;|\Delta_{i}^{-}|\big\}}}{\Theta}\leq k_{j} \leq \frac{\min{\big\{m_{i};|\Delta_{i}^{+}|\big\}}}{\Theta}
+\end{equation}
