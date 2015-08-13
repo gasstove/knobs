@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2015.8.8)  13 AUG 2015 17:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2015.8.8)  13 AUG 2015 20:11
 entering extended mode
 **mainl.tex
 (C:\Users\felix\code\knobs\mainl.tex
@@ -1236,9 +1236,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--12
  []
 
 
-LaTeX Warning: Reference `subsec:model' on page 5 undefined on input line 17.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 16--21
 
  []
@@ -1324,11 +1321,82 @@ Overfull \hbox (1.21129pt too wide) in paragraph at lines 7--7
 [] 
  []
 
-) (C:\Users\felix\code\knobs\requirements.tex
+) (C:\Users\felix\code\knobs\requirements.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 4--103
+[]\T1/lmr/m/n/10 The per-for-mance er-rors are ir-reg-u-lar func-tions.
+ []
 
-LaTeX Warning: Reference `subsec:pcs' on page 6 undefined on input line 5.
 
-) (C:\Users\felix\code\knobs\cmaes.tex [6])
+Underfull \hbox (badness 2744) in paragraph at lines 4--103
+\T1/lmr/m/n/10 In par-tic-u-lar, the con-ges-tion pat-tern fit-ting re-flects
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--103
+\T1/lmr/m/n/10 con-ges-tion phe-nom-ena. These present nu-mer-ous
+ []
+
+
+Underfull \hbox (badness 3954) in paragraph at lines 4--103
+\T1/lmr/m/n/10 Furthermore, each eval-u-a-tion of the er-ror func-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--103
+\T1/lmr/m/n/10 We de-duce from these ob-ser-va-tions that con-vex
+ []
+
+
+Underfull \hbox (badness 5288) in paragraph at lines 4--103
+\T1/lmr/m/n/10 op-ti-miza-tion meth-ods and derivative-based meth-ods
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--103
+
+ []
+
+
+Underfull \hbox (badness 1946) in paragraph at lines 4--103
+\T1/lmr/m/n/10 Finally, this ex-per-i-ment is a proof of con-cept that
+ []
+
+(C:\Users\felix\code\knobs\cmaes.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--4
+\T1/lmr/m/n/10 The de-scrip-tion of its ar-chi-tect, Nico-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--4
+\T1/lmr/m/n/10 laus Hansen []in-sert bib-li-og-ra-phy here[](see
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--4
+\T1/lmr/m/n/10 https://www.lri.fr/ hansen/cmaesintro.html) con-tains
+ []
+
+[6])
+Underfull \hbox (badness 7907) in paragraph at lines 9--106
+\T1/lmr/m/n/10 More in-for-ma-tion on CMA-ES can be found at
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--106
+
+ []
+
+
+Underfull \hbox (badness 2035) in paragraph at lines 9--106
+\T1/lmr/m/n/10 In what fol-lows, the ob-jec-tive func-tion $\OT1/lmr/m/n/10 $ 
+\T1/lmr/m/n/10 will also
+ []
+
 (C:\Users\felix\code\knobs\implementation.tex
 Underfull \hbox (badness 5431) in paragraph at lines 1--4
 \T1/lmr/m/n/10 However, the source code does not han-dle lin-ear
@@ -1416,155 +1484,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--74
 
  []
 
-) (C:\Users\felix\code\knobs\ctm.tex) (C:\Users\felix\code\knobs\beats.tex)
+) (C:\Users\felix\code\knobs\experiment_intro.tex)
 (C:\Users\felix\code\knobs\pems.tex)
-(C:\Users\felix\code\knobs\cpimplementation.tex
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
-[]\T1/lmr/m/n/10 Relative dif-fer-ence : $\OML/lmm/m/it/10 []\OT1/lmr/m/n/10 (
-\OML/lmm/m/it/10 CP\OT1/lmr/m/n/10 ) = 100 \OMS/lmsy/m/n/10 
- []
-
-) (C:\Users\felix\code\knobs\parameters.tex)
-(C:\Users\felix\code\knobs\results.tex [8])
-(C:\Users\felix\code\knobs\conclusion.tex) (C:\Users\felix\code\knobs\old.tex
-(C:\Users\felix\code\knobs\single.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--15
+Underfull \hbox (badness 10000) in paragraph at lines 9--117
 
  []
 
 
-Underfull \hbox (badness 4001) in paragraph at lines 1--15
-\T1/lmr/m/n/10 An un-cer-tainty must be in-tro-duced on these flow
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--15
-\T1/lmr/m/it/10 co-ef-fi-cient \T1/lmr/m/n/10 and \T1/lmr/m/it/10 over-evaluati
-on tol-er-ance co-ef-fi-cient\T1/lmr/m/n/10 ,
- []
-
-
-Underfull \hbox (badness 2057) in paragraph at lines 1--15
-\T1/lmr/m/n/10 A dif-fer-ent un-cer-tainty on the flow de-mands called
- []
-
-
-Underfull \hbox (badness 1917) in paragraph at lines 1--15
-\T1/lmr/m/it/10 lo-cal un-cer-tainty \T1/lmr/m/n/10 has been in-tro-duced in []
-[]. As a
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--15
+Underfull \hbox (badness 10000) in paragraph at lines 9--117
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--15
-
- []
-
-
-Underfull \hbox (badness 4205) in paragraph at lines 1--15
-[]\T1/lmr/m/n/10 Consider delet-ing this sub-sec-tion and uni-fy-ing the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--15
-
- []
-
-
-Underfull \hbox (badness 3271) in paragraph at lines 1--15
-\T1/lmr/m/n/10 The per-fect val-ues are com-puted as fol-lows, us-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--15
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--32
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--32
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--32
-\T1/lmr/m/n/10 for single-knob groups, are the math-e-mat-i-cal
- []
-
-
-LaTeX Warning: Reference `subsec:naive' on page 9 undefined on input line 33.
-
-[9]))
-Underfull \hbox (badness 1609) in paragraph at lines 38--144
-[]\T1/lmr/m/n/10 Taking into ac-count $\OML/lmm/m/it/10 I[]$ \T1/lmr/m/n/10 is 
-in-dis-pens-able as the
- []
-
-
-Underfull \hbox (badness 1655) in paragraph at lines 38--144
-\T1/lmr/m/n/10 by the main-line sen-sors). Once $\OML/lmm/m/it/10 I[]$\T1/lmr/m
-/n/10 =$\OT1/lmr/m/n/10 10%$ \T1/lmr/m/n/10 is taken
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--144
-
- []
-
+(C:\Users\felix\code\knobs\ctm.tex) (C:\Users\felix\code\knobs\beats.tex)
+(C:\Users\felix\code\knobs\cpimplementation.tex [8])
+(C:\Users\felix\code\knobs\results.tex)
+(C:\Users\felix\code\knobs\conclusion.tex)
 (C:\Users\felix\code\knobs\acknowledgement.tex)
-(C:\Users\felix\code\knobs\appendix.tex) [10
+(C:\Users\felix\code\knobs\appendix.tex) [9
 
 ]
-(C:\Users\felix\code\knobs\mainl.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+(C:\Users\felix\code\knobs\mainl.aux) ) 
 Here is how much of TeX's memory you used:
- 5560 strings out of 493922
- 80891 string characters out of 3147306
- 227288 words of memory out of 3000000
- 8576 multiletter control sequences out of 15000+200000
+ 5551 strings out of 493922
+ 80721 string characters out of 3147306
+ 227280 words of memory out of 3000000
+ 8573 multiletter control sequences out of 15000+200000
  227673 words of font info for 176 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 38i,13n,38p,640b,295s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,13n,38p,640b,263s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on mainl.dvi (10 pages, 73352 bytes).
+Output written on mainl.dvi (9 pages, 66564 bytes).

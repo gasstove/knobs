@@ -1,15 +1,13 @@
-Talk about CMAES characteristics and why it is very well suited for this.\\
-\color{red}\emph{Most of the stuff will come from :}
+The state-of-the-art evolutionnary algorithm CMA-ES is very well suited for these requirements.\\
+The description of its architect, Nicolaus Hansen \color{blue}insert bibliography here\color{black} (see https://www.lri.fr/~hansen/cmaesintro.html) contains these words :
 \begin{itemize}
-	\item https://www.lri.fr/~hansen/cmaesintro.html
-	\item https://www.lri.fr/~hansen/cmatutorial.pdf
-	\begin{itemize}
-		\item 0.3: Randomized Black-Box optimization
-		\item 5: Discussion
-	\end{itemize}	\color{black}
-
-	\item explain how the sampling works
-	\item Consider the search costs together with the achieved objective function value.
-	\item define \emph{fitness function}
+	\item It is conceived to solve "difficult non-linear non-convex black-box optimisation problems in continuous domain". 
+	\item It is feasible on "non-smooth and even non-continuous problems, as well as on multimodal and/or noisy problems".
+	\item "The CMA-ES does not use or approximate gradients and does not even presume or require their existence"
+	\item It is "competitive for global optimization".
 \end{itemize}
-	\color{black}
+In addition, it is extremely adaptive as only an initial standard deviation and the population size have to be tuned.\\
+More information on CMA-ES can be found at https://www.lri.fr/~hansen/cmatutorial.pdf, especially in the parts \emph{0.3: Randomized Black-Box optimization} and \emph{5: Discussion}.\\
+For further understanding, the reader can keep in memory that the algorithm samples a population $\Pi_{p}$ of $\lambda$ random points at iteration $p$. It then evaluates each one of them, and modifies its internal parameters so that the next $\lambda$ sampled points $\Pi_{p+1}$ will be more probably in the direction of the points of $\Pi_{p}$ that gave the smaller $\Phi$ values. It globally keeps memory of the fitness (objective function value) of the points it encountered.\\
+\\
+In what follows, the objective function $\Phi$ will also be called \emph{fitness function}.

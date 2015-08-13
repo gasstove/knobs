@@ -1,11 +1,13 @@
-The real scenario used for this study is a segment of freeway 210 East in the suburbs of Los Angeles. The measurements used are collected by CalTRANS sensors and gathered in PeMS \emph{talk about PeMS}. \\
-These daily measurements are flow, density and speed on 74 links of 188, every 5 minutes for 24 hours.\\
+The real scenario used for this study is a portion of freeway 210 East in the suburbs of Los Angeles. The measurements used are collected by the sensors network PeMS of Caltrans. For more information, see http://pems.dot.ca.gov/\\
+These daily measurements are flow, density and speed on 74 links of 188, every 5 minutes for 24 hours (289 time-steps).\\
 After deleting partial or too biased data, the sensors have the following distribution:
 \begin{itemize}
 	\item 33/135 monitored mainline links
 	\item 26/28 monitored on-ramps
 	\item 15/25 monitored off-ramps
 \end{itemize}
-\emph{Should we introduce and quantify  precisely the uncertainty notations $I^{global}$ and $I^{local}$ here or later ?}\\
-\color{red}Will we talk about how we pre-processed the wrong sensors/ramp that comes from the left into the HOV, biased sensors etc. ?\color{black}
-
+This makes a total of \textbf{12 knobs}.\\
+\\
+We chose to calibrate the model on the average of 5 Tuesdays (0am-12pm) in fall 2014 data. The goal is to find the set of knobs that best fits the profile of a Tuesday (the general shape of the traffic depending greatly on the day of the week).\\
+\\
+For each knob-ramp, the template is built by taking the average of the two closest monitored ramps that have the same size and incoming traffic context. 
