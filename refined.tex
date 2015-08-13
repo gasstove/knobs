@@ -7,7 +7,7 @@ $\Delta_{i}^{+}=\max{\{|\Delta_{i}|+U^{add};|\Delta_{i}|.(1+U^{mul})\}}$\\
 Taking the local uncertainty into account in Eq. \ref{eq:balance} is translated into the following linear inequality constraint:
 \begin{equation}
 \label{eq:ineq}
-	\forall i\in \llbracket 1,\gamma \rrbracket,\ \Delta_{i}^{-}\leq |\sum\limits_{j\in K\cap S_{i}}\sigma_{j}.k_{j}.\Theta| \leq \Delta_{i}^{+}
+	\forall i\in \llbracket 1,\gamma \rrbracket,\ \Delta_{i}^{-}\leq |\sum\limits_{j\in g_{i}}\sigma_{j}.k_{j}.\Theta| \leq \Delta_{i}^{+}
 \end{equation}
 \\
 These $\gamma$ inequalities drastically reduce the size of the search space, defining a new \emph{feasible space}.\\

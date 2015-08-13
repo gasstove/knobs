@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2015.8.8)  12 AUG 2015 19:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=latex 2015.8.8)  13 AUG 2015 13:10
 entering extended mode
 **mainl.tex
 (C:\Users\felix\code\knobs\mainl.tex
@@ -1325,171 +1325,152 @@ LaTeX Warning: Reference `subsec:pcs' on page 6 undefined on input line 5.
 
 ) (C:\Users\felix\code\knobs\cmaes.tex [6])
 (C:\Users\felix\code\knobs\implementation.tex
-Underfull \hbox (badness 4582) in paragraph at lines 1--3
-\T1/lmr/m/n/10 pe-nal-iz-ing (i.e. in-creas-ing the value of the fit-ness
+Underfull \hbox (badness 3407) in paragraph at lines 1--4
+\T1/lmr/m/n/10 na-tively us-ing the "re-pair and pe-nal-ize" pro-ce-dure.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--3
-
+Underfull \hbox (badness 5431) in paragraph at lines 1--4
+\T1/lmr/m/n/10 However, the source code does not han-dle lin-ear
  []
 
 
-LaTeX Warning: Reference `subsec:single' on page 7 undefined on input line 9.
-
-
-LaTeX Warning: Reference `subsec:single' on page 7 undefined on input line 11.
-
-
-LaTeX Warning: Reference `subsec:naive' on page 7 undefined on input line 12.
-
-File: figures/proj.eps Graphic file (type eps)
-<figures/proj.eps>
-
-LaTeX Warning: Reference `subsec:kd' on page 7 undefined on input line 44.
-
-
-Underfull \hbox (badness 1552) in paragraph at lines 5--46
-\T1/lmr/m/n/10 These bound-aries are 1-D box con-straints, they are
- []
-
-
-Underfull \hbox (badness 1546) in paragraph at lines 5--46
-\T1/lmr/m/n/10 di-rectly han-dled by the CMA-ES im-ple-men-ta-tion as
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--46
+Underfull \hbox (badness 10000) in paragraph at lines 1--4
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--46
+Underfull \hbox (badness 10000) in paragraph at lines 1--4
 
  []
 
 
-Underfull \hbox (badness 3281) in paragraph at lines 5--46
-\T1/lmr/m/n/10 For each multiple-knob group, we want to im-pose
- []
-
-
-Underfull \hbox (badness 4940) in paragraph at lines 5--46
-\T1/lmr/m/n/10 The im-ple-men-ta-tion is done by leav-ing the knob
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--46
+Underfull \hbox (badness 10000) in paragraph at lines 12--19
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--46
-
- []
-
-
-Underfull \hbox (badness 1975) in paragraph at lines 5--46
+Underfull \hbox (badness 1975) in paragraph at lines 12--19
 \T1/lmr/m/n/10 Let $[][]$ the knobs vec-tor sam-pled by CMA-ES at
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--46
+Underfull \hbox (badness 10000) in paragraph at lines 12--19
+
+ []
+
+File: figures/proj.eps Graphic file (type eps)
+<figures/proj.eps>
+
+LaTeX Warning: Reference `subsec:kd' on page 7 undefined on input line 41.
+
+
+Underfull \hbox (badness 1394) in paragraph at lines 20--43
+[]\T1/lmr/m/n/10 The pro-jec-tion is im-ple-mented us-ing the fol-low-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--46
+Underfull \hbox (badness 10000) in paragraph at lines 20--43
 
  []
 
 
-Underfull \hbox (badness 4353) in paragraph at lines 5--46
-\T1/lmr/m/n/10 The pro-jec-tion is im-ple-mented us-ing the fol-low-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--46
+Underfull \hbox (badness 10000) in paragraph at lines 20--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--46
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--46
-
- []
-
-
-Underfull \hbox (badness 1571) in paragraph at lines 5--46
+Underfull \hbox (badness 1571) in paragraph at lines 20--43
 \T1/lmr/m/n/10 A pe-nal-iza-tion pro-por-tional to the dis-tance be-tween
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
 
-LaTeX Warning: Reference `subsec:multiple' on page 8 undefined on input line 70
+LaTeX Warning: Reference `subsec:multiple' on page 8 undefined on input line 67
 .
 
-LaTeX Font Info:    Try loading font information for T1+frc on input line 73.
+LaTeX Font Info:    Try loading font information for T1+frc on input line 70.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\frcursive\t1frc.fd"
 File: t1frc.fd 2004/06/12 French Cursive font definition
 )
 
-LaTeX Warning: Reference `subsec:multiple' on page 8 undefined on input line 88
+LaTeX Warning: Reference `subsec:multiple' on page 8 undefined on input line 85
 .
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 69--110
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--86
 
  []
 
 
-Underfull \hbox (badness 2142) in paragraph at lines 69--110
+Underfull \hbox (badness 2142) in paragraph at lines 66--86
 \T1/lmr/m/n/10 The un-cer-tainty $\OML/lmm/m/it/10 I[]$ \T1/lmr/m/n/10 acts on 
 this pro-jec-tion: the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--110
+Underfull \hbox (badness 10000) in paragraph at lines 66--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--110
+Underfull \hbox (badness 10000) in paragraph at lines 66--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--110
+Underfull \hbox (badness 10000) in paragraph at lines 66--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--110
+Underfull \hbox (badness 10000) in paragraph at lines 66--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--110
+Underfull \hbox (badness 10000) in paragraph at lines 66--86
+
+ []
+
+)
+Underfull \hbox (badness 1552) in paragraph at lines 87--110
+\T1/lmr/m/n/10 These bound-aries are 1-D box con-straints, they are
+ []
+
+
+Underfull \hbox (badness 1546) in paragraph at lines 87--110
+\T1/lmr/m/n/10 di-rectly han-dled by the CMA-ES im-ple-men-ta-tion as
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--110
 
  []
 
 (C:\Users\felix\code\knobs\ctm.tex) (C:\Users\felix\code\knobs\beats.tex)
 (C:\Users\felix\code\knobs\pems.tex)
-(C:\Users\felix\code\knobs\cpimplementation.tex [8]
+(C:\Users\felix\code\knobs\cpimplementation.tex
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
 []\T1/lmr/m/n/10 Relative dif-fer-ence : $\OML/lmm/m/it/10 []\OT1/lmr/m/n/10 (
 \OML/lmm/m/it/10 CP\OT1/lmr/m/n/10 ) = 100 \OMS/lmsy/m/n/10 
  []
 
-) (C:\Users\felix\code\knobs\parameters.tex)
+) (C:\Users\felix\code\knobs\parameters.tex [8])
 (C:\Users\felix\code\knobs\results.tex)
 (C:\Users\felix\code\knobs\conclusion.tex) (C:\Users\felix\code\knobs\old.tex
 (C:\Users\felix\code\knobs\single.tex
@@ -1579,7 +1560,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--15
 
  []
 
-[9]
+
 Underfull \hbox (badness 10000) in paragraph at lines 18--32
 
  []
@@ -1594,6 +1575,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--32
 \T1/lmr/m/n/10 for single-knob groups, are the math-e-mat-i-cal
  []
 
+[9]
 
 LaTeX Warning: Reference `subsec:naive' on page 10 undefined on input line 33.
 
@@ -1624,12 +1606,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5596 strings out of 493922
- 81579 string characters out of 3147306
- 228288 words of memory out of 3000000
- 8608 multiletter control sequences out of 15000+200000
+ 5595 strings out of 493922
+ 81564 string characters out of 3147306
+ 227288 words of memory out of 3000000
+ 8607 multiletter control sequences out of 15000+200000
  228662 words of font info for 177 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 38i,13n,38p,640b,309s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,13n,38p,640b,295s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on mainl.dvi (10 pages, 75212 bytes).
+Output written on mainl.dvi (10 pages, 73632 bytes).

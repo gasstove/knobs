@@ -23,7 +23,7 @@ $and\ \forall k\in K,\ k\in S.$\\
 $Knob\ groups:\ (g_{i})_{i\in \llbracket 1,\gamma \rrbracket}$\\
 \\
 Formal definition:\\
-$\forall i \in \llbracket 1, \gamma \rrbracket,\ g_{i}=\llbracket \beta_{i}, \eta_{i} \rrbracket \cap K $\\
+$\forall i \in \llbracket 1, \gamma \rrbracket,\ g_{i}=S_{i} \cap K $\\
 \\
 We can deduce the value of the daily flow brought by the knobs of each group from the \emph{knob group flow balance}: the difference between all the flows entering and all the flows exiting their incomplete monitored segment. That is the sum of the flow exiting the mainline entrance of the segment and the flows exiting the monitored on-ramps throughout the segment minus the sum of the flow exiting the mainline exit of the segment and the flows exiting the monitored off-ramps throughout the segment. \\ 
 \color{red}Put here the paragraph Gabriel wrote\color{black}\\
@@ -42,19 +42,19 @@ $0=\mathlarger{\sum\limits_{t\in \tau}}\bigg[f_{\beta_{i}}(t)-f_{\eta_{i}}(t)+\s
 \\
 As stated in eq. \ref{eq:noqueue}, the model-output flows exiting the ramps are equal to their demand flows. The balance equation becomes therefore:\\
 \\
-$0=\Delta_{i}+\mathlarger{\sum\limits_{t\in \tau}}\bigg[\sum\limits_{j\in K\cap S_{i}}\sigma_{j}.r_{j}(t)\bigg]$\\
+$0=\Delta_{i}+\mathlarger{\sum\limits_{t\in \tau}}\bigg[\sum\limits_{j\in g_{i}}\sigma_{j}.r_{j}(t)\bigg]$\\
 \\
 Leading to:\\
 \\
-$\Delta_{i}=\mathlarger{-\sum\limits_{t\in \tau}}\bigg[\sum\limits_{j\in K\cap S_{i}}\sigma_{j}.r_{j}(t)\bigg]$\\
+$\Delta_{i}=\mathlarger{-\sum\limits_{t\in \tau}}\bigg[\sum\limits_{j\in g_{i}}\sigma_{j}.r_{j}(t)\bigg]$\\
 \\
-$\Leftrightarrow \Delta_{i}=\mathlarger{-\sum\limits_{j\in K\cap S_{i}}}\sigma_{j}\bigg[\sum\limits_{t\in \tau}r_{j}(t)\bigg]$\\
+$\Leftrightarrow \Delta_{i}=\mathlarger{-\sum\limits_{j\in g_{i}}}\sigma_{j}\bigg[\sum\limits_{t\in \tau}r_{j}(t)\bigg]$\\
 \\ 
 and thanks to eq. \ref{eq:noqueuetemplate}:
 \begin{equation}
 \centering
 \label{eq:balance}
-\Leftrightarrow\ \ \Delta_{i}=-\sum\limits_{j\in K\cap S_{i}}\sigma_{j}.k_{j}.\Theta
+\Leftrightarrow\ \ \Delta_{i}=-\sum\limits_{j\in g_{i}}\sigma_{j}.k_{j}.\Theta
 \end{equation}
 Eq. \ref{eq:balance} shows that, for every knob group, the knobs composing it are linked by one linear equation.\\
 This equation determines uniquely the value of the single-knob groups and links the multiple-knob groups with one linear constraint. The next paragraph describes how we apply uncertainties to this equation in order to produce new, closer to reality knob boundaries.\\
