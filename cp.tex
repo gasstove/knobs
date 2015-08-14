@@ -1,10 +1,16 @@
 We call \emph{contour plot} the graph representing the value of a quantity on every mainline link at all times: the mainline links as absciss and time steps as ordinates.
-Below is an example of a density contour plot for one day on a 135 links freeway (time is descending).\\
+Fig. \ref{fig:beats_contour}. below is an example of a density contour plot for one day on a 135 links freeway, from a traffic model output.\\
 %\begin{figure}
 %	\caption{Example of a contour plot}
 %	\includegraphics[width=1in]{figures/contourexample.eps}
 %\end{figure}
-This plot is used to monitor easily where and when the congestion is : here, it is contained in the framed part.\\
+\begin{figure}[h]
+	\centering
+	\label{fig:beats_contour}
+	\includegraphics[width=7in]{beats_contour.png}
+	\caption{Example of a density contour plot on a 135 mainline links freeway over 24h out of a traffic model output.}
+\end{figure}
+This plot is used to monitor easily where and when the congestion is : here, we see empirically that it is contained in the two framed parts.\\
 In what follows, by analogy, we will call \emph{contour domain} the set $\mathscr{P}$=$\big\{(i,t)|\ i\in M,\ t\in\tau\big\}$ and \emph{pixel} each of its elements.\\
 On the model output, we define the \emph{congested} pixels as the ones where the density exceeds some \emph{critical density} deduced for each link from the freeway and traffic models. The main feature of our calibration method is to fit the locations and times of these congested pixels to what the measurements indicate.\\
 For each mainline link $i\in{M}$, we denote $d_{i}^{*}$ the critical density.
@@ -29,4 +35,10 @@ We can now define the congestion pattern error denoted $E_{CP}$ as the normalize
 \begin{equation*}
 	E_{CP}(\vec{k})=\frac{\sum_{t\in{\tau}}\sum_{i\in{M}}\mathds{1}_{\{(i,t)\in{(\widetilde{\mathscr{C}}\backslash \mathscr{C})\cup(\mathscr{C}\backslash \widetilde{\mathscr{C}} })\}}}{\sum_{t\in{\tau}}\sum_{i\in{M}}\mathds{1}_{(i,t)\in{\widetilde{\mathscr{C}}}}}
 \end{equation*}
-Note that this error becomes very sensible if the data does not contain much congestion ($Card(\widetilde{\mathscr{C}})<<Card(\mathscr{P})$).
+Fig. \ref{fig:cp_example}. below is a visual representation on a contour domain of $(\widetilde{\mathscr{C}}\backslash \mathscr{C})$ otherwise called \emph{false negative pixels}, $(\mathscr{C}\backslash\widetilde{\mathscr{C}})$ otherwise called \emph{false negative pixels} and $(\mathscr{C}\cap\widetilde{\mathscr{C}})\cup \big(\mathscr{P}\backslash(\mathscr{C}\cup \widetilde{\mathscr{C}})\big)$, which are the \emph{correct congestion matching} pixels.
+\begin{figure}[h]
+	\caption{Visual example of the congestion pattern matching computation.}
+	\label{fig:cp_example}
+	\includegraphics[width=7in]{figures/cp_example.png}
+\end{figure}
+Note that $E_{CP}$ becomes very sensible if the data does not contain much congestion (i.e. $Card(\widetilde{\mathscr{C}})<<Card(\mathscr{P})$).

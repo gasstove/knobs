@@ -1,7 +1,6 @@
 The CMA-ES source code handles box constraints natively using the "repair and penalize" procedure. This consists in repairing non-feasible sampled points before inputing them to the model; and penalizing (i.e. increasing the value of the fitness function) proportionally to the distance between the unfeasible point and the feasible space. This method forces the algorithm to eventually enter and stay in the feasible domain while avoiding evaluating non-allowed points.\\
 However, the source code does not handle linear constraints. We describe here how we apply manually this repair \& penalize procedure to reflect the two linear constraints shown in \ref{subsec:statement}.\\
 \\
-
 %
 %For the multiple-knob groups, the boundaries are refined using the same idea as in \ref{subsec:single} applied to the \emph{knob group flow demands}. The CMA-ES code requires however to implement ourselves a repair \& penalize process instead of changing the knob boundaries, as the constraints will not be box but linear. \color{red}(<- rephrase this)\color{black}.\\
 %\\
@@ -16,7 +15,6 @@ Let $\underline{\vec{k}}^{(p)}$ the knobs vector sampled by CMA-ES at iteration 
 %\\
 %$\forall j\in J,\ \Delta_{j}^{min}=\min{\{\lambda.\Delta_{j};\Delta_{j}-I^{local}\}}$\\
 %$\ and\ \Delta_{j}^{max}=\max{\{\Lambda.\Delta_{j};\Delta_{j}+I^{local}\}}$\\
-
 The projection is implemented using the following program in a standard quadratic optimization solver:\\
 \\
 $minimize \ \ \ \ \ \ \norm{\vec{k}^{(p)}-\underline{\vec{k}}^{(p)}}_{2}$\\
@@ -24,19 +22,19 @@ $s.t.\ \ \ \forall i\in{G}, \ \ \Delta_{i}^{-}< \sum_{j\in{g_{i}}} \sigma_{j}.k_
 $and\ \widetilde{VMT}^{-}\leq\mathlarger{\sum\limits_{i\in K}}\biggl[\sigma_{i}.k_{i}.\Theta.	\sum\limits_{\underset{j>i}{j\in T}}L_{j}\biggr]+VMT^{ref}\leq \widetilde{VMT}^{+}\nonumber $\\
 $and\ \ \ \ \vec{k}^{(p)}\in \mathscr{B}$\\
 \\
-Let us illustrate the effect of this program with an example. We suppose that the $\widetilde{TVM}^{\pm}$ condition above is enough loose for the condition to be respected without influencing the projection (often verified in practice).\\
+Let us illustrate the effect of this program with an example. We suppose that the $\widetilde{TVM}^{\pm}$ condition above is enough loose for the condition to be respected without influencing the projection (often verified in practice).
+\begin{figure}[h!]
+\centering
+\includegraphics[width=3in]{figures/proj.pdf}
+\caption{Example of projection on a two-knobs group}
+\label{fig:proj}
+\end{figure}
 Fig. \ref{fig:proj} above displays, for a two-knobs group $g_{l}=\{i,j\}$, the projection of several sampled points due to the two remaining conditions ($\Delta_{l}^{\pm}$ and $\mathscr{B}$). $D$ is the hyper-plan (straight line in dimension 2) on which the knob group flow will have the exact value $\Delta_{l}$.
 The two \emph{tolerance hyper-plans} on which the knob group flow value will be $\Delta_{l}^{+}$ and $\Delta_{l}^{-}$ are respectively $D^{+}$ and $D^{-}$.
 In addition, the external square is the hyper-cube corresponding to the physical boundaries. 
 The points sampled in the feasible space (inside the doted line trapezium) remain untouched while the others are projected on the nearest point of the edge of the feasible space.\\
 This repair ensures that only feasible values of the input are tested and that the algorithm will not get stuck in an unfeasible well of the physical boundaries hyper-cube.\\
-\begin{figure}
-\centering
-\includegraphics[width=3in]{figures/proj.eps}
-\caption{Example of projection on a two-knobs group}
-\label{fig:proj}
-\end{figure}
-\\
+
 \emph{Penalizing:}\\
 \\
 At each evaluation, a penalization proportional to the distance between the projected and original point is added to the fitness function. This ensures that the algorithm will come closer to the feasible space at every iteration until eventually entering and staying inside it. This feature is important as it avoids two imbalances on the sampling:
