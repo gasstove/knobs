@@ -6,7 +6,7 @@ The description of its architect, Nicolaus Hansen \color{blue}insert bibliograph
 	\item "The CMA-ES does not use or approximate gradients and does not even presume or require their existence"
 	\item It is "competitive for global optimization".
 \end{itemize}
-In addition, it is extremely adaptive as only an initial standard deviation and the population size have to be tuned.\\
+In addition, it is extremely adaptive as only an initial standard deviation $\sigma$ and the population size $\lambda$ have to be tuned.\\
 More information on CMA-ES can be found at https://www.lri.fr/~hansen/cmatutorial.pdf, especially in the parts \emph{0.3: Randomized Black-Box optimization} and \emph{5: Discussion}.\\
 For further understanding, the reader can keep in memory that the algorithm samples a population $\Pi_{p}$ of $\lambda$ random points at iteration $p$. It then evaluates each one of them, and modifies its internal parameters so that the next $\lambda$ sampled points $\Pi_{p+1}$ will be more probably in the direction of the points of $\Pi_{p}$ that gave the smaller $\Phi$ values. It globally keeps memory of the fitness (objective function value) of the points it encountered.\\
 \\

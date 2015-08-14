@@ -31,7 +31,7 @@ Let us illustrate the effect of this program with an example. We suppose that th
 \end{figure}
 Fig. \ref{fig:proj} above displays, for a two-knobs group $g_{l}=\{i,j\}$, the projection of several sampled points due to the two remaining conditions ($\Delta_{l}^{\pm}$ and $\mathscr{B}$). $D$ is the hyper-plan (straight line in dimension 2) on which the knob group flow will have the exact value $\Delta_{l}$.
 The two \emph{tolerance hyper-plans} on which the knob group flow value will be $\Delta_{l}^{+}$ and $\Delta_{l}^{-}$ are respectively $D^{+}$ and $D^{-}$.
-In addition, the external square is the hyper-cube corresponding to the physical boundaries. 
+In addition, the external square is the hyper-cube corresponding to the physical boundaries of the two knobs. 
 The points sampled in the feasible space (inside the doted line trapezium) remain untouched while the others are projected on the nearest point of the edge of the feasible space.\\
 This repair ensures that only feasible values of the input are tested and that the algorithm will not get stuck in an unfeasible well of the physical boundaries hyper-cube.\\
 
@@ -65,6 +65,10 @@ the final fitness function used is $J$ defined by :\\
 	\right.
 \end{equation*}
 \\
+We denote $J^{*}$ the minimum of $J$ encountered by CMA-ES during its search :
+\begin{equation*}
+	J^{*}=\min_{p}{J({\vec{k}^{(p)})}}
+\end{equation*}
 \\
 \emph{Single-knob group specificity:} For a single-knob group, the condition Eq. \ref{eq:ineq} is equivalent to hard boundaries for the concerned knob (one equation in one dimension). In this case, the projection due to Eq. \ref{eq:ineq} is not implemented but the physical boundaries (from $\mathscr{B}$) of the knob input to CMA-ES are replaced by these new boundaries, if they are narrower :\\
 \\

@@ -1,9 +1,5 @@
 We call \emph{contour plot} the graph representing the value of a quantity on every mainline link at all times: the mainline links as absciss and time steps as ordinates.
 Fig. \ref{fig:beats_contour}. below is an example of a density contour plot for one day on a 135 links freeway, from a traffic model output.\\
-%\begin{figure}
-%	\caption{Example of a contour plot}
-%	\includegraphics[width=1in]{figures/contourexample.eps}
-%\end{figure}
 \begin{figure}[h]
 	\centering
 	\label{fig:beats_contour}
@@ -35,10 +31,11 @@ We can now define the congestion pattern error denoted $E_{CP}$ as the normalize
 \begin{equation*}
 	E_{CP}(\vec{k})=\frac{\sum_{t\in{\tau}}\sum_{i\in{M}}\mathds{1}_{\{(i,t)\in{(\widetilde{\mathscr{C}}\backslash \mathscr{C})\cup(\mathscr{C}\backslash \widetilde{\mathscr{C}} })\}}}{\sum_{t\in{\tau}}\sum_{i\in{M}}\mathds{1}_{(i,t)\in{\widetilde{\mathscr{C}}}}}
 \end{equation*}
-Fig. \ref{fig:cp_example}. below is a visual representation on a contour domain of $(\widetilde{\mathscr{C}}\backslash \mathscr{C})$ otherwise called \emph{false negative pixels}, $(\mathscr{C}\backslash\widetilde{\mathscr{C}})$ otherwise called \emph{false negative pixels} and $(\mathscr{C}\cap\widetilde{\mathscr{C}})\cup \big(\mathscr{P}\backslash(\mathscr{C}\cup \widetilde{\mathscr{C}})\big)$, which are the \emph{correct congestion matching} pixels.
+Note that $E_{CP}$ becomes very sensible if the data does not contain much congestion (i.e. $Card(\widetilde{\mathscr{C}})<<Card(\mathscr{P})$).\\
+\\
+Fig. \ref{fig:cp_example}. below is a visual representation on a contour domain of $(\widetilde{\mathscr{C}}\backslash \mathscr{C})$ otherwise called \emph{false negative pixels}, $(\mathscr{C}\backslash\widetilde{\mathscr{C}})$ otherwise called \emph{false negative pixels} and $(\mathscr{C}\cap\widetilde{\mathscr{C}})\cup \big(\mathscr{P}\backslash(\mathscr{C}\cup \widetilde{\mathscr{C}})\big)$, which are the \emph{correct congestion matching} pixels. $\widetilde{\mathscr{C}} here is one rectangle.$
 \begin{figure}[h]
-	\caption{Visual example of the congestion pattern matching computation.}
+	\caption{Visual example of the congestion pattern matching computation. $\widetilde{\mathscr{C}}$ is one rectangle.}
 	\label{fig:cp_example}
 	\includegraphics[width=7in]{figures/cp_example.png}
 \end{figure}
-Note that $E_{CP}$ becomes very sensible if the data does not contain much congestion (i.e. $Card(\widetilde{\mathscr{C}})<<Card(\mathscr{P})$).

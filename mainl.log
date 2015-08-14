@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.8.8)  14 AUG 2015 17:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.8.8)  14 AUG 2015 23:14
 entering extended mode
 **mainl.tex
 (C:\Users\felix\code\knobs\mainl.tex
@@ -797,7 +797,7 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 ** WARNING: \and is valid only when in conference or peerreviewca
-modes (line 24).
+modes (line 23).
 (C:\Users\felix\code\knobs\abstract.tex)
 (C:\Users\felix\code\knobs\introduction.tex
 LaTeX Font Info:    Calculating math sizes for size <11> on input line 3.
@@ -860,7 +860,7 @@ x/config/pdftex.map}]) (C:\Users\felix\code\knobs\traffic_model.tex)
 (C:\Users\felix\code\knobs\data.tex)
 (C:\Users\felix\code\knobs\freeway_notation.tex) [2 <C:/Users/felix/code/knobs/
 figures/scheme.pdf>] (C:\Users\felix\code\knobs\traffic_notation.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1--56
+Underfull \hbox (badness 10000) in paragraph at lines 1--55
 
  []
 
@@ -915,22 +915,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--19
  []
 
 ) (C:\Users\felix\code\knobs\constraintsintro.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1--73
+Underfull \hbox (badness 10000) in paragraph at lines 1--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--73
+Underfull \hbox (badness 10000) in paragraph at lines 1--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--73
+Underfull \hbox (badness 10000) in paragraph at lines 1--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--73
+Underfull \hbox (badness 10000) in paragraph at lines 1--72
 
  []
 
@@ -1121,22 +1121,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--8
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 11--82
+Underfull \hbox (badness 10000) in paragraph at lines 11--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--82
+Underfull \hbox (badness 10000) in paragraph at lines 11--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--82
+Underfull \hbox (badness 10000) in paragraph at lines 11--81
 
  []
 
 [6] (C:\Users\felix\code\knobs\pcs_intro.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1--85
+Underfull \hbox (badness 10000) in paragraph at lines 1--84
 
  []
 
@@ -1190,24 +1190,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--33
 File: figures/beats_contour.png Graphic file (type png)
 
 <use figures/beats_contour.png>
-Package pdftex.def Info: figures/beats_contour.png used on input line 10.
+Package pdftex.def Info: figures/beats_contour.png used on input line 6.
 (pdftex.def)             Requested size: 505.89pt x 253.58287pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--35
+Underfull \hbox (badness 10000) in paragraph at lines 17--31
 
  []
 
-[8] <figures/cp_example.png, id=104, 855.94781pt x 450.9347pt>
+[8]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 38.
+ <figures/cp_example.png, id=104, 855.94781pt x 450.9347pt>
 File: figures/cp_example.png Graphic file (type png)
 
 <use figures/cp_example.png>
-Package pdftex.def Info: figures/cp_example.png used on input line 42.
+Package pdftex.def Info: figures/cp_example.png used on input line 40.
 (pdftex.def)             Requested size: 505.89pt x 266.51704pt.
 )
+Underfull \hbox (badness 10000) in paragraph at lines 33--93
+
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1251,17 +1258,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
 
-) (C:\Users\felix\code\knobs\requirements.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 4--105
+[10 <C:/Users/felix/code/knobs/figures/cp_example.png>])
+(C:\Users\felix\code\knobs\requirements.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 4--104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--105
+Underfull \hbox (badness 10000) in paragraph at lines 4--104
 
  []
 
-[10 <C:/Users/felix/code/knobs/figures/cp_example.png>]
 (C:\Users\felix\code\knobs\cmaes.tex
 Overfull \hbox (50.90125pt too wide) in paragraph at lines 1--4
 \T1/lmr/m/n/11 The de-scrip-tion of its ar-chi-tect, Nico-laus Hansen []in-sert
@@ -1269,12 +1276,12 @@ Overfull \hbox (50.90125pt too wide) in paragraph at lines 1--4
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 9--108
+Underfull \hbox (badness 10000) in paragraph at lines 9--107
 
  []
 
-(C:\Users\felix\code\knobs\implementation.tex
-<figures/proj.pdf, id=113, 302.24919pt x 296.55795pt>
+[11] (C:\Users\felix\code\knobs\implementation.tex
+<figures/proj.pdf, id=116, 302.24919pt x 296.55795pt>
 File: figures/proj.pdf Graphic file (type pdf)
  <use figures/proj.pdf>
 Package pdftex.def Info: figures/proj.pdf used on input line 28.
@@ -1304,16 +1311,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--37
 
  []
 
-[11]
+[12 <C:/Users/felix/code/knobs/figures/proj.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 38--42
 
  []
 
-[12 <C:/Users/felix/code/knobs/figures/proj.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 51--58
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 51--58
 
@@ -1325,23 +1327,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--58
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--72
+Underfull \hbox (badness 10000) in paragraph at lines 51--58
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--72
+Underfull \hbox (badness 10000) in paragraph at lines 71--76
 
  []
 
-) (C:\Users\felix\code\knobs\experiment_intro.tex)
-(C:\Users\felix\code\knobs\pems.tex [13])
-Underfull \hbox (badness 10000) in paragraph at lines 9--119
+[13]) (C:\Users\felix\code\knobs\experiment_intro.tex)
+(C:\Users\felix\code\knobs\pems.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 9--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--119
+Underfull \hbox (badness 10000) in paragraph at lines 9--118
 
  []
 
@@ -1353,28 +1355,67 @@ File: figures/PeMS_contour.png Graphic file (type png)
 <use figures/PeMS_contour.png>
 Package pdftex.def Info: figures/PeMS_contour.png used on input line 11.
 (pdftex.def)             Requested size: 505.89pt x 254.46596pt.
+) [14]
+(C:\Users\felix\code\knobs\results_intro.tex
+<figures/results_array.png, id=153, 1188.69093pt x 974.89218pt>
+File: figures/results_array.png Graphic file (type png)
+
+<use figures/results_array.png>
+Package pdftex.def Info: figures/results_array.png used on input line 7.
+(pdftex.def)             Requested size: 505.89pt x 414.89641pt.
+
+
+LaTeX Warning: Reference `fig:results_graph' on page 15 undefined on input line
+ 9.
+
+[15 <C:/Users/felix/code/knobs/figures/PeMS_contour.png>])
+(C:\Users\felix\code\knobs\umul.tex
+<figures/umul.png, id=158, 998.9822pt x 520.19344pt>
+File: figures/umul.png Graphic file (type png)
+ <use figures/umul.png>
+Package pdftex.def Info: figures/umul.png used on input line 4.
+(pdftex.def)             Requested size: 505.89pt x 263.42982pt.
 )
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-(C:\Users\felix\code\knobs\results.tex [14])
-(C:\Users\felix\code\knobs\conclusion.tex)
+(C:\Users\felix\code\knobs\uadd.tex
+<figures/uadd.png, id=159, 1022.31938pt x 531.48563pt>
+File: figures/uadd.png Graphic file (type png)
+ <use figures/uadd.png>
+Package pdftex.def Info: figures/uadd.png used on input line 4.
+(pdftex.def)             Requested size: 505.89pt x 263.00104pt.
+)
+(C:\Users\felix\code\knobs\sigma.tex
+<figures/sigma.png, id=160, 998.9822pt x 691.83469pt>
+File: figures/sigma.png Graphic file (type png)
+ <use figures/sigma.png>
+Package pdftex.def Info: figures/sigma.png used on input line 4.
+(pdftex.def)             Requested size: 505.89pt x 350.35023pt.
+)
+(C:\Users\felix\code\knobs\lambda.tex)
+(C:\Users\felix\code\knobs\conclusion.tex [16 <C:/Users/felix/code/knobs/figure
+s/results_array.png>] [17 <C:/Users/felix/code/knobs/figures/umul.png> <C:/User
+s/felix/code/knobs/figures/uadd.png>])
 (C:\Users\felix\code\knobs\acknowledgement.tex)
-(C:\Users\felix\code\knobs\appendix.tex) [15 <C:/Users/felix/code/knobs/figures
-/PeMS_contour.png>] (C:\Users\felix\code\knobs\mainl.aux)
+(C:\Users\felix\code\knobs\appendix.tex) [18 <C:/Users/felix/code/knobs/figures
+/sigma.png>] (C:\Users\felix\code\knobs\mainl.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.19997pt have occurred.
 
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 6037 strings out of 493921
- 87449 string characters out of 3147283
- 233534 words of memory out of 3000000
- 9047 multiletter control sequences out of 15000+200000
- 236822 words of font info for 185 fonts, out of 3000000 for 9000
+ 6080 strings out of 493921
+ 88367 string characters out of 3147283
+ 233629 words of memory out of 3000000
+ 9079 multiletter control sequences out of 15000+200000
+ 240932 words of font info for 191 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 38i,13n,38p,640b,276s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,13n,38p,640b,252s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Fil
 es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fon
 ts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ma
@@ -1414,9 +1455,9 @@ les/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/hoekwater/rsfs/rsfs10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/hoekwater/stmary10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/hoekwater/stmary8.pfb>
-Output written on mainl.pdf (15 pages, 665799 bytes).
+Output written on mainl.pdf (18 pages, 995158 bytes).
 PDF statistics:
- 267 PDF objects out of 1000 (max. 8388607)
+ 284 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
