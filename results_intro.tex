@@ -1,4 +1,8 @@
 \emph{General observations:}\\
+With $\kappa=12$ knobs and the standard CMA-ES population size $11=4+\lfloor3.log(\kappa)\rfloor=$), the algorithm always lasts less than $2000\ BeATS\ evaluations$ (i.e. $180 generations$) to converge, which is  approximately 3 hours on a regular computer without parallelization.
+$U^{global}$ is set to a reasonable $5\%$, in order to give some space to CMA-ES on the global quantities.\\
+The main observation, that we will develop later, is that the templates shape limit the quality of the result : in every experiment, not one but two congestion profiles appear on the contour domain and are correlated (i.e. when one grows, the other one too : they are caused by the same knob or fundamental diagram). The only box $\widetilde{mathscr{C}}$ fitting $\mathscr{C}$ implies that the second congestion profile is significant and outside the box.\\
+\emph{Changing the parameters:}\\
 Fig. \ref{fig:results_array}. below contains the parameters and global error results of the experiments we made. We monitored the effect of each parameter by changing it slightly from one execution to another. Going in the details of each execution, we will expose in this part the questions they do and do not answer.\\
 \begin{figure}
 \centering
@@ -6,11 +10,6 @@ Fig. \ref{fig:results_array}. below contains the parameters and global error res
 	\caption{Experiments parameters and $J$ final value.}
 	\includegraphics[width=7in]{figures/results_array.png}
 \end{figure}
-Fig. \ref{fig:results_graph} below displays the influence of the main parameters on $J^{*}$.
-\begin{figure}
-	\caption{Evolution of $J^{*}$ with the parameters.}
-\end{figure}
-
 
 
 

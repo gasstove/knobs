@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.8.8)  14 AUG 2015 23:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.8.8)  15 AUG 2015 11:41
 entering extended mode
 **mainl.tex
 (C:\Users\felix\code\knobs\mainl.tex
@@ -1348,28 +1348,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--118
  []
 
 (C:\Users\felix\code\knobs\ctm.tex) (C:\Users\felix\code\knobs\beats.tex)
-(C:\Users\felix\code\knobs\cpimplementation.tex
-<figures/PeMS_contour.png, id=149, 877.02657pt x 441.14813pt>
+(C:\Users\felix\code\knobs\cpimplementation.tex [14]
+<figures/PeMS_contour.png, id=152, 877.02657pt x 441.14813pt>
 File: figures/PeMS_contour.png Graphic file (type png)
 
 <use figures/PeMS_contour.png>
 Package pdftex.def Info: figures/PeMS_contour.png used on input line 11.
 (pdftex.def)             Requested size: 505.89pt x 254.46596pt.
-) [14]
-(C:\Users\felix\code\knobs\results_intro.tex
-<figures/results_array.png, id=153, 1188.69093pt x 974.89218pt>
+) (C:\Users\felix\code\knobs\results_intro.tex
+<figures/results_array.png, id=153, 1187.18532pt x 976.39781pt>
 File: figures/results_array.png Graphic file (type png)
 
 <use figures/results_array.png>
-Package pdftex.def Info: figures/results_array.png used on input line 7.
-(pdftex.def)             Requested size: 505.89pt x 414.89641pt.
-
-
-LaTeX Warning: Reference `fig:results_graph' on page 15 undefined on input line
- 9.
-
-[15 <C:/Users/felix/code/knobs/figures/PeMS_contour.png>])
-(C:\Users\felix\code\knobs\umul.tex
+Package pdftex.def Info: figures/results_array.png used on input line 11.
+(pdftex.def)             Requested size: 505.89pt x 416.07353pt.
+ [15 <C:/Users/felix/code/knobs/figures/PeMS_contour.png>]) (C:\Users\felix\cod
+e\knobs\umul.tex
 <figures/umul.png, id=158, 998.9822pt x 520.19344pt>
 File: figures/umul.png Graphic file (type png)
  <use figures/umul.png>
@@ -1401,21 +1395,15 @@ s/felix/code/knobs/figures/uadd.png>])
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.19997pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 6080 strings out of 493921
- 88367 string characters out of 3147283
- 233629 words of memory out of 3000000
- 9079 multiletter control sequences out of 15000+200000
+ 6079 strings out of 493921
+ 88348 string characters out of 3147283
+ 233663 words of memory out of 3000000
+ 9078 multiletter control sequences out of 15000+200000
  240932 words of font info for 191 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 38i,13n,38p,640b,252s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,13n,38p,640b,270s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Fil
 es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fon
 ts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ma
@@ -1455,7 +1443,7 @@ les/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/hoekwater/rsfs/rsfs10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/hoekwater/stmary10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/hoekwater/stmary8.pfb>
-Output written on mainl.pdf (18 pages, 995158 bytes).
+Output written on mainl.pdf (18 pages, 993430 bytes).
 PDF statistics:
  284 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -9,5 +9,7 @@ The description of its architect, Nicolaus Hansen \color{blue}insert bibliograph
 In addition, it is extremely adaptive as only an initial standard deviation $\sigma$ and the population size $\lambda$ have to be tuned.\\
 More information on CMA-ES can be found at https://www.lri.fr/~hansen/cmatutorial.pdf, especially in the parts \emph{0.3: Randomized Black-Box optimization} and \emph{5: Discussion}.\\
 For further understanding, the reader can keep in memory that the algorithm samples a population $\Pi_{p}$ of $\lambda$ random points at iteration $p$. It then evaluates each one of them, and modifies its internal parameters so that the next $\lambda$ sampled points $\Pi_{p+1}$ will be more probably in the direction of the points of $\Pi_{p}$ that gave the smaller $\Phi$ values. It globally keeps memory of the fitness (objective function value) of the points it encountered.\\
+In what follows, the objective function $\Phi$ will also be called \emph{fitness function}.\\
 \\
-In what follows, the objective function $\Phi$ will also be called \emph{fitness function}.
+It is recommended to give the same sensitivity to the parameters i.e., in our case, to give the same range to the knobs (we rescaled each one of them to a 0-10 range before imputation to CMA-ES). Furthermore, it is recommended to set $\sigma$ in the range $[0.2,0.5]$ times the size of the knobs range ($[2,5]$ in our case). The standard first value to give to $\lambda$ is $4+\lfloor3.log(\kappa)\rfloor$.
+
