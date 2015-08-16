@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.8.8)  15 AUG 2015 11:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.8.8)  16 AUG 2015 12:10
 entering extended mode
 **mainl.tex
 (C:\Users\felix\code\knobs\mainl.tex
@@ -753,7 +753,14 @@ Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 )
 (C:\Users\felix\code\knobs\_defines.tex
 \c@theorem=\count114
-) (C:\Users\felix\code\knobs\mainl.aux)
+) (C:\Users\felix\code\knobs\mainl.aux
+
+LaTeX Warning: Label `fig:umul' multiply defined.
+
+
+LaTeX Warning: Label `fig:umul' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
@@ -768,8 +775,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 18.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 18.
@@ -1275,12 +1281,12 @@ Overfull \hbox (50.90125pt too wide) in paragraph at lines 1--4
  bib-li-og-ra-phy here[](see https://www.lri.fr/ hansen/cmaesintro.html)
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 9--107
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--15
 
  []
 
-[11] (C:\Users\felix\code\knobs\implementation.tex
+[11]) (C:\Users\felix\code\knobs\implementation.tex
 <figures/proj.pdf, id=116, 302.24919pt x 296.55795pt>
 File: figures/proj.pdf Graphic file (type pdf)
  <use figures/proj.pdf>
@@ -1369,6 +1375,15 @@ File: figures/umul.png Graphic file (type png)
  <use figures/umul.png>
 Package pdftex.def Info: figures/umul.png used on input line 4.
 (pdftex.def)             Requested size: 505.89pt x 263.42982pt.
+File: figures/umul.png Graphic file (type png)
+
+<use figures/umul.png>
+Package pdftex.def Info: figures/umul.png used on input line 9.
+(pdftex.def)             Requested size: 505.89pt x 263.42982pt.
+File: figures/umul.png Graphic file (type png)
+ <use figures/umul.png>
+Package pdftex.def Info: figures/umul.png used on input line 14.
+(pdftex.def)             Requested size: 505.89pt x 263.42982pt.
 )
 (C:\Users\felix\code\knobs\uadd.tex
 <figures/uadd.png, id=159, 1022.31938pt x 531.48563pt>
@@ -1386,24 +1401,27 @@ Package pdftex.def Info: figures/sigma.png used on input line 4.
 )
 (C:\Users\felix\code\knobs\lambda.tex)
 (C:\Users\felix\code\knobs\conclusion.tex [16 <C:/Users/felix/code/knobs/figure
-s/results_array.png>] [17 <C:/Users/felix/code/knobs/figures/umul.png> <C:/User
-s/felix/code/knobs/figures/uadd.png>])
+s/results_array.png>] [17 <C:/Users/felix/code/knobs/figures/umul.png>]
+[18 <C:/Users/felix/code/knobs/figures/uadd.png>])
 (C:\Users\felix\code\knobs\acknowledgement.tex)
-(C:\Users\felix\code\knobs\appendix.tex) [18 <C:/Users/felix/code/knobs/figures
+(C:\Users\felix\code\knobs\appendix.tex) [19 <C:/Users/felix/code/knobs/figures
 /sigma.png>] (C:\Users\felix\code\knobs\mainl.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.19997pt have occurred.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
  6079 strings out of 493921
  88348 string characters out of 3147283
- 233663 words of memory out of 3000000
+ 233702 words of memory out of 3000000
  9078 multiletter control sequences out of 15000+200000
  240932 words of font info for 191 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 38i,13n,38p,640b,270s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,13n,38p,640b,252s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Fil
 es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fon
 ts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ma
@@ -1443,9 +1461,9 @@ les/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/hoekwater/rsfs/rsfs10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/hoekwater/stmary10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/hoekwater/stmary8.pfb>
-Output written on mainl.pdf (18 pages, 993430 bytes).
+Output written on mainl.pdf (19 pages, 995497 bytes).
 PDF statistics:
- 284 PDF objects out of 1000 (max. 8388607)
+ 288 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
