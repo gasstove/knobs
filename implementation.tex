@@ -10,7 +10,7 @@ However, the source code does not handle linear constraints. We describe here ho
 %\\
 \emph{Repairing:}\\
 \\
-Let $\underline{\vec{k}}^{(p)}$ the knobs vector sampled by CMA-ES at iteration p (i.e. before repairment).\\
+Let $\underline{\vec{k}}^{(p)}$ the knobs vector sampled by CMA-ES at iteration $p$ (i.e. before repairment).\\
 %Let $J=\{j\in \llbracket 1,\gamma \rrbracket\ |\ Card(g_{j}>1)\}$\\
 %\\
 %$\forall j\in J,\ \Delta_{j}^{min}=\min{\{\lambda.\Delta_{j};\Delta_{j}-I^{local}\}}$\\
@@ -22,16 +22,16 @@ $s.t.\ \ \ \forall i\in{G}, \ \ \Delta_{i}^{-}< \sum_{j\in{g_{i}}} \sigma_{j}.k_
 $and\ \widetilde{VMT}^{-}\leq\mathlarger{\sum\limits_{i\in K}}\biggl[\sigma_{i}.k_{i}.\Theta.	\sum\limits_{\underset{j>i}{j\in T}}L_{j}\biggr]+VMT^{ref}\leq \widetilde{VMT}^{+}\nonumber $\\
 $and\ \ \ \ \vec{k}^{(p)}\in \mathscr{B}$\\
 \\
-Let us illustrate the effect of this program with an example. We suppose that the $\widetilde{TVM}^{\pm}$ condition above is enough loose for the condition to be respected without influencing the projection (often verified in practice).
+Let us illustrate the effect of this program with an example. We suppose that the $\widetilde{VMT}^{\pm}$ condition above is enough loose for it to be respected without influencing the projection (often verified in practice).
 \begin{figure}[h!]
 \centering
 \includegraphics[width=3in]{figures/proj.pdf}
 \caption{Example of projection on a two-knobs group}
 \label{fig:proj}
 \end{figure}
-Fig. \ref{fig:proj} above displays, for a two-knobs group $g_{l}=\{i,j\}$, the projection of several sampled points due to the two remaining conditions ($\Delta_{l}^{\pm}$ and $\mathscr{B}$). $D$ is the hyper-plan (straight line in dimension 2) on which the knob group flow will have the exact value $\Delta_{l}$.
+Fig. \ref{fig:proj} below displays, for a two-knobs group $g_{l}=\{i,j\}$, the projection of several sampled points due to the two remaining conditions ($\Delta_{l}^{\pm}$ and $\mathscr{B}$). $D$ is the hyper-plan (straight line in dimension 2) on which the knob group flow will have the exact value $\Delta_{l}$.
 The two \emph{tolerance hyper-plans} on which the knob group flow value will be $\Delta_{l}^{+}$ and $\Delta_{l}^{-}$ are respectively $D^{+}$ and $D^{-}$.
-In addition, the external square is the hyper-cube corresponding to the physical boundaries of the two knobs. 
+In addition, the external square is the hyper-cube corresponding to the physical boundaries of the two knobs (from $\mathscr(B]$). 
 The points sampled in the feasible space (inside the doted line trapezium) remain untouched while the others are projected on the nearest point of the edge of the feasible space.\\
 This repair ensures that only feasible values of the input are tested and that the algorithm will not get stuck in an unfeasible well of the physical boundaries hyper-cube.\\
 
@@ -39,13 +39,13 @@ This repair ensures that only feasible values of the input are tested and that t
 \\
 At each evaluation, a penalization proportional to the distance between the projected and original point is added to the fitness function. This ensures that the algorithm will come closer to the feasible space at every iteration until eventually entering and staying inside it. This feature is important as it avoids two imbalances on the sampling:
 \begin{itemize}
-	\item Testing more points on the edges than we should: if the algorithm is left sampling points far from the edges, without penalization, it will have no incentive to prefer sampling next to the feasible space than far. This is an obstacle from entering the feasible space, as all the points on the straight lines perpendicular to the edges would be equivalent. This would lead to a situation where it is common that too much (or all) of the points are sampled on the edges, CMA-ES converging far from the feasible space.\color{red}(<- rewrite this)\color{black}.
+	\item Testing more points on the edges than we should: if the algorithm is left sampling points far from the edges, without penalization, it will have no incentive to prefer sampling next to the feasible space than far. This is an obstacle from entering the feasible space, as all the points on the straight lines perpendicular to the edges would be equivalent. This would lead to a situation where it is common that too much (or all) of the points are sampled on the edges while CMA-ES converges far from the feasible space.
 	\item Imbalance between the edge points tested: the edge points which are the projection of more unfeasible hyper-cube points than others will be sampled unfairly more often.\\
-	\emph{Example:} in Fig. \ref{fig:proj}, the points on the mediator of the segment formed by the intersections of D and the square while inside the square are more numerous than the points on any other straight with same slope.\\
+	\emph{Example:} in Fig. \ref{fig:proj}, the points of the square on the mediator of the segment formed by the intersections of D and the square are more numerous than the points on any other straight with same slope.\\
 The points on one of these straights and below the feasible space are all projected to the same point of the edge of the feasible space. Therefore, without penalization, the middle of the segment cited above would be sampled more often than the other points of its edge, for a reason that is not the simulation output it leads to. 
 \end{itemize}
-
-The penalization is normalized by a factor which is the distance between the physical maximums and minimums vectors, reflecting the \emph{order of magnitude} of the search space.
+~\\
+The penalization, denoted $E_{proj}$ is normalized by a factor which is the distance between the physical maximums and minimums vectors, reflecting the \emph{order of magnitude} of the search space.
 \begin{equation*}
 	E_{proj}(\underline{\vec{k}}^{(p)},\vec{k}^{(p)})=\frac{\norm{\vec{k}^{(p)}-\underline{\vec{k}}^{(p)}}_{2}}{\norm{\begin{bmatrix}m_{1}\\m_{2}\\\vdots\\m_{\kappa}\end{bmatrix}-\begin{bmatrix}0\\0\\\vdots\\0\end{bmatrix}}_{2}}
 \end{equation*}
@@ -69,6 +69,8 @@ We denote $J^{*}$ the minimum of $J$ encountered by CMA-ES during its search :
 \begin{equation*}
 	J^{*}=\min_{p}{J({\vec{k}^{(p)})}}
 \end{equation*}
+\\
+Similarly, all values (input or output) denoted with stars are the ones corresponding to the $J$ evaluation that gave $J^{*}$.\\
 \\
 \emph{Single-knob group specificity:} For a single-knob group, the condition Eq. \ref{eq:ineq} is equivalent to hard boundaries for the concerned knob (one equation in one dimension). In this case, the projection due to Eq. \ref{eq:ineq} is not implemented but the physical boundaries (from $\mathscr{B}$) of the knob input to CMA-ES are replaced by these new boundaries, if they are narrower :\\
 \\

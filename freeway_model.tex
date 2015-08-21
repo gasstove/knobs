@@ -1,29 +1,18 @@
-We consider a one-way segment of freeway and its on-ramps and off-ramps.
-A fraction of the links is monitored.\\
-Define without notation:
+The freeway model is composed by the physical characteristics of the freeway.
+We consider a one-way segment of freeway and its on-ramps and off-ramps.\\
+We define here the components of the considered freeway model :
 \begin{itemize}
-	\item topography of the freeway
-	\item scenario
-	\item links
-	\item lanes
-	\item nodes
-	\item mainline
-	\item on-ramp
-	\item off-ramp
-	\item ramps
-	\item source
-	\item sink
-	\item linear order
-	\item flow
-	\item density
-	\item demand
-	\item monitored link
-	\item other stuff that I've not thought about
+	\item \emph{Mainline}: The freeway itself i.e. the central part where the cars go fast.
+	\item \emph{Ramps}: The portions of road connected to the mainline that allow to enter or exit it.
+	\item \emph{On-ramp}: Ramp to enter the mainline.
+	\item \emph{Off-ramp}: Ramp to exit the mainline.
+	\item \emph{Link}: a link is a segment of freeway or a ramp. The links are separated by \emph{nodes}. Each ramp is connected to a node and a node can only be connected to one ramp. There can be several mainline links in a row without ramps.
+	\item \emph{Linear order}: Links ordered accordingly to the traffic direction.
+	\item \emph{Number of lanes of a link}: number of cars than can be side by side on the same level of the link.
+	\item \emph{Topography of the freeway}: The length of the links and their number of lanes.
+	\item \emph{Source}: Link which is an on-ramp or the entry of the mainline.
+	\item \emph{Sink}: Link which is an off-ramp or the exit of the mainline.
+	\item \emph{Monitored link}: Link which possesses a fully functional sensor monitoring all of its lanes in terms of flow. If it is a mainline link, it must also be monitored in terms of density (or speed, which are equivalent).
 \end{itemize}
-\emph{Freeway model assumptions:}
-\begin{itemize}
-	\item the entrance link is monitored
-	\item the behavior of the HOV
-	\item other assumptions I've not thought about
-\end{itemize}
+
 

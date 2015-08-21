@@ -1,20 +1,18 @@
 This quantity is the sum of the distance traveled on the mainline by each car, over the whole duration.
-Obviously, it is computed using only the monitored mainline links, for the comparison with the data to be relevant.
-\color{red}Explain why it is important in traffic study, why we have chosen it\color{black}
+Obviously, it is computed using only the monitored mainline links, for the comparison with the data to be relevant.\\
 \\
-VMT computation on monitored mainline links output and data:
+VMT computation on monitored mainline links output:
 \begin{equation*}
 	 VMT(\vec{k})=\sum_{i\in{T}}L_{i}\sum_{t\in \tau}f_{i}(t)
 \end{equation*}
 \\
-Denoting $\widetilde{VMT}$ the value computed from the data using the same formula, the error is the relative difference :\\
-\\
+Denoting $\widetilde{VMT}$ the value computed from the data using the same formula, the error is the relative difference :
 \begin{equation*}
 	E_{VMT}(\vec{k})=\frac{|VMT(\vec{k})-\widetilde{VMT}|}{\widetilde{VMT}}
 \end{equation*}
-
+~\\
 \emph{Reduction of the feasible space:} we present here a method used to reduce the feasible space size by forcing the knobs to match the correct VMT value.\\
-VMT is the result of a simple \emph{a priori} calculation that does not need the traffic model output calculation, if we know the boundary conditions at $t=0$ and $t=D$. As exposed in \ref{subsec:traffic_model}, we assume that these conditions are $0\ cars$ on every link ($D$ has to be big enough for these conditions to be very small in comparison with the total number of vehicles during $D$).\\
+VMT is the result of a simple \emph{a priori} calculation that does not need the traffic model output calculation, if we know the boundary conditions at $t=0$ and $t=D$. As exposed in \ref{subsec:traffic_model}, we assume that these conditions are $0\ cars$ on every link ($D$ has to be big enough for these conditions to be very small in comparison with the total number of vehicles going through the freeway during $D$).\\
 \\
 Let $VMT^{ref}=VMT(\vec{k}^{ref})$, a certain $VMT$ reference value output by the model. We suppose that $\vec{k}^{ref}$ is some feasible knobs vector (in our case, we used $\vec{k}^{ref}=(1,...,1)$).\\
 Denoting $VMT^{a priori}(\vec{k})$ the expected VMT value computed from $\vec{k}$:\\
@@ -22,14 +20,14 @@ Denoting $VMT^{a priori}(\vec{k})$ the expected VMT value computed from $\vec{k}
 	\label{eq:TVMapriori}
 	VMT^{a\ priori}(\vec{k})=VMT^{ref}+\mathlarger{\sum\limits_{i\in K}}\biggl[\sigma_{i}.k_{i}.\Theta.	\sum\limits_{\underset{j>i}{j\in T}}L_{j}\biggr]
 \end{equation}	
-The \emph{a-priori} calculation above relies on anticipating the changes from $VMT^{ref}$ caused by changing the knobs from $\vec{k^{ref}}$ to $\vec{k}$. For each knob, the flow change resulting from its modification is multiplied by the remaining mainline length and the "on/off-ramp indicator". All these contributions are then summed.\\
+The \emph{a-priori} calculation above relies on anticipating the deviation from $VMT^{ref}$ caused by changing the knobs from $\vec{k^{ref}}$ to $\vec{k}$. For each knob, the flow change resulting from its modification is multiplied by the remaining mainline length and the "on/off-ramp indicator". All these contributions are then summed.\\
 \\
-The linear equation \ref{eq:TVMapriori} empowers us to constrain the input $\vec{k}$ in order to ensure $\widetilde{VMT}=VMT^{a\ priori}(\vec{k})\approx VMT(\vec{k})$, thus reducing the size of the feasible space by one dimension:
+The linear equation \ref{eq:TVMapriori} empowers us to constrain the input $\vec{k}$ in order to ensure\\ $\widetilde{VMT}=VMT^{a\ priori}(\vec{k})(\approx VMT(\vec{k}))$, thus reducing the size of the feasible space by one dimension:
 \begin{equation*}
 	\mathlarger{\sum\limits_{i\in K}}\biggl[\sigma_{i}.k_{i}.\Theta.	\sum\limits_{\underset{j>i}{j\in T}}L_{j}\biggr]+VMT^{ref}=\widetilde{VMT}
 \end{equation*}
-However, the global uncertainty applied on VMT (which is a global quantity computed from the sum over the whole time and space) forces us to loosen this constraint equation.\\
-Denoting $\widetilde{VMT}^{-}=\widetilde{VMT}.(1-U^{global})$ and\\ $\widetilde{VMT}^{+}=\widetilde{VMT}.(1+U^{global})$, it becomes:\\
+However, the global uncertainty applied on VMT (which is a global quantity computed from the sum over the whole time and space) forces us to loosen this last constraint equation.\\
+Denoting $\widetilde{VMT}^{-}=\widetilde{VMT}.(1-U^{global})$ and $\widetilde{VMT}^{+}=\widetilde{VMT}.(1+U^{global})$, it becomes:\\
 \begin{equation}	
 	\label{eq:TVMineq}
 	\widetilde{VMT}^{-}\leq\mathlarger{\sum\limits_{i\in K}}\biggl[\sigma_{i}.k_{i}.\Theta.	\sum\limits_{\underset{j>i}{j\in T}}L_{j}\biggr]+VMT^{ref}\leq \widetilde{VMT}^{+}

@@ -1,28 +1,28 @@
-Our problem involves three sources of uncertainty:
+Our problem involves three sources of uncertainty or inexactness:
 \begin{itemize}
 	\item Uncertainty on the data: the measurements have a certain confidence interval.
-	\item Uncertainty due to the inexactness of the model itself.\\
-	This uncertainty reflects the fact that, even if we had perfect data and the demand on every link, the model would not output the exact real traffic (and congestion phenomena etc.).
-	\item Uncertainty due to the inexact shape of the templates.
+	\item Inexactness of the model itself.\\
+	This inexactness reflects the fact that, even if we had perfect data and the demand on every link, the model would not output the exact real traffic (and congestion phenomena etc.).
+	\item Inexactness of the shapes of the templates, that forces us to give freedom to the parameters.
 \end{itemize}
-\color{red}<- We gotta decide how much we develop this\color{black}
-\\
-These uncertaintes are merged into two uncertainties:
+These uncertainties and inexactness are merged into two uncertainties:
 \begin{itemize}
-	\item \emph{Uncertainty on the local duration-long measurements:} This describes the uncertainty at the link level. It is applied to the sum of the flow measurements of one sensor for all the duration.\\
+	\item \emph{Uncertainty on the local flow measurements:} This describes the uncertainty at the link level. It is applied to the sum of all the flow measurements of one sensor during the duration.\\
 	Denoting $F_{i}=\sum\limits_{t\in\tau}f_{i}(t)$ and $\widetilde{F_{i}}=\sum\limits_{t\in\tau}\widetilde{f_{i}}(t)$, this local uncertainty is divided into two competing components:
 	\begin{itemize}
-		\item \emph{additive local uncertainty}: denoted $U^{add}$. The additive confidence interval for $F_{i}$ is:\\
-		\\
-		$F_{i}\in\big[\widetilde{F_{i}}-U^{add},\ \widetilde{F_{i}}+U^{add}\big]$
-		\item \emph{multiplicative local uncertainty}: denoted $U^{mul}$. The multiplicative confidence interval for $F_{i}$ is:\\
-		\\
-		 $F_{i}\in\big[\widetilde{F_{i}}.(1-U^{mul}),\ \widetilde{F_{i}}.(1+U^{mul})\big]$
+		\item \emph{additive local uncertainty}: denoted $U^{add}$. The additive confidence interval for $F_{i}$ is:
+		\begin{equation*}
+			F_{i}\in\big[\widetilde{F_{i}}-U^{add},\ \widetilde{F_{i}}+U^{add}\big]
+		\end{equation*}		
+		\item \emph{multiplicative local uncertainty}: denoted $U^{mul}$. The multiplicative confidence interval for $F_{i}$ is:
+		\begin{equation*}
+		 	F_{i}\in\big[\widetilde{F_{i}}.(1-U^{mul}),\ \widetilde{F_{i}}.(1+U^{mul})\big]
+		\end{equation*}
 	\end{itemize}
-	\item \emph{Uncertainty on the global duration-long measurements}: This describes the uncertainty at the whole mainline level. It is a generic multiplicative uncertainty applied to all quantities that are computed from the measurements on every mainline sensor during the whole duration.\\
+	\item \emph{Uncertainty on the global duration-long measurements}: This describes the uncertainty at the whole mainline level. It is a generic multiplicative uncertainty applied to all quantities that are computed from the measurements on every mainline sensor and during the whole duration.\\
 	We denote this uncertainty $U^{global}$. Let $\widetilde{q_{i}}(t)$ a quantity computed from the measurements on link $i$ at time $t$. Denoting $Q=\sum\limits_{i\in T}\sum\limits_{t\in\tau}q_{i}(t)$ and $\widetilde{Q}=\sum\limits_{i\in T}\sum\limits_{t\in\tau}\widetilde{q_{i}}(t)$, the global confidence interval for this quantity is:\\
-	\\
-	$ Q\in \big[\widetilde{Q}.(1-U^{global}),\ \widetilde{Q}.(1+U^{global})\big]$
-	
+	\begin{equation*}
+		 Q\in \big[\widetilde{Q}.(1-U^{global}),\ \widetilde{Q}.(1+U^{global})\big]
+	\end{equation*}	
 \end{itemize}
-\color{red}<- We've got to decide how much we justify this definition of the uncertainties\color{black}
+The reader will understand better the form chosen for the uncertainty further on.

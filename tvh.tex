@@ -1,14 +1,13 @@
 This quantity is the sum of the time spent on the mainline by each car, over the whole duration.
-Obviously, it is computed using only the monitored mainline links, for the comparison with the data to be relevant.
-\color{red}explain why it is important in traffic study, why we have chosen it\color{black}\\ 
+Obviously, it is computed using only the monitored mainline links, for the comparison with the data to be relevant.\\
 \\
-VHT computation on monitored mainline links output and data:
+VHT computation on monitored mainline links output:
 \begin{equation*}
 	 VHT(\vec{k})=\frac{dt}{[1\ hour]}\sum_{i\in{T}}L_{i}\sum_{t\in \tau}d_{i}(t)
 \end{equation*}
 \\
-Denoting $\widetilde{VHT}$ the value computed from the data using the same formula, the error is the relative difference :\\
-\\
+Denoting $\widetilde{VHT}$ the value computed from the data using the same formula, the error is the relative difference :
 \begin{equation*}
 	E_{VHT}(\vec{k})=\frac{|VHT(\vec{k})-\widetilde{VHT}|}{\widetilde{VHT}}
 \end{equation*}
+~\\

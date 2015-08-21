@@ -33,7 +33,8 @@ We can now define the congestion pattern error denoted $E_{CP}$ as the normalize
 \end{equation*}
 Note that $E_{CP}$ becomes very sensible if the data does not contain much congestion (i.e. $Card(\widetilde{\mathscr{C}})<<Card(\mathscr{P})$).\\
 \\
-Fig. \ref{fig:cp_example}. below is a visual representation on a contour domain of $(\widetilde{\mathscr{C}}\backslash \mathscr{C})$ otherwise called \emph{false negative pixels}, $(\mathscr{C}\backslash\widetilde{\mathscr{C}})$ otherwise called \emph{false negative pixels} and $(\mathscr{C}\cap\widetilde{\mathscr{C}})\cup \big(\mathscr{P}\backslash(\mathscr{C}\cup \widetilde{\mathscr{C}})\big)$, which are the \emph{correct congestion matching} pixels. $\widetilde{\mathscr{C}} here is one rectangle.$
+Fig. \ref{fig:cp_example}. below is a visual representation on a contour domain of $(\widetilde{\mathscr{C}}\backslash \mathscr{C})$ otherwise called \emph{false negative pixels}, $(\mathscr{C}\backslash\widetilde{\mathscr{C}})$ otherwise called \emph{false positive pixels} and $(\mathscr{C}\cap\widetilde{\mathscr{C}})\cup \big(\mathscr{P}\backslash(\mathscr{C}\cup \widetilde{\mathscr{C}})\big)$, which are the \emph{correct congestion matching} pixels. 
+\\Here, $\widetilde{\mathscr{C}}$ is the yellow rectangle.
 \begin{figure}[h]
 	\caption{Visual example of the congestion pattern matching computation. $\widetilde{\mathscr{C}}$ is one rectangle.}
 	\label{fig:cp_example}

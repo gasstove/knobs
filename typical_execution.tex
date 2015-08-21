@@ -1,5 +1,6 @@
-If the parameters are in an wide acceptable range that we will define later, all the execution are alike : the limiting factor is the shape of the templates. This prevents the algorithm to surpass a certain level of quality, and makes many different parameters combinations to be equivalent in terms of result quality.
-We describe here the typical behavior of the errors during one of these typical equivalent runs (parameters : $\sigma=5$, $\lambda=11$, $U^{global}=5\% $, $\frac{U^{add}}{\widetilde{F}}=5\% $, $U^{mul}=75 \% $).\\
+If the parameters are in an wide acceptable range that we will define later, all the execution are alike, because the limiting factor is the shape of the templates. This prevents the algorithm to surpass a certain level of quality, and makes many different parameters combinations to be equivalent in terms of result quality.
+We will say abusively that there are several "equivalent global minima" for J.
+We describe here the behavior of the errors during one of these typical equivalent runs (parameters : $\sigma=5$, $\lambda=11$, $U^{global}=5\% $, $\frac{U^{add}}{\widetilde{F}}=5\% $, $U^{mul}=75 \% $).\\
 \\
 \emph{$E_{proj}$}: By construction, $E_{proj}$ is always very close to zero at the end of the execution (the algorithm come closer and closer to the feasible space).\\
 Fig. \ref{fig:eprojexample}. illustrates this behavior on a typical example.\\ 
@@ -9,7 +10,7 @@ Fig. \ref{fig:eprojexample}. illustrates this behavior on a typical example.\\
 	\includegraphics[width=7in]{figures/results_figures/eprojexample.png}
 \end{figure}	
 \\
-\emph{$E_{VMT}$}: By imputation, as explained in \ref{subsec:tvm} and \ref{subsec:implementation}, $E_{VMT}$ is always below $5\%$, often around $1-2\%$ on each iteration of the algorithm.\\
+\emph{$E_{VMT}$}: By imputation, as explained in \ref{subsec:vmt} and \ref{subsec:implementation}, $E_{VMT}$ is always below $5\%$, often around $1-2\%$ on each iteration of the algorithm.\\
 Fig. \ref{fig:vmtexample} reflects the history of $VMT$ during a typical run.\\
 \begin{figure}[h]
 	\label{fig:vmtexample}
@@ -17,8 +18,8 @@ Fig. \ref{fig:vmtexample} reflects the history of $VMT$ during a typical run.\\
 	\includegraphics[width=7in]{figures/results_figures/VMTexample.png}
 \end{figure}	
 \\
-\emph{$E_{VHT}$}: VHT is quite correlated with the congestion : on most executions that lead to an acceptable congestion, $E_{TVH}^{*}$ is less than $U^{global}=5\%$. However, particularly when the knobs are constrained too much,  $E_{TVH}^{*}$ ends up around $20\%$.
-Fig. \ref{fig:vhtexample} reflects the history of $E_{VHT}$ with its most common -good- behavior.\\
+\emph{$E_{VHT}$}: VHT is quite correlated with the congestion : on the typical executions that lead to an acceptable congestion, $E_{TVH}^{*}$ is less than $U^{global}=5\%$. However, particularly when the knobs are constrained too much,  $E_{TVH}^{*}$ ends up around $20\%$.
+Fig. \ref{fig:vhtexample} reflects the history of $E_{VHT}$ with its typical -good- behavior.\\
 \begin{figure}[h]
 	\label{fig:vhtexample}
 	\caption{Evolution of $VHT$ during a typical execution}
@@ -28,21 +29,21 @@ Fig. \ref{fig:vhtexample} reflects the history of $E_{VHT}$ with its most common
 \emph{$E_{CP}$}: $E_{CP}$ behaves like $E_{VHT}$. The congestion shape obtained for the typical run (best we got) is displayed in Fig. \ref{fig:typicalcpexample}. This shape is obtained for all the runs that have acceptable parameters. We can see the two congestion patterns induced by the templates : the smaller one is correlated with the bigger one and impossible to suppress.\\
 \begin{figure}[h]
 	\label{fig:typicalcpexample}
-	\caption{typicalcpexample}
+	\caption{Typical congestion pattern fitting result}
 	\includegraphics[width=7in]{figures/results_figures/typicalcpexample.png}
 \end{figure}	
 \\
 Below is a figure displaying the evolution of the contributions $\phi_{CP}$, $\phi_{VMT}$, $\phi_{VHT}$ and $\phi_{proj}$ of every parameter and their sum, the global error $\Phi$.\\
 \begin{figure}[h]
 	\label{fig:contributionsexample}
-	\caption{contributionsexample}
+	\caption{$\Phi$ and contributions evolution during a typical execution}
 	\includegraphics[width=7in]{figures/results_figures/contributionsexample.png}
 \end{figure}	
 \\
 Finally, the following figure displays the evolution of the CMA-ES parameters, in particular the standard deviations associated to the $12$ knobs.\\
 \begin{figure}[h]
 	\label{fig:cmaesexample}
-	\caption{cmaesexample}
+	\caption{CMA-ES parameters evolution during a typical execution}
 	\includegraphics[width=7in]{figures/results_figures/cmaesexample.png}
 \end{figure}	
 
