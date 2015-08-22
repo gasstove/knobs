@@ -1,0 +1,12 @@
+Below here are the next steps to improve our calibration methods and ideas that we could apply to it: 
+
+\begin{itemize}
+\item \emph{Modulate the templates shape:} The inexact shape of the templates greatly limits the result quality and the depths of analysis that we can do on the parameters effect (especially $\lambda$ and $\sigma$).\\
+To solve this issue, we associate each monitored ramp to a basis of normalized templates. The parameters of the problem will thus be the knob of each ramp \emph{and} the weight associated to each template of the base of each knob. This will greatly improve the result as it would allow the "undesirable" congestion to disappear, while having credible input flow profile shapes (a combination of credible flow profiles is a credible flow profile).
+For example, with a basis of 3 templates, the dimension of the search space is $36$ in our case, which is perfectly manageable by CMA-ES ($3\in [3,100]$)!
+\item \emph{Better knob boundaries:} Instead of having an uncertainty approach, we could choose custom boundaries for each knob, deduced from the observation of the usual traffic around them and the bias the nearby sensor have. We could also study the effect of parameter sensitivity on CMA-ES in order to better the choose the rescale of the knob (which is today the same [0-10] scale for all).
+\item \emph{Use multi-objective CMAES:} Instead of seeing our error minimization problem as single-objective, we could implement the calibration as a multi-objective problem: one for each of the 3 performance errors defined in \ref{subsec:fitnessintro}. A method is exposed in \cite{mocmaes} to use CMA-ES in  multi-objective optimization.
+\item In terms of implementation, the parallelization allowed by CMA-ES (up to $\lambda$ processes at the same time!) allows to divide the search time by $\lambda$.
+\end{itemize}
+~\\
+As said in the introduction, this process will be part of a wider loop that will calibrate the fundamental diagrams jointly with the input flows.

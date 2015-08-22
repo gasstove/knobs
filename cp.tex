@@ -1,10 +1,10 @@
 We call \emph{contour plot} the graph representing the value of a quantity on every mainline link at all times: the mainline links as absciss and time steps as ordinates.
 Fig. \ref{fig:beats_contour}. below is an example of a density contour plot for one day on a 135 links freeway, from a traffic model output.\\
-\begin{figure}[h]
+\begin{figure}[h!]
+	\caption{Example of a density contour plot on a 135 mainline links freeway over 24h out of a traffic model output.}
 	\centering
 	\label{fig:beats_contour}
 	\includegraphics[width=7in]{beats_contour.png}
-	\caption{Example of a density contour plot on a 135 mainline links freeway over 24h out of a traffic model output.}
 \end{figure}
 This plot is used to monitor easily where and when the congestion is : here, we see empirically that it is contained in the two framed parts.\\
 In what follows, by analogy, we will call \emph{contour domain} the set $\mathscr{P}$=$\big\{(i,t)|\ i\in M,\ t\in\tau\big\}$ and \emph{pixel} each of its elements.\\
@@ -35,8 +35,10 @@ Note that $E_{CP}$ becomes very sensible if the data does not contain much conge
 \\
 Fig. \ref{fig:cp_example}. below is a visual representation on a contour domain of $(\widetilde{\mathscr{C}}\backslash \mathscr{C})$ otherwise called \emph{false negative pixels}, $(\mathscr{C}\backslash\widetilde{\mathscr{C}})$ otherwise called \emph{false positive pixels} and $(\mathscr{C}\cap\widetilde{\mathscr{C}})\cup \big(\mathscr{P}\backslash(\mathscr{C}\cup \widetilde{\mathscr{C}})\big)$, which are the \emph{correct congestion matching} pixels. 
 \\Here, $\widetilde{\mathscr{C}}$ is the yellow rectangle.
-\begin{figure}[h]
+\begin{figure}[h!]
+ 	\centering
 	\caption{Visual example of the congestion pattern matching computation. $\widetilde{\mathscr{C}}$ is one rectangle.}
 	\label{fig:cp_example}
 	\includegraphics[width=7in]{figures/cp_example.png}
 \end{figure}
+

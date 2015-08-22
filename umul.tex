@@ -2,8 +2,9 @@
 \\
 Fig. \ref{fig:umulevolution} below shows the evolution of the value of $J^{*}$ with $U_{mul}$.
 \begin{figure}[!h]
-	\label{fig:umulevolution}
+	\centering
 	\caption{Evolution of $J^{*}$ with $U^{mul}$}
+	\label{fig:umulevolution}
 	\includegraphics[width=7in]{figures/umul.png}
 \end{figure}
 As intuitively guessed, the more uncertainty i.e. freedom to the knobs there is, the smaller $J^{*}$ is.
@@ -15,67 +16,73 @@ More precisely, the tendencies observed are the following :
 \end{itemize} 
 Below are 4 groups of figures. They display especially, for each of the 4 values of $U^{mul}$, how the resulting congestion pattern fitting and the history of the knobs trough the execution evolve with $U^{add}$ and $\sigma$.\\
 \begin{figure}[!h]
+	\centering
 	\label{fig:umulcp25}
 	\caption{$\mathbf{U_{mul}=25\%}$. Congestion pattern matching plots : evolution with $U_{add}$ and $\sigma$.}
 	\includegraphics[width=7in]{figures/results_figures/Umul/cp_Umul_25_lambda_11.png}
 \end{figure}	
 \begin{figure}[!h]
-	\label{fig:umulknobs25}
+	\centering
 	\caption{$\mathbf{U_{mul}=25\%}$. Knobs history plots : evolution with $U_{add}$ and $\sigma$.}
+	\label{fig:umulknobs25}
 	\includegraphics[width=7in]{figures/results_figures/Umul/knobs_Umul_25_lambda_11.png}
 \end{figure}
 \begin{figure}[!h]
-	\label{fig:badvht}
+	\centering
 	\caption{$\mathbf{U_{mul}=25\%}$. $E_{VHT}$ evolution plot with $U^{add}=2.5\% $.}
+	\label{fig:badvht}
 	\includegraphics[width=7in]{figures/results_figures/Umul/bad_vht.png}
 \end{figure}		
-\\
+\newpage
 \emph{$U^{mul}=25\% $}: Fig. \ref{fig:umulcp25}, with $U^{mul}=25\% $, shows the effect on the result of excessively tight constraints.  With $U^{add}=2.5\% $ and $5\% $ (two first columns), $\mathscr{C}$ cannot grow enough to fill $\widetilde{\mathscr{C}}$, which is responsible for a very high $E_{CP}^{*}$.\\
 In addition, Fig. \ref{fig:badvht} shows that, with these parameters, $E_{VHT}$ converges to an unacceptable $20\% $ (it converges below $5 \% $ in all other configurations).
 In the last column, $U^{add}=10\% $ gives a good space to all the knobs (many of them having their physical boundaries $\mathscr{B}$). In this case, $U^{mul}=25\% $ has no effect, which is the reason for the good "typical" result obtained.\\
 To summarize, as highlighted previously by Fig. \ref{fig:umulevolution}, setting $U^{mul}$ to a value smaller than a significant threshold ($25\% $ is quite high !) expels the good acceptable solutions from the feasible space.\\
 
 There is nothing clear to conclude from the knobs evolution on Fig. \ref{fig:umulknobs25}., except that many end up on their boundaries (up to 8 of 12 !), which reflects that they were not adequately set i.e. that we describe a far-from-reality situation.
-\\
-
+\newpage
 \begin{figure}[!h]
-	\label{fig:umulcp50}
 	\caption{$\mathbf{U_{mul}=50\%}$. Congestion pattern matching plots : evolution with $U_{add}$ and $\sigma$.}
-	\includegraphics[width=7in]{figures/results_figures/Umul/cp_Umul_50_lambda_11.png}
+	\label{fig:umulcp50}
+	\centering
+	\includegraphics[width=6.8in]{figures/results_figures/Umul/cp_Umul_50_lambda_11.png}
 \end{figure}
 \begin{figure}[!h]
-	\label{fig:umulknobs50}
 	\caption{$\mathbf{U_{mul}=50\%}$. [0-10] knobs history plots : evolution with $U_{add}$ and $\sigma$.}
+	\label{fig:umulknobs50}
 	\includegraphics[width=7in]{figures/results_figures/Umul/knobs_Umul_50_lambda_11.png}
 \end{figure}	
-\emph{$U^{mul}=50\% $}: We observe in Fig. \ref{fig:umulcp50} only typical results, with, as expected, a slight improvement while loosing the $U^{add}$ constraint.
-
+\emph{$U^{mul}=50\% $}: We observe in Fig. \ref{fig:umulcp50} only typical results, with, as expected, a slight improvement while loosing the $U^{add}$ constraint.\\
 In Fig. \ref{fig:umulknobs50}, there are more situations than previously with many knobs converging to another value than their  boundaries. We see a situation (middle-down figure) where the knobs did not finish converging, although the result is good : this illustrates the "equivalent results with different knobs" mentioned before. Some knobs whose action does not affect $\mathscr{C}$ can evolve in a correlated way (e.g. one on-ramp and one off-ramp knob both increase their value), maintaining all the contributions on a constant value. Their variations are therefore invisible to $J$ and $\mathscr{C}$.\\
+\newpage
 \begin{figure}[!h]
-	\label{fig:umulcp75}
+	\centering
 	\caption{$\mathbf{U^{mul}=75\%}$. Congestion pattern matching plots : evolution with $U^{add}$ and $\sigma$.}
-	\includegraphics[width=7in]{figures/results_figures/Umul/cp_Umul_75_lambda_11.png}
+	\label{fig:umulcp75}
+	\includegraphics[width=6.8in]{figures/results_figures/Umul/cp_Umul_75_lambda_11.png}
 \end{figure}
 \begin{figure}[!h]
-	\label{fig:umulknobs75}
+	\centering
 	\caption{$\mathbf{U^{mul}=75\%}$. [0-10] knobs history plots : evolution with $U^{add}$ and $\sigma$.}
+	\label{fig:umulknobs75}
 	\includegraphics[width=7in]{figures/results_figures/Umul/knobs_Umul_75_lambda_11.png}
 \end{figure}	
-\\
-\emph{$U^{mul}=75\% $}: Fig. \ref{fig:umulcp75} is similar to the preceding Fig. \ref{fig:umulcp50}. Unusual but acceptable congestion shapes that we did not observe before can appear when $U^{add}$ is small and $U^{mul}$  is large. 
 
-There are many situations in Fig. \ref{fig:umulknobs75}. where many knobs (up to 9 of 12) converge far from their boundaries : this is a desirable situation and is expected, because we loosened the boundaries.\\
+\emph{$U^{mul}=75\% $}: Fig. \ref{fig:umulcp75} is similar to the preceding Fig. \ref{fig:umulcp50}. Unusual but acceptable congestion shapes that we did not observe before can appear when $U^{add}$ is small and $U^{mul}$  is large. \\
+There are many situations in Fig. \ref{fig:umulknobs75}. where many knobs (up to 9 of 12) converge far from their boundaries : this is a desirable situation and is expected, because we loosened the boundaries.\newpage
 \begin{figure}[!h]
-	\label{fig:umulcp100}
+	\centering
 	\caption{$\mathbf{U^{mul}=100\%}$. Congestion pattern matching plots : evolution with $U^{add}$ and $\sigma$.}
-	\includegraphics[width=7in]{figures/results_figures/Umul/cp_Umul_100_lambda_11.png}
+	\label{fig:umulcp100}
+	\includegraphics[width=6.8in]{figures/results_figures/Umul/cp_Umul_100_lambda_11.png}
 \end{figure}
 \begin{figure}[!h]
-	\label{fig:umulknobs100}
+	\centering
 	\caption{$\mathbf{U^{mul}=100\%}$. [0-10] knobs history plots : evolution with $U{add}$ and $\sigma$.}
+	\label{fig:umulknobs100}
 	\includegraphics[width=7in]{figures/results_figures/Umul/knobs_Umul_100_lambda_11.png}
 \end{figure}	
-\\
+
 \emph{$U^{mul}=100\% $}: Fig. \ref{fig:umulcp100} shows too loose constraints lead too unlikely congestion situations. In this case, all the knob boundaries are their physical boundaries from $\mathscr{B}$ or are close to them. CMA-ES is not "guided" by boundaries that reflect likely traffic, it therefore finds a way of decreasing the congestion error by making non-physic "wholes" in the congestion patterns.\\
 As we began to observe in Fig. \ref{fig:umulcp75}, the worst cases happen when $U^{add}$ is small. In this cases (first and second column), $6$ of the knobs boundaries are very loose, and $6$ are very tight : these are associated with small knob group flow demands, which always cause very tight boundaries with the multiplicative uncertainty.\\
 Increasing $U^{add}$ diminishes this bad effect although it does not disappear : $U^{mul}=100\% $ is not a good choice.\\
@@ -84,8 +91,8 @@ We see in this figure that the traffic does not go smoothly from congested to no
 
 The knobs in Fig. \ref{fig:umulknobs100} do not behave as expected : most of them converge to their boundaries in all the cases, when we expected them to do the opposite, as we loosened the constraints. This illustrates that CMA-ES took advantage of the new non-realistic domains of the feasible space (i.e. far from the exact equation \ref{eq:balance}), close to its boundaries. There is therefore no advantage on setting $U^{mul}$ too large in terms of likelyhood of the resulting knob values.
 \begin{figure}[!h]
-	\label{fig:badcontourplot}
 	\caption{Speed contour plot. Example of non-physical effects on the congestion that appear when $U^{mul}$ is too large (100 \%)}
+	\label{fig:badcontourplot}
 	\includegraphics[width=7in]{figures/results_figures/Umul/badcontourplot.png}
 \end{figure}
 \\

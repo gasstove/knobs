@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.8.8)  21 AUG 2015 16:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.8.8)  22 AUG 2015 17:50
 entering extended mode
 **mainl.tex
 (C:\Users\felix\code\knobs\mainl.tex
@@ -772,61 +772,49 @@ Package: afterpage 1995/10/27 v1.08 After-Page Package (DPC)
 \AP@partial=\box30
 \AP@footins=\box31
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-
-
-Package natbib Warning: The `cite' package should not be used
-(natbib)                with natbib. Use option `sort' instead.
-
-\bibhang=\skip62
-\bibsep=\skip63
-LaTeX Info: Redefining \cite on input line 694.
-LaTeX Info: Redefining \citenum on input line 708.
-\c@NAT@ctr=\count112
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count113
+\c@lips@count=\count112
 )
 (C:\Users\felix\code\knobs\_defines.tex
-\c@theorem=\count114
+\c@theorem=\count113
 ) (C:\Users\felix\code\knobs\mainl.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 18.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 19.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 18.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count115
+\scratchcounter=\count114
 \scratchdimen=\dimen139
 \scratchbox=\box32
-\nofMPsegments=\count116
-\nofMParguments=\count117
+\nofMPsegments=\count115
+\nofMParguments=\count116
 \everyMPshowfont=\toks33
-\MPscratchCnt=\count118
+\MPscratchCnt=\count117
 \MPscratchDim=\dimen140
-\MPnumerator=\count119
-\makeMPintoPDFobject=\count120
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
 \everyMPtoPDFconversion=\toks34
 )
 Package caption Info: Begin \AtBeginDocument code.
@@ -834,7 +822,7 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 ** WARNING: \and is valid only when in conference or peerreviewca
-modes (line 24).
+modes (line 23).
 (C:\Users\felix\code\knobs\abstract.tex)
 (C:\Users\felix\code\knobs\introduction.tex)
 (C:\Users\felix\code\knobs\freeway_model.tex
@@ -896,7 +884,7 @@ File: figures/scheme.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/scheme.pdf used on input line 6.
 (pdftex.def)             Requested size: 505.89pt x 132.20282pt.
 ) [2] (C:\Users\felix\code\knobs\traffic_notation.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1--56
+Underfull \hbox (badness 10000) in paragraph at lines 1--55
 
  []
 
@@ -947,27 +935,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--19
  []
 
 ) (C:\Users\felix\code\knobs\constraintsintro.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1--73
+Underfull \hbox (badness 10000) in paragraph at lines 1--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--73
+Underfull \hbox (badness 10000) in paragraph at lines 1--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--73
+Underfull \hbox (badness 10000) in paragraph at lines 1--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--73
+Underfull \hbox (badness 10000) in paragraph at lines 1--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--73
+Underfull \hbox (badness 10000) in paragraph at lines 1--72
 
  []
 
@@ -1141,27 +1129,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--8
  []
 
 [6])
-Underfull \hbox (badness 10000) in paragraph at lines 11--82
+Underfull \hbox (badness 10000) in paragraph at lines 11--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--82
+Underfull \hbox (badness 10000) in paragraph at lines 11--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--82
+Underfull \hbox (badness 10000) in paragraph at lines 11--81
 
  []
 
 (C:\Users\felix\code\knobs\pcs_intro.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1--85
+Underfull \hbox (badness 10000) in paragraph at lines 1--84
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--85
+Underfull \hbox (badness 10000) in paragraph at lines 1--84
 
  []
 
@@ -1171,7 +1159,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--5
  []
 
 [7])
-Underfull \hbox (badness 10000) in paragraph at lines 12--88
+Underfull \hbox (badness 10000) in paragraph at lines 12--87
 
  []
 
@@ -1205,7 +1193,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--31
 File: figures/beats_contour.png Graphic file (type png)
 
 <use figures/beats_contour.png>
-Package pdftex.def Info: figures/beats_contour.png used on input line 6.
+Package pdftex.def Info: figures/beats_contour.png used on input line 7.
 (pdftex.def)             Requested size: 505.89pt x 253.58287pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 17--31
@@ -1214,24 +1202,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--31
 
 [9 <C:/Users/felix/code/knobs/figures/beats_contour.png>]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 39.
+(Font)              <9> on input line 40.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 39.
+(Font)              <6> on input line 40.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 39.
+(Font)              <5> on input line 40.
 
 <figures/cp_example.png, id=102, 855.94781pt x 450.9347pt>
 File: figures/cp_example.png Graphic file (type png)
 
 <use figures/cp_example.png>
-Package pdftex.def Info: figures/cp_example.png used on input line 41.
+Package pdftex.def Info: figures/cp_example.png used on input line 42.
 (pdftex.def)             Requested size: 505.89pt x 266.51704pt.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 33--94
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--44
 
  []
 
-(C:\Users\felix\code\knobs\fitnessintro.tex
+) (C:\Users\felix\code\knobs\fitnessintro.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--15
 
  []
@@ -1272,23 +1260,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--2
  []
 
 ) (C:\Users\felix\code\knobs\requirements.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 4--105
+Underfull \hbox (badness 10000) in paragraph at lines 4--104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--105
+Underfull \hbox (badness 10000) in paragraph at lines 4--104
 
  []
 
-(C:\Users\felix\code\knobs\cmaes.tex
-Overfull \hbox (50.90125pt too wide) in paragraph at lines 1--4
-\T1/lmr/m/n/11 The de-scrip-tion of its ar-chi-tect, Nico-laus Hansen []in-sert
- bib-li-og-ra-phy here[](see https://www.lri.fr/ hansen/cmaesintro.html)
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 9--17
+(C:\Users\felix\code\knobs\cmaes.tex [11]
+Underfull \hbox (badness 10000) in paragraph at lines 10--18
 
  []
 
@@ -1347,22 +1329,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--58
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--76
+Underfull \hbox (badness 10000) in paragraph at lines 71--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--78
 
  []
 
 ) (C:\Users\felix\code\knobs\experiment_intro.tex)
 (C:\Users\felix\code\knobs\pems.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 9--119
+Underfull \hbox (badness 10000) in paragraph at lines 9--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--119
+Underfull \hbox (badness 10000) in paragraph at lines 9--118
 
  []
 
-(C:\Users\felix\code\knobs\ctm.tex) [14] (C:\Users\felix\code\knobs\beats.tex)
+[14] (C:\Users\felix\code\knobs\ctm.tex) (C:\Users\felix\code\knobs\beats.tex)
 (C:\Users\felix\code\knobs\cpimplementation.tex
 <figures/PeMS_contour.png, id=146, 877.02657pt x 441.14813pt>
 File: figures/PeMS_contour.png Graphic file (type png)
@@ -1370,95 +1357,31 @@ File: figures/PeMS_contour.png Graphic file (type png)
 <use figures/PeMS_contour.png>
 Package pdftex.def Info: figures/PeMS_contour.png used on input line 11.
 (pdftex.def)             Requested size: 505.89pt x 254.46596pt.
-) (C:\Users\felix\code\knobs\results_intro.tex
-<figures/results_array.png, id=147, 1187.18532pt x 977.90344pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15]) (C:\Users\felix\code\knobs\results_intro.tex
+<figures/results_array.png, id=150, 1187.18532pt x 977.90344pt>
 File: figures/results_array.png Graphic file (type png)
 
 <use figures/results_array.png>
 Package pdftex.def Info: figures/results_array.png used on input line 14.
 (pdftex.def)             Requested size: 505.89pt x 416.71512pt.
- [15 <C:/Users/felix/code/knobs/figures/PeMS_contour.png>]) (C:\Users\felix\cod
-e\knobs\typical_execution.tex
-<figures/results_figures/eprojexample.png, id=152, 875.52094pt x 450.18187pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--16
+
+ []
+
+[16 <C:/Users/felix/code/knobs/figures/PeMS_contour.png>])
+(C:\Users\felix\code\knobs\typical_execution.tex
+<figures/results_figures/eprojexample.png, id=155, 875.52094pt x 450.18187pt>
 File: figures/results_figures/eprojexample.png Graphic file (type png)
 
 <use figures/results_figures/eprojexample.png>
 Package pdftex.def Info: figures/results_figures/eprojexample.png used on input
  line 10.
 (pdftex.def)             Requested size: 505.89pt x 260.12337pt.
-
-
-LaTeX Warning: Reference `subsec:tvm' on page 16 undefined on input line 13.
-
-<figures/results_figures/VMTexample.png, id=153, 883.04906pt x 452.4403pt>
-File: figures/results_figures/VMTexample.png Graphic file (type png)
-
-<use figures/results_figures/VMTexample.png>
-Package pdftex.def Info: figures/results_figures/VMTexample.png used on input l
-ine 18.
-(pdftex.def)             Requested size: 505.89pt x 259.19846pt.
-
-<figures/results_figures/VHTexample.png, id=154, 873.2625pt x 452.4403pt>
-File: figures/results_figures/VHTexample.png Graphic file (type png)
-
-<use figures/results_figures/VHTexample.png>
-Package pdftex.def Info: figures/results_figures/VHTexample.png used on input l
-ine 26.
-(pdftex.def)             Requested size: 505.89pt x 262.1049pt.
-
-<figures/results_figures/typicalcpexample.png, id=155, 881.54344pt x 453.94594p
-t>
-File: figures/results_figures/typicalcpexample.png Graphic file (type png)
- <use figures/results_figures/typicalcpexample.png>
-Package pdftex.def Info: figures/results_figures/typicalcpexample.png used on i
-nput line 33.
-(pdftex.def)             Requested size: 505.89pt x 260.5043pt.
-
-<figures/results_figures/contributionsexample.png, id=156, 885.3075pt x 453.945
-94pt>
-File: figures/results_figures/contributionsexample.png Graphic file (type png)
- <use figures/results_figures/contributionsexample.png>
-Package pdftex.def Info: figures/results_figures/contributionsexample.png used 
-on input line 40.
-(pdftex.def)             Requested size: 505.89pt x 259.40297pt.
-
-<figures/results_figures/cmaesexample.png, id=157, 685.05937pt x 489.32813pt>
-File: figures/results_figures/cmaesexample.png Graphic file (type png)
-
-<use figures/results_figures/cmaesexample.png>
-Package pdftex.def Info: figures/results_figures/cmaesexample.png used on input
- line 47.
-(pdftex.def)             Requested size: 505.89pt x 361.35794pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--49
-
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[16]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (C:\Users\felix\code\knobs\umul.tex
-<figures/umul.png, id=161, 988.44281pt x 447.92343pt>
-File: figures/umul.png Graphic file (type png)
- <use figures/umul.png>
-Package pdftex.def Info: figures/umul.png used on input line 7.
-(pdftex.def)             Requested size: 505.89pt x 229.24442pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 1--12
 
@@ -1468,168 +1391,197 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--12
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [17 <C:/Users/felix/code/knobs/figures/results_array.png>]
-<figures/results_figures/Umul/cp_Umul_25_lambda_11.png, id=166, 832.61063pt x 5
+
+LaTeX Warning: Reference `subsec:vmt' on page 18 undefined on input line 13.
+
+<figures/results_figures/VMTexample.png, id=160, 883.04906pt x 452.4403pt>
+File: figures/results_figures/VMTexample.png Graphic file (type png)
+
+<use figures/results_figures/VMTexample.png>
+Package pdftex.def Info: figures/results_figures/VMTexample.png used on input l
+ine 18.
+(pdftex.def)             Requested size: 505.89pt x 259.19846pt.
+ [18 <C:/Users/felix/code/knobs/figures/results_figures/eprojexample.png> <C:/U
+sers/felix/code/knobs/figures/results_figures/VMTexample.png>]
+<figures/results_figures/VHTexample.png, id=166, 873.2625pt x 452.4403pt>
+File: figures/results_figures/VHTexample.png Graphic file (type png)
+
+<use figures/results_figures/VHTexample.png>
+Package pdftex.def Info: figures/results_figures/VHTexample.png used on input l
+ine 26.
+(pdftex.def)             Requested size: 505.89pt x 262.1049pt.
+
+<figures/results_figures/typicalcpexample.png, id=167, 881.54344pt x 453.94594p
+t>
+File: figures/results_figures/typicalcpexample.png Graphic file (type png)
+ <use figures/results_figures/typicalcpexample.png>
+Package pdftex.def Info: figures/results_figures/typicalcpexample.png used on i
+nput line 32.
+(pdftex.def)             Requested size: 505.89pt x 260.5043pt.
+ [19 <C:/Users/felix/code/knobs/figures/results_figures/VHTexample.png> <C:/Use
+rs/felix/code/knobs/figures/results_figures/typicalcpexample.png>]
+<figures/results_figures/contributionsexample.png, id=174, 885.3075pt x 453.945
+94pt>
+File: figures/results_figures/contributionsexample.png Graphic file (type png)
+ <use figures/results_figures/contributionsexample.png>
+Package pdftex.def Info: figures/results_figures/contributionsexample.png used 
+on input line 39.
+(pdftex.def)             Requested size: 505.89pt x 259.40297pt.
+
+<figures/results_figures/cmaesexample.png, id=175, 639.89063pt x 228.855pt>
+File: figures/results_figures/cmaesexample.png Graphic file (type png)
+
+<use figures/results_figures/cmaesexample.png>
+Package pdftex.def Info: figures/results_figures/cmaesexample.png used on input
+ line 46.
+(pdftex.def)             Requested size: 505.89pt x 180.93314pt.
+ [20 <C:/Users/felix/code/knobs/figures/results_figures/contributionsexample.pn
+g> <C:/Users/felix/code/knobs/figures/results_figures/cmaesexample.png>]) (C:\U
+sers\felix\code\knobs\umul.tex
+<figures/umul.png, id=182, 988.44281pt x 447.92343pt>
+File: figures/umul.png Graphic file (type png)
+ <use figures/umul.png>
+Package pdftex.def Info: figures/umul.png used on input line 8.
+(pdftex.def)             Requested size: 505.89pt x 229.24442pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+<figures/results_figures/Umul/cp_Umul_25_lambda_11.png, id=183, 832.61063pt x 5
 04.38437pt>
 File: figures/results_figures/Umul/cp_Umul_25_lambda_11.png Graphic file (type 
 png)
  <use figures/results_figures/Umul/cp_Umul_25_lambda_11.png>
 Package pdftex.def Info: figures/results_figures/Umul/cp_Umul_25_lambda_11.png 
-used on input line 20.
+used on input line 22.
 (pdftex.def)             Requested size: 505.89pt x 306.4657pt.
 
-<figures/results_figures/Umul/knobs_Umul_25_lambda_11.png, id=167, 811.53188pt 
+<figures/results_figures/Umul/knobs_Umul_25_lambda_11.png, id=184, 811.53188pt 
 x 502.87875pt>
 File: figures/results_figures/Umul/knobs_Umul_25_lambda_11.png Graphic file (ty
 pe png)
  <use figures/results_figures/Umul/knobs_Umul_25_lambda_11.png>
 Package pdftex.def Info: figures/results_figures/Umul/knobs_Umul_25_lambda_11.p
-ng used on input line 25.
+ng used on input line 28.
 (pdftex.def)             Requested size: 505.89pt x 313.49274pt.
 
-<figures/results_figures/Umul/bad_vht.png, id=168, 868.74562pt x 453.94594pt>
+<figures/results_figures/Umul/bad_vht.png, id=185, 868.74562pt x 453.94594pt>
 File: figures/results_figures/Umul/bad_vht.png Graphic file (type png)
 
 <use figures/results_figures/Umul/bad_vht.png>
 Package pdftex.def Info: figures/results_figures/Umul/bad_vht.png used on input
- line 30.
+ line 34.
 (pdftex.def)             Requested size: 505.89pt x 264.3486pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--37
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[21 <C:/Users/felix/code/knobs/figures/umul.png>]
+
+LaTeX Warning: Text page 22 contains only floats.
+
+[22 <C:/Users/felix/code/knobs/figures/results_figures/Umul/cp_Umul_25_lambda_1
+1.png> <C:/Users/felix/code/knobs/figures/results_figures/Umul/knobs_Umul_25_la
+mbda_11.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 37--41
 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[18 <C:/Users/felix/code/knobs/figures/results_figures/eprojexample.png> <C:/Us
-ers/felix/code/knobs/figures/results_figures/VMTexample.png>] [19 <C:/Users/fel
-ix/code/knobs/figures/results_figures/VHTexample.png> <C:/Users/felix/code/knob
-s/figures/results_figures/typicalcpexample.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 38--40
-
- []
-
-
-<figures/results_figures/Umul/cp_Umul_50_lambda_11.png, id=180, 827.34094pt x 5
+[23 <C:/Users/felix/code/knobs/figures/results_figures/Umul/bad_vht.png>]
+<figures/results_figures/Umul/cp_Umul_50_lambda_11.png, id=201, 827.34094pt x 5
 10.40688pt>
 File: figures/results_figures/Umul/cp_Umul_50_lambda_11.png Graphic file (type 
 png)
  <use figures/results_figures/Umul/cp_Umul_50_lambda_11.png>
 Package pdftex.def Info: figures/results_figures/Umul/cp_Umul_50_lambda_11.png 
-used on input line 44.
-(pdftex.def)             Requested size: 505.89pt x 312.10318pt.
+used on input line 48.
+(pdftex.def)             Requested size: 491.43622pt x 303.18573pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<figures/results_figures/Umul/knobs_Umul_50_lambda_11.png, id=181, 822.82407pt 
+<figures/results_figures/Umul/knobs_Umul_50_lambda_11.png, id=202, 822.82407pt 
 x 508.90125pt>
 File: figures/results_figures/Umul/knobs_Umul_50_lambda_11.png Graphic file (ty
 pe png)
  <use figures/results_figures/Umul/knobs_Umul_50_lambda_11.png>
 Package pdftex.def Info: figures/results_figures/Umul/knobs_Umul_50_lambda_11.p
-ng used on input line 49.
+ng used on input line 53.
 (pdftex.def)             Requested size: 505.89pt x 312.88312pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 55--57
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+ []
 
-
-<figures/results_figures/Umul/cp_Umul_75_lambda_11.png, id=182, 837.88031pt x 5
+[24 <C:/Users/felix/code/knobs/figures/results_figures/Umul/cp_Umul_50_lambda_1
+1.png> <C:/Users/felix/code/knobs/figures/results_figures/Umul/knobs_Umul_50_la
+mbda_11.png>] [25]
+<figures/results_figures/Umul/cp_Umul_75_lambda_11.png, id=212, 837.88031pt x 5
 06.6428pt>
 File: figures/results_figures/Umul/cp_Umul_75_lambda_11.png Graphic file (type 
 png)
  <use figures/results_figures/Umul/cp_Umul_75_lambda_11.png>
 Package pdftex.def Info: figures/results_figures/Umul/cp_Umul_75_lambda_11.png 
-used on input line 57.
-(pdftex.def)             Requested size: 505.89pt x 305.89752pt.
+used on input line 62.
+(pdftex.def)             Requested size: 491.43622pt x 297.15405pt.
 
-<figures/results_figures/Umul/knobs_Umul_75_lambda_11.png, id=183, 813.0375pt x
+<figures/results_figures/Umul/knobs_Umul_75_lambda_11.png, id=213, 813.0375pt x
  511.9125pt>
 File: figures/results_figures/Umul/knobs_Umul_75_lambda_11.png Graphic file (ty
 pe png)
  <use figures/results_figures/Umul/knobs_Umul_75_lambda_11.png>
 Package pdftex.def Info: figures/results_figures/Umul/knobs_Umul_75_lambda_11.p
-ng used on input line 62.
+ng used on input line 68.
 (pdftex.def)             Requested size: 505.89pt x 318.5229pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<figures/results_figures/Umul/cp_Umul_100_lambda_11.png, id=184, 831.105pt x 50
+[26 <C:/Users/felix/code/knobs/figures/results_figures/Umul/cp_Umul_75_lambda_1
+1.png> <C:/Users/felix/code/knobs/figures/results_figures/Umul/knobs_Umul_75_la
+mbda_11.png>] [27]
+<figures/results_figures/Umul/cp_Umul_100_lambda_11.png, id=222, 831.105pt x 50
 7.39563pt>
 File: figures/results_figures/Umul/cp_Umul_100_lambda_11.png Graphic file (type
  png)
  <use figures/results_figures/Umul/cp_Umul_100_lambda_11.png>
 Package pdftex.def Info: figures/results_figures/Umul/cp_Umul_100_lambda_11.png
- used on input line 71.
-(pdftex.def)             Requested size: 505.89pt x 308.8528pt.
+ used on input line 77.
+(pdftex.def)             Requested size: 491.43622pt x 300.02666pt.
 
-<figures/results_figures/Umul/knobs_Umul_100_lambda_11.png, id=185, 824.32968pt
+<figures/results_figures/Umul/knobs_Umul_100_lambda_11.png, id=223, 824.32968pt
  x 502.12593pt>
 File: figures/results_figures/Umul/knobs_Umul_100_lambda_11.png Graphic file (t
 ype png)
 
 <use figures/results_figures/Umul/knobs_Umul_100_lambda_11.png>
 Package pdftex.def Info: figures/results_figures/Umul/knobs_Umul_100_lambda_11.
-png used on input line 76.
+png used on input line 83.
 (pdftex.def)             Requested size: 505.89pt x 308.15819pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--84
+Underfull \hbox (badness 10000) in paragraph at lines 86--91
 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[20 <C:/Users/felix/code/knobs/figures/results_figures/contributionsexample.png
->] [21 <C:/Users/felix/code/knobs/figures/results_figures/cmaesexample.png> <C:
-/Users/felix/code/knobs/figures/umul.png>]
-
-LaTeX Warning: Text page 22 contains only floats.
-
-[22 <C:/Users/felix/code/knobs/figures/results_figures/Umul/cp_Umul_25_lambda_1
-1.png> <C:/Users/felix/code/knobs/figures/results_figures/Umul/knobs_Umul_25_la
-mbda_11.png>] [23 <C:/Users/felix/code/knobs/figures/results_figures/Umul/bad_v
-ht.png> <C:/Users/felix/code/knobs/figures/results_figures/Umul/cp_Umul_50_lamb
-da_11.png>]
-
-LaTeX Warning: Text page 24 contains only floats.
-
-[24 <C:/Users/felix/code/knobs/figures/results_figures/Umul/knobs_Umul_50_lambd
-a_11.png> <C:/Users/felix/code/knobs/figures/results_figures/Umul/cp_Umul_75_la
-mbda_11.png>]
-<figures/results_figures/Umul/badcontourplot.png, id=213, 883.04906pt x 453.945
+[28 <C:/Users/felix/code/knobs/figures/results_figures/Umul/cp_Umul_100_lambda_
+11.png> <C:/Users/felix/code/knobs/figures/results_figures/Umul/knobs_Umul_100_
+lambda_11.png>]
+<figures/results_figures/Umul/badcontourplot.png, id=229, 883.04906pt x 453.945
 94pt>
 File: figures/results_figures/Umul/badcontourplot.png Graphic file (type png)
  <use figures/results_figures/Umul/badcontourplot.png>
 Package pdftex.def Info: figures/results_figures/Umul/badcontourplot.png used o
-n input line 89.
+n input line 96.
 (pdftex.def)             Requested size: 505.89pt x 260.061pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 85--144
+Underfull \hbox (badness 10000) in paragraph at lines 92--143
 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 (C:\Users\felix\code\knobs\uadd.tex
-<figures/uadd.png, id=214, 1029.09468pt x 465.99094pt>
+<figures/uadd.png, id=230, 1029.09468pt x 465.99094pt>
 File: figures/uadd.png Graphic file (type png)
  <use figures/uadd.png>
 Package pdftex.def Info: figures/uadd.png used on input line 7.
@@ -1644,122 +1596,128 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--13
 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[25 <C:/Users/felix/code/knobs/figures/results_figures/Umul/knobs_Umul_75_lambd
-a_11.png>]
-
-LaTeX Warning: Text page 26 contains only floats.
-
-[26 <C:/Users/felix/code/knobs/figures/results_figures/Umul/cp_Umul_100_lambda_
-11.png> <C:/Users/felix/code/knobs/figures/results_figures/Umul/knobs_Umul_100_
-lambda_11.png>]
-<figures/results_figures/Uadd/cp_Uadd_25_lambda_11.png, id=225, 1371.1225pt x 7
-57.83125pt>
+[29 <C:/Users/felix/code/knobs/figures/results_figures/Umul/badcontourplot.png>
+]
+<figures/results_figures/Uadd/cp_Uadd_25_lambda_11.png, id=235, 840.13875pt x 4
+86.31688pt>
 File: figures/results_figures/Uadd/cp_Uadd_25_lambda_11.png Graphic file (type 
 png)
  <use figures/results_figures/Uadd/cp_Uadd_25_lambda_11.png>
 Package pdftex.def Info: figures/results_figures/Uadd/cp_Uadd_25_lambda_11.png 
-used on input line 21.
-(pdftex.def)             Requested size: 505.89pt x 279.60686pt.
+used on input line 22.
+(pdftex.def)             Requested size: 505.89pt x 292.83868pt.
 
-<figures/results_figures/Uadd/knobs_Uadd_25_lambda_11.png, id=226, 1371.1225pt 
-x 757.83125pt>
+<figures/results_figures/Uadd/knobs_Uadd_25_lambda_11.png, id=236, 803.25093pt 
+x 488.57532pt>
 File: figures/results_figures/Uadd/knobs_Uadd_25_lambda_11.png Graphic file (ty
 pe png)
  <use figures/results_figures/Uadd/knobs_Uadd_25_lambda_11.png>
 Package pdftex.def Info: figures/results_figures/Uadd/knobs_Uadd_25_lambda_11.p
-ng used on input line 26.
-(pdftex.def)             Requested size: 505.89pt x 279.60686pt.
+ng used on input line 28.
+(pdftex.def)             Requested size: 505.89pt x 307.71461pt.
 
-<figures/results_figures/Uadd/cp_Uadd_5_lambda_11.png, id=227, 1371.1225pt x 75
-7.83125pt>
+<figures/results_figures/Uadd/cp_Uadd_5_lambda_11.png, id=237, 839.38594pt x 48
+7.8225pt>
 File: figures/results_figures/Uadd/cp_Uadd_5_lambda_11.png Graphic file (type p
 ng)
  <use figures/results_figures/Uadd/cp_Uadd_5_lambda_11.png>
 Package pdftex.def Info: figures/results_figures/Uadd/cp_Uadd_5_lambda_11.png u
-sed on input line 31.
-(pdftex.def)             Requested size: 505.89pt x 279.60686pt.
+sed on input line 34.
+(pdftex.def)             Requested size: 505.89pt x 294.00581pt.
 
-<figures/results_figures/Uadd/knobs_Uadd_5_lambda_11.png, id=228, 1371.1225pt x
- 757.83125pt>
+<figures/results_figures/Uadd/knobs_Uadd_5_lambda_11.png, id=238, 803.25093pt x
+ 491.58656pt>
 File: figures/results_figures/Uadd/knobs_Uadd_5_lambda_11.png Graphic file (typ
 e png)
  <use figures/results_figures/Uadd/knobs_Uadd_5_lambda_11.png>
 Package pdftex.def Info: figures/results_figures/Uadd/knobs_Uadd_5_lambda_11.pn
-g used on input line 36.
-(pdftex.def)             Requested size: 505.89pt x 279.60686pt.
+g used on input line 40.
+(pdftex.def)             Requested size: 505.89pt x 309.61116pt.
 
-<figures/results_figures/Uadd/cp_Uadd_10_lambda_11.png, id=229, 1371.1225pt x 7
-57.83125pt>
+<figures/results_figures/Uadd/cp_Uadd_10_lambda_11.png, id=239, 838.63312pt x 4
+96.85625pt>
 File: figures/results_figures/Uadd/cp_Uadd_10_lambda_11.png Graphic file (type 
 png)
  <use figures/results_figures/Uadd/cp_Uadd_10_lambda_11.png>
 Package pdftex.def Info: figures/results_figures/Uadd/cp_Uadd_10_lambda_11.png 
-used on input line 41.
-(pdftex.def)             Requested size: 505.89pt x 279.60686pt.
+used on input line 46.
+(pdftex.def)             Requested size: 505.89pt x 299.71571pt.
 
-<figures/results_figures/Uadd/knobs_Uadd_10_lambda_11.png, id=230, 1371.1225pt 
-x 757.83125pt>
+<figures/results_figures/Uadd/knobs_Uadd_10_lambda_11.png, id=240, 805.50937pt 
+x 489.32813pt>
 File: figures/results_figures/Uadd/knobs_Uadd_10_lambda_11.png Graphic file (ty
 pe png)
  <use figures/results_figures/Uadd/knobs_Uadd_10_lambda_11.png>
 Package pdftex.def Info: figures/results_figures/Uadd/knobs_Uadd_10_lambda_11.p
-ng used on input line 46.
-(pdftex.def)             Requested size: 505.89pt x 279.60686pt.
+ng used on input line 52.
+(pdftex.def)             Requested size: 505.89pt x 307.31516pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--51
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[30 <C:/Users/felix/code/knobs/figures/uadd.png>]
+
+LaTeX Warning: Text page 31 contains only floats.
+
+[31 <C:/Users/felix/code/knobs/figures/results_figures/Uadd/cp_Uadd_25_lambda_1
+1.png> <C:/Users/felix/code/knobs/figures/results_figures/Uadd/knobs_Uadd_25_la
+mbda_11.png>]
+
+LaTeX Warning: Text page 32 contains only floats.
+
+[32 <C:/Users/felix/code/knobs/figures/results_figures/Uadd/cp_Uadd_5_lambda_11
+.png> <C:/Users/felix/code/knobs/figures/results_figures/Uadd/knobs_Uadd_5_lamb
+da_11.png>]
+
+LaTeX Warning: Text page 33 contains only floats.
+
+[33 <C:/Users/felix/code/knobs/figures/results_figures/Uadd/cp_Uadd_10_lambda_1
+1.png> <C:/Users/felix/code/knobs/figures/results_figures/Uadd/knobs_Uadd_10_la
+mbda_11.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[27 <C:/Users/felix/code/knobs/figures/results_figures/Umul/badcontourplot.png>
- <C:/Users/felix/code/knobs/figures/uadd.png>])
-Underfull \hbox (badness 10000) in paragraph at lines 53--147
+)
+Underfull \hbox (badness 10000) in paragraph at lines 60--146
 
  []
 
 (C:\Users\felix\code\knobs\sigma.tex
-<figures/sigma.png, id=236, 1018.55531pt x 735.49782pt>
+<figures/sigma.png, id=262, 1018.55531pt x 735.49782pt>
 File: figures/sigma.png Graphic file (type png)
 
 <use figures/sigma.png>
 Package pdftex.def Info: figures/sigma.png used on input line 5.
 (pdftex.def)             Requested size: 505.89pt x 365.30144pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 1--150
+Underfull \hbox (badness 10000) in paragraph at lines 1--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--150
+Underfull \hbox (badness 10000) in paragraph at lines 1--149
 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[28 <C:/Users/felix/code/knobs/figures/results_figures/Uadd/cp_Uadd_25_lambda_1
-1.png (PNG copy)>] (C:\Users\felix\code\knobs\lambda.tex
-<figures/results_figures/lambda/cp_lambda_all.png, id=241, 832.61063pt x 565.36
+[34 <C:/Users/felix/code/knobs/figures/sigma.png>]
+(C:\Users\felix\code\knobs\lambda.tex
+<figures/results_figures/lambda/cp_lambda_all.png, id=267, 832.61063pt x 565.36
 218pt>
 File: figures/results_figures/lambda/cp_lambda_all.png Graphic file (type png)
  <use figures/results_figures/lambda/cp_lambda_all.png>
@@ -1767,7 +1725,7 @@ Package pdftex.def Info: figures/results_figures/lambda/cp_lambda_all.png used
 on input line 9.
 (pdftex.def)             Requested size: 505.89pt x 343.51602pt.
 
-<figures/results_figures/lambda/knobs_lambda_all.png, id=242, 835.62187pt x 566
+<figures/results_figures/lambda/knobs_lambda_all.png, id=268, 835.62187pt x 566
 .86781pt>
 File: figures/results_figures/lambda/knobs_lambda_all.png Graphic file (type pn
 g)
@@ -1776,48 +1734,46 @@ Package pdftex.def Info: figures/results_figures/lambda/knobs_lambda_all.png us
 ed on input line 16.
 (pdftex.def)             Requested size: 505.89pt x 343.19395pt.
 
-<figures/results_figures/lambda/knobs_lambda_all_genmean.png, id=243, 843.15pt 
+<figures/results_figures/lambda/knobs_lambda_all_genmean.png, id=269, 843.15pt 
 x 567.62062pt>
 File: figures/results_figures/lambda/knobs_lambda_all_genmean.png Graphic file 
 (type png)
 
 <use figures/results_figures/lambda/knobs_lambda_all_genmean.png>
 Package pdftex.def Info: figures/results_figures/lambda/knobs_lambda_all_genmea
-n.png used on input line 23.
+n.png used on input line 22.
 (pdftex.def)             Requested size: 505.89pt x 340.57498pt.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 1--153
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1--153
+Underfull \hbox (badness 10000) in paragraph at lines 1--25
 
  []
 
+[35 <C:/Users/felix/code/knobs/figures/results_figures/lambda/cp_lambda_all.png
+>]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-(C:\Users\felix\code\knobs\results_comments.tex) [29 <C:/Users/felix/code/knobs
-/figures/results_figures/Uadd/knobs_Uadd_25_lambda_11.png (PNG copy)>]
+[36 <C:/Users/felix/code/knobs/figures/results_figures/lambda/knobs_lambda_all.
+png>]) (C:\Users\felix\code\knobs\further_work.tex) [37 <C:/Users/felix/code/kn
+obs/figures/results_figures/lambda/knobs_lambda_all_genmean.png>]
 (C:\Users\felix\code\knobs\conclusion.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 1--158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--158
+
+ []
+
 (C:\Users\felix\code\knobs\acknowledgement.tex)
-(C:\Users\felix\code\knobs\appendix.tex) [30 <C:/Users/felix/code/knobs/figures
-/results_figures/Uadd/cp_Uadd_5_lambda_11.png (PNG copy)>] [31 <C:/Users/felix/
-code/knobs/figures/results_figures/Uadd/knobs_Uadd_5_lambda_11.png (PNG copy)>]
-[32 <C:/Users/felix/code/knobs/figures/results_figures/Uadd/cp_Uadd_10_lambda_1
-1.png (PNG copy)> <C:/Users/felix/code/knobs/figures/results_figures/Uadd/knobs
-_Uadd_10_lambda_11.png (PNG copy)>] [33 <C:/Users/felix/code/knobs/figures/sigm
-a.png>] [34 <C:/Users/felix/code/knobs/figures/results_figures/lambda/cp_lambda
-_all.png>] [35 <C:/Users/felix/code/knobs/figures/results_figures/lambda/knobs_
-lambda_all.png>] [36 <C:/Users/felix/code/knobs/figures/results_figures/lambda/
-knobs_lambda_all_genmean.png>] (C:\Users\felix\code\knobs\mainl.aux)
+(C:\Users\felix\code\knobs\mainl.bbl) [38] (C:\Users\felix\code\knobs\mainl.aux
+)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.19997pt have occurred.
@@ -1825,22 +1781,19 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 6460 strings out of 493921
- 99139 string characters out of 3147283
- 239131 words of memory out of 3000000
- 9397 multiletter control sequences out of 15000+200000
+ 6146 strings out of 493921
+ 95409 string characters out of 3147283
+ 233136 words of memory out of 3000000
+ 9086 multiletter control sequences out of 15000+200000
  241765 words of font info for 171 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 38i,13n,38p,665b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/M
-iKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
-nc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ma
-thex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program 
+ 38i,13n,38p,664b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
+iKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/d
+vips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit
+.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
@@ -1867,16 +1820,17 @@ s/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts
 mr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/lm/lmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/lm/lmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/hoekwater/rsfs/rsfs
-10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/hoekwater/stmary10.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/hoekwater/stmary8.pfb>
-Output written on mainl.pdf (36 pages, 2961588 bytes).
+lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri9.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy9.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/hoekwater/rsfs/rsfs10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/hoekwater/stmary10.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/hoekwater/stmary8.pfb>
+Output written on mainl.pdf (38 pages, 2783332 bytes).
 PDF statistics:
- 377 PDF objects out of 1000 (max. 8388607)
+ 396 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  171 words of extra memory for PDF output out of 10000 (max. 10000000)
 

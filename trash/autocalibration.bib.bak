@@ -1,0 +1,47 @@
+% This file was created with JabRef 2.10.
+% Encoding: Cp1252
+
+
+@Unpublished{ctm,
+  Title                    = {The Cell Transmission Model. Part I: A Simple Dynamic Representation of Highway Traffic.},
+  Author                   = {Carlos F. Daganzo},
+  Note                     = {California PATH program.},
+
+  Month                    = {July},
+  Year                     = {1993},
+
+  Owner                    = {felix},
+  Timestamp                = {2015.08.22}
+}
+
+@Electronic{cmaintro,
+  Title                    = {The CMA Evolution Strategy},
+  Author                   = {Nikolaus Hansen},
+  Url                      = {https://www.lri.fr/~hansen/cmaesintro.html},
+
+  Owner                    = {felix},
+  Timestamp                = {2015.08.22}
+}
+
+@Electronic{cmatuto,
+  Title                    = {The CMA Evolution Strategy: A Tutorial},
+  Author                   = {Nikolaus Hansen},
+  Month                    = {June},
+  Organization             = {Inria},
+  Url                      = {https://www.lri.fr/~hansen/cmatutorial.pdf},
+  Year                     = {2011},
+
+  Owner                    = {felix},
+  Timestamp                = {2015.08.22}
+}
+
+@Conference{cmaes,
+  Title                    = {Adapting Arbitrary Normal Mutation Distributions in Evolution Strategies: The Covariance Matrix Adaptation},
+  Author                   = {Nicolaus Hansen \& Andreas Ostermeier},
+  Booktitle                = {Proceedings of the 1996 IEEE Intern. Conf. on Evolutionnary Computation (ICEC '96): 312-317},
+  Year                     = {1996},
+
+  Owner                    = {felix},
+  Timestamp                = {2015.08.22}
+}
+
