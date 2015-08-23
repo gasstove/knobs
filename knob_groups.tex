@@ -1,4 +1,4 @@
-We define here objects and notation to describe a simple situation: the knobs are closely monitored by nearby mainline sensors, leading often to a situation where a ramp is the only non-monitored ramp between two mainline sensors. This is equivalent to it being monitored.\\
+We define here objects and notation to describe a simple situation: the knobs are closely monitored by nearby mainline sensors, leading often to a situation where a ramp is the only non-monitored ramp between two mainline sensors. This is equivalent to the ramp being monitored.\\
 \\
 We call \emph{segment} the set of links between two consecutive mainline sensors, including the links containing these sensors. \\
 We call \emph{knob group} each set of knobs whose corresponding ramps are connected to the same monitored segment.
@@ -38,16 +38,15 @@ The standard flow balance equation of each partially monitored segment is:\\
 \\
 $0=\mathlarger{\sum\limits_{t\in \tau}}\bigg[f_{\beta_{i}}(t)-f_{\eta_{i}}(t)+\sum\limits_{j\in R\cap S_{i}}\sigma_{j}.r_{j}(t)\bigg]$   i.e. the sum of all the signed flows entering and exiting the segment is zero.\\
 \\
-As stated in eq. \ref{eq:noqueue}, the model-output flows exiting the ramps are equal to their demand flows. The balance equation becomes therefore:\\
-\\
-$0=\Delta_{i}+\mathlarger{\sum\limits_{t\in \tau}}\bigg[\sum\limits_{j\in g_{i}}\sigma_{j}.r_{j}(t)\bigg]$\\
-\\
-Leading to:\\
-\\
-$\Delta_{i}=\mathlarger{-\sum\limits_{t\in \tau}}\bigg[\sum\limits_{j\in g_{i}}\sigma_{j}.r_{j}(t)\bigg]$\\
-\\
-$\Leftrightarrow \Delta_{i}=\mathlarger{-\sum\limits_{j\in g_{i}}}\sigma_{j}\bigg[\sum\limits_{t\in \tau}r_{j}(t)\bigg]$\\
-\\ 
+As stated in eq. \ref{eq:noqueue}, $\widetilde{f}_{\beta_{i}}(t)=f_{\beta_{i}}(t)$, $\widetilde{f}_{\eta_{i}}(t)=f_{\eta_{i}}(t)$ and $\widetilde{r_{j}}(t)=r_{j}(t)$. The balance equation becomes therefore:\\
+\begin{equation*}
+0=\Delta_{i}+\mathlarger{\sum\limits_{t\in \tau}}\bigg[\sum\limits_{j\in g_{i}}\sigma_{j}.r_{j}(t)\bigg]
+\end{equation*}
+leading to:
+\begin{align*}
+\Delta_{i}=\mathlarger{-\sum\limits_{t\in \tau}}\bigg[\sum\limits_{j\in g_{i}}\sigma_{j}.r_{j}(t)\bigg]\\
+\Leftrightarrow \Delta_{i}=\mathlarger{-\sum\limits_{j\in g_{i}}}\sigma_{j}\bigg[\sum\limits_{t\in \tau}r_{j}(t)\bigg]\\
+\end{align*}
 and thanks to eq. \ref{eq:noqueuetemplate}:
 \begin{equation}
 \centering

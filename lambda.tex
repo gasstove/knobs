@@ -8,19 +8,20 @@ Fig. \ref{fig:lambdacp}. shows the exact same result quality for every execution
 	\label{fig:lambdacp}
 	\includegraphics[width=7in]{figures/results_figures/lambda/cp_lambda_all.png}
 \end{figure}
-\\
+\newpage
 Fig. \ref{fig:lambdaknobs}. shows that the knobs have very different behaviors between the executions with same $\lambda$ in terms of convergence time. We also observe that the convergence time increases with $\lambda$.\\
 \begin{figure}[!h]
 	\caption{[0-10] knobs history plots : non-unicity and evolution with $\lambda$.}
 	\label{fig:lambdaknobs}
 	\includegraphics[width=7in]{figures/results_figures/lambda/knobs_lambda_all.png}
 \end{figure}
-\\
-Fig. \ref{fig:lambdaknobsgenmean}. which is composed by [0-10] knob plots where the values for each BeATS evaluation have been replaced by the average value of their generation. It shows that the executions with same $\lambda$ converge to different knob values, whatever the $\lambda$. 
+\newpage
+Fig. \ref{fig:lambdaknobsgenmean}. which is composed by [0-10] knob plots where the values for each BeATS evaluation have been replaced by the average value of their generation. It shows that the executions with same $\lambda$ converge to different knob values, whatever the $\lambda$. However, $\lambda$ seems to improve slightly the solution uniqueness.
 \begin{figure}[!h]
 	\caption{[0-10] knobs "average of each generation" history plots : non-unicity and evolution with $\lambda$.}
 	\includegraphics[width=7in]{figures/results_figures/lambda/knobs_lambda_all_genmean.png}
 	\label{fig:lambdaknobsgenmean}
-\end{figure}
+\end{figure}\\
+\\
+\emph{Conclusion:} The experiment allows the observation of the several equivalent global minima : the knobs converge to different values but to the same result quality. Our case does not empower us to highlight any influence of $\lambda$ on the result. It probably has when the search space dimension increases. It also probably has with better template shapes: in this case, there is a better discrimination between the "equivalent global minima", and increasing $\lambda$ is the best way to improve global minimum search.
 \newpage
-\emph{Conclusion:} The experiment allows the observation of the several equivalent global minima : the knobs converge to different values but to the same result quality. Our case does not empower us to highlight any influence of $\lambda$ on the result. It probably has when the search space dimension increases.

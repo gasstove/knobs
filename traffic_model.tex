@@ -4,7 +4,7 @@ Definitions:
 \begin{itemize}	
 	\item \emph{Scenario}: the freeway and traffic models and all the input of the traffic model.
 	\item \emph{Exit flow profile for a link}: Number of vehicles that actually exit the link during every time-step of a time profile.
-	\item \emph{Exit flow demand profile for a link}: exit flow profile for the link \emph{input} to the traffic model. This can differ from the actual output flow profile if there are not enough cars on the freeway or if there is extreme congestion, in which case the cars cannot enter the freeway at the asked rhythm, forming a queue.
+	\item \emph{Exit flow demand profile for a link}: exit flow profile for the link \emph{inputted} to the traffic model. This can differ from the actual output flow profile if there are not enough cars on the freeway or if there is extreme congestion, in which case the cars cannot enter the freeway at the asked rhythm, forming a queue.
 	\item \emph{Density profile for a link}: average of the number of cars simultaneously on the link during every time-step. This can be expressed in cars or in cars/mile.
 \end{itemize}
 ~\\
@@ -13,12 +13,12 @@ The \emph{large traffic model} to calibrate is characterized by the following in
 	\item \emph{Input:} 
 	\begin{itemize}
 		\item   duration of the scenario and time step.
-		\item   value of the exit flow demand at every source and non-mainline sink for every time step (total over the time step).
+		\item   value of the exit flow demand at every source and off-ramp, for every time step (sum of the flow during sthe time step).
 		\item	other parameters proper to the model, assumed to be already calibrated
 	\end{itemize}
 	\item \emph{Output:}
 	\begin{itemize}
-		\item   value of the exit flow on every link, for every time step (total over the time step).
+		\item   value of the exit flow on every link, for every time step (sum of the flow during the time step).
 		\item	value of the density on every link, for every time step (average over the time step).		
 	\end{itemize}
 \end{itemize}
@@ -27,5 +27,5 @@ We make the following \emph{assumptions} on the traffic model:
 \begin{itemize}
 	\item The number of cars on the freeway at the beginning and the end of the time period is very small in comparison with the total number of cars going through the freeway during the period (for example, it is true if we take a period from midnight to midnight).
 	\item There is approximately no queues on the ramps and the off-ramps can always obtain the flow their demand profile ask from the mainline.\\
-	 We justify this by the fact that the situations where this is not true are highly non-realistic and therefore far from our objective. There is no queue in the ramps because the flows we input them will always be inferior to the capacity of each ramp (physical box constraints). On the on-ramps, we have to make the additional usual hypothesis in traffic studies that the cars do not have difficulties to enter the mainline, even if there is congestion.
+	 We justify this by the fact that the situations where this is not true are highly non-realistic and therefore far from our objective. There is no queue in the ramps because the flows we input them will always be inferior to the capacity of each ramp (physical box constraints). In addition, on the on-ramps, we have to make the additional usual hypothesis in traffic studies that the cars do not have difficulties to enter the mainline, even if there is congestion.
 \end{itemize}

@@ -1,10 +1,11 @@
 The local uncertainty described in \ref{sec:uncertainty} prevents us from keeping Eq. \ref{eq:balance} as a constraint for the parameters.\\
 \\
-$\forall i \in {\llbracket 1,\gamma \rrbracket},\ let\ the\ most\ permissive\ uncertainties:$\\
+$\forall i \in {\llbracket 1,\gamma \rrbracket}$, let the most permissive boundaries:\\
+\\
 $\Delta_{i}^{-}=\max{\{|\Delta_{i}|-U^{add};|\Delta_{i}|.(1-U^{mul})\}}$\\
 $\Delta_{i}^{+}=\min{\{|\Delta_{i}|+U^{add};|\Delta_{i}|.(1+U^{mul})\}}$\\
 \\
-Taking the local uncertainty into account in Eq. \ref{eq:balance} is translated into the following linear inequality constraint:
+Taking the local uncertainty into account in Eq. \ref{eq:balance} is translated into the following linear inequality constraints:\\
 \begin{equation}
 \label{eq:ineq}
 	\forall i\in \llbracket 1,\gamma \rrbracket,\ \Delta_{i}^{-}\leq |\sum\limits_{j\in g_{i}}\sigma_{j}.k_{j}.\Theta| \leq \Delta_{i}^{+}
@@ -14,9 +15,9 @@ These $\gamma$ inequalities drastically reduce the size of the search space, def
 \\
 \emph{Comments:}\\
 We can now illustrate and justify the form that we have adopted for the uncertainty. This form allows us to quantify the freedom given to the result: the flow balance of each knob-group is between $(1-U^{mul})$ and $(1+U^{mul})$ times what has been measured by the mainline sensors, aknowledging that we don't accept less than $\pm U^{add}$ cars precision on the measures.\\
-Taking into account $U^{add}$ is indispensable. This is observed in the case of single-knob groups, where Eq. \ref{eq:balance} leads to a unique value for the knob of the group. Let us call it \emph{perfect value of the knob i}, denoted $k_{i}^{perfect}$. It immediately follows from Eq. \ref{eq:ineq} that two new boundaries are set for $k_{i}$, if they are tighter than $[0,m_{i}]$ : $k_{i}\in [(1\pm U^{mul}).k_{i}^{perfect}]$\\
+Taking into account $U^{add}$ is indispensable. This is observed in the case of single-knob groups, where Eq. \ref{eq:balance} leads to a unique value for the knob of the group. Let us call it \emph{perfect value of the knob i}, denoted $k_{i}^{perfect}$. If $U^{add}=0$, it immediately follows from Eq. \ref{eq:ineq} that two new boundaries are set for $k_{i}$, if they are tighter than $[0,m_{i}]$ : $k_{i}\in [(1\pm U^{mul}).k_{i}^{perfect}]$.\\
 The problem happens when the perfect value is a ridiculously small quantity. The maximum obtained with $(1+ U^{mul}).k_{i}^{perfect}$ then corresponds often to a total daily flow of less than $500$ cars exiting the ramp, which is not acceptable.\\ 
 \\
-\emph{Example:} In the scenario we study, one of the ramps has a perfect value of $0.016$, which leads to a maximum of $0.032$ i.e. $406$ cars going through the ramp during the whole day if $U^{mul}$ is set to $100\%$ (very permissive: the daily flow can double what is measured by the mainline sensors). This is way too small for the scenario.\\ 
-However, in fact, the fluctuation allowed by the new boundaries of this ramp is of $406\ cars$, which is $13$ times smaller than $U^{add}=5 \% .[mean\ on\ i\in T\ of\ \widetilde{F_{i}}]=5139\ cars$: the sensors do not have this level of precision, and the sensor noise/bias is responsible for this impossible perfect value. \\
-Once $U^{add}$ is taken into account, the maximum of the knob becomes $0.42$, which corresponds to $5329\ cars$  and offers an acceptable range to the flow going through the ramp.\\
+\emph{Example:} In the scenario we experiment on, one of the ramps has a perfect value of $0.016$, which leads to a maximum of $0.032$ i.e. $406$ cars going through the ramp during the whole day if $U^{mul}$ is set to $100\%$ (very permissive: the daily flow can double what is measured by the mainline sensors). This is way too small for the scenario.\\ 
+However, in fact, the fluctuation allowed by the new boundaries of this ramp is $406\ cars$, which is $13$ times smaller than the sensor uncertainty (i.e. $5 \% .[mean\ on\ i\in T\ of\ \widetilde{F_{i}}]=5139\ cars$): the sensors do not have this level of precision, and the sensor noise/bias is responsible for this impossible perfect value. \\
+Once $U^{add}=5\%.[mean\ on\ i\in T\ of\ \widetilde{F_{i}}]$ is taken into account, the maximum of the knob becomes $0.42$, which corresponds to $5329\ cars$  and offers an acceptable range to the flow going through the ramp.\\

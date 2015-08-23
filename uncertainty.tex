@@ -2,7 +2,7 @@ Our problem involves three sources of uncertainty or inexactness:
 \begin{itemize}
 	\item Uncertainty on the data: the measurements have a certain confidence interval.
 	\item Inexactness of the model itself.\\
-	This inexactness reflects the fact that, even if we had perfect data and the demand on every link, the model would not output the exact real traffic (and congestion phenomena etc.).
+	This inexactness reflects the fact that, even if we had perfect data and the demand on every ramp, the model would not output the exact real traffic (and congestion phenomena etc.).
 	\item Inexactness of the shapes of the templates, that forces us to give freedom to the parameters.
 \end{itemize}
 These uncertainties and inexactness are merged into two uncertainties:
@@ -19,8 +19,9 @@ These uncertainties and inexactness are merged into two uncertainties:
 		 	F_{i}\in\big[\widetilde{F_{i}}.(1-U^{mul}),\ \widetilde{F_{i}}.(1+U^{mul})\big]
 		\end{equation*}
 	\end{itemize}
-	\item \emph{Uncertainty on the global duration-long measurements}: This describes the uncertainty at the whole mainline level. It is a generic multiplicative uncertainty applied to all quantities that are computed from the measurements on every mainline sensor and during the whole duration.\\
-	We denote this uncertainty $U^{global}$. Let $\widetilde{q_{i}}(t)$ a quantity computed from the measurements on link $i$ at time $t$. Denoting $Q=\sum\limits_{i\in T}\sum\limits_{t\in\tau}q_{i}(t)$ and $\widetilde{Q}=\sum\limits_{i\in T}\sum\limits_{t\in\tau}\widetilde{q_{i}}(t)$, the global confidence interval for this quantity is:\\
+	\item \emph{Uncertainty on the global duration-long measurements}: This describes the uncertainty at the whole mainline level. It is a generic multiplicative uncertainty applied to all quantities that are computed from the measurements on every mainline sensor and during the whole duration. We denote this uncertainty $U^{global}$.\\
+\\
+Let $\widetilde{q_{i}}(t)$ a quantity computed from the measurements on link $i$ at time $t$. Denoting $Q=\sum\limits_{i\in T}\sum\limits_{t\in\tau}q_{i}(t)$ and $\widetilde{Q}=\sum\limits_{i\in T}\sum\limits_{t\in\tau}\widetilde{q_{i}}(t)$, the global confidence interval for this quantity is:\\
 	\begin{equation*}
 		 Q\in \big[\widetilde{Q}.(1-U^{global}),\ \widetilde{Q}.(1+U^{global})\big]
 	\end{equation*}	

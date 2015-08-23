@@ -6,19 +6,19 @@ Fig. \ref{fig:umulevolution} below shows the evolution of the value of $J^{*}$ w
 	\caption{Evolution of $J^{*}$ with $U^{mul}$}
 	\label{fig:umulevolution}
 	\includegraphics[width=7in]{figures/umul.png}
-\end{figure}
-As intuitively guessed, the more uncertainty i.e. freedom to the knobs there is, the smaller $J^{*}$ is.
+\end{figure}\\
+As intuitively guessed, the more uncertainty i.e. freedom to the knobs there is, the smaller $J^{*}$ is.\\
 More precisely, the tendencies observed are the following :
 \begin{itemize}
-	\item If $U^{add}$ is not too big (i.e. doesn't override the effect of $U^{mul}$), there is a minimum threshold on $U^{mul}$ for $J^{*}$ to be reasonably small : in our case, $U^{mul}$ around $25\% $ doesn't give satisfactory $J^{*}$ values ($35\% $ and $45\% $). It enters in an acceptable range (in comparison with the best results) if $U^{mul}\geq 50\% $. This shows the importance of the uncertainty, due to the lack of precision of the whole : a multiplicative uncertainty of $25\% $ or less is not enough.
+	\item If $U^{add}$ is not too big (i.e. doesn't override the effect of $U^{mul}$), there is a minimum threshold on $U^{mul}$ for $J^{*}$ to be reasonably small : in our case, $U^{mul}$ around $25\% $ doesn't give satisfactory $J^{*}$ values ($35\% $ and $45\% $). It enters in an acceptable range if $U^{mul}\geq 50\% $. This shows the importance of the uncertainty, due to the lack of precision of the whole : a multiplicative uncertainty of $25\% $ or less is not enough.
 	\item There is no real difference for the effect of $U^{mul}$ between $50\% $ and $75\% $: they are the typical executions.
-	\item When the multiplicative uncertainty is very big, $U^{mul}=100\% $ (minimums are zero i.e. the physical minimums; and the maximums correspond to twice the partially monitored segments flow demands), the result seem to slightly improve. However, one run ($\sigma=5$ and $\frac{U^{add}}{\widetilde{F}}=5\% $) shows that it is not always the case :  the feasible space becomes very big and CMA-ES is not guided at all. In fact, as we will observe on the congestion pattern contour plots in this case, the results are not satisfactory.
+	\item When the multiplicative uncertainty is very big, i.e. $U^{mul}=100\% $ (minimums are zero i.e. the physical minimums; and the maximums correspond to twice the partially monitored segments flow demands), the result seem to slightly improve. However, one run ($\sigma=5$ and $\frac{U^{add}}{\widetilde{F}}=5\% $) shows that it is not always the case :  the feasible space becomes very big and CMA-ES is not guided at all. In fact, as we will observe on the congestion pattern contour plots in this case, the results are not satisfactory.
 \end{itemize} 
 Below are 4 groups of figures. They display especially, for each of the 4 values of $U^{mul}$, how the resulting congestion pattern fitting and the history of the knobs trough the execution evolve with $U^{add}$ and $\sigma$.\\
 \begin{figure}[!h]
 	\centering
+		\caption{$\mathbf{U_{mul}=25\%}$. Congestion pattern matching plots : evolution with $U_{add}$ and $\sigma$.}
 	\label{fig:umulcp25}
-	\caption{$\mathbf{U_{mul}=25\%}$. Congestion pattern matching plots : evolution with $U_{add}$ and $\sigma$.}
 	\includegraphics[width=7in]{figures/results_figures/Umul/cp_Umul_25_lambda_11.png}
 \end{figure}	
 \begin{figure}[!h]
@@ -39,7 +39,7 @@ In addition, Fig. \ref{fig:badvht} shows that, with these parameters, $E_{VHT}$ 
 In the last column, $U^{add}=10\% $ gives a good space to all the knobs (many of them having their physical boundaries $\mathscr{B}$). In this case, $U^{mul}=25\% $ has no effect, which is the reason for the good "typical" result obtained.\\
 To summarize, as highlighted previously by Fig. \ref{fig:umulevolution}, setting $U^{mul}$ to a value smaller than a significant threshold ($25\% $ is quite high !) expels the good acceptable solutions from the feasible space.\\
 
-There is nothing clear to conclude from the knobs evolution on Fig. \ref{fig:umulknobs25}., except that many end up on their boundaries (up to 8 of 12 !), which reflects that they were not adequately set i.e. that we describe a far-from-reality situation.
+There is nothing clear to conclude from the knobs evolution on Fig. \ref{fig:umulknobs25}., except that many end up on their boundaries (up to 8 of 12 !), which reflects that they were set too tight i.e. that we describe a far-from-reality situation.
 \newpage
 \begin{figure}[!h]
 	\caption{$\mathbf{U_{mul}=50\%}$. Congestion pattern matching plots : evolution with $U_{add}$ and $\sigma$.}
@@ -53,7 +53,7 @@ There is nothing clear to conclude from the knobs evolution on Fig. \ref{fig:umu
 	\includegraphics[width=7in]{figures/results_figures/Umul/knobs_Umul_50_lambda_11.png}
 \end{figure}	
 \emph{$U^{mul}=50\% $}: We observe in Fig. \ref{fig:umulcp50} only typical results, with, as expected, a slight improvement while loosing the $U^{add}$ constraint.\\
-In Fig. \ref{fig:umulknobs50}, there are more situations than previously with many knobs converging to another value than their  boundaries. We see a situation (middle-down figure) where the knobs did not finish converging, although the result is good : this illustrates the "equivalent results with different knobs" mentioned before. Some knobs whose action does not affect $\mathscr{C}$ can evolve in a correlated way (e.g. one on-ramp and one off-ramp knob both increase their value), maintaining all the contributions on a constant value. Their variations are therefore invisible to $J$ and $\mathscr{C}$.\\
+In Fig. \ref{fig:umulknobs50}, there are more situations than previously with many knobs converging to another value than their  boundaries. We see a situation (middle-down figure) where the knobs did not finish converging, although the result is good : this illustrates the "equivalent global minima" mentioned in \ref{subsec:results_intro}. Some knobs whose action do not affect $\mathscr{C}$ can evolve in a correlated way (e.g. one on-ramp and one off-ramp knob both increase their value), maintaining all the contributions on a constant value. Their variations are therefore invisible to $\mathscr{C}$ and $J$.\\
 \newpage
 \begin{figure}[!h]
 	\centering
@@ -89,7 +89,7 @@ Increasing $U^{add}$ diminishes this bad effect although it does not disappear :
 This effect is not caused by the congestion threshold $d_{i}^{*}$ choice : full density or speed contour plots show the same non-physical undesirable congestion shapes. We see them in Fig. \ref{fig:badcontourplot}, a speed contour plot that intuitively reflects the congestion (located where the speeds are clearly slower).
 We see in this figure that the traffic does not go smoothly from congested to non-congested, implying that the framed strange shape is not due to $d_{i}^{*}$ but to truly non-physic phenomena output by BeATS.\\
 
-The knobs in Fig. \ref{fig:umulknobs100} do not behave as expected : most of them converge to their boundaries in all the cases, when we expected them to do the opposite, as we loosened the constraints. This illustrates that CMA-ES took advantage of the new non-realistic domains of the feasible space (i.e. far from the exact equation \ref{eq:balance}), close to its boundaries. There is therefore no advantage on setting $U^{mul}$ too large in terms of likelyhood of the resulting knob values.
+The knobs in Fig. \ref{fig:umulknobs100} do not behave as expected : most of them converge to their boundaries in all the cases, when we expected them to do the opposite, as we loosened the constraints. This illustrates that CMA-ES took advantage of the new non-realistic domains of the feasible space (i.e. far from the exact equation \ref{eq:balance}), close to its boundaries (many knobs converged to 0 !). There is therefore no advantage on setting $U^{mul}$ too large in terms of likelyhood of the resulting knob values.
 \begin{figure}[!h]
 	\caption{Speed contour plot. Example of non-physical effects on the congestion that appear when $U^{mul}$ is too large (100 \%)}
 	\label{fig:badcontourplot}

@@ -28,8 +28,8 @@ N.~Hansen. The cma evolution strategy. [Online]. Available:
 \BIBentrySTDinterwordspacing
 
 \bibitem{cmaes}
-N.~H. .~A. Ostermeier, ``Adapting arbitrary normal mutation distributions in
-  evolution strategies: The covariance matrix adaptation,'' in
+N.~Hansen and A.~Ostermeier, ``Adapting arbitrary normal mutation distributions
+  in evolution strategies: The covariance matrix adaptation,'' in
   \emph{Proceedings of the 1996 IEEE Intern. Conf. on Evolutionnary Computation
   (ICEC '96): 312-317}, 1996.
 
@@ -44,7 +44,7 @@ C.~F. Daganzo, ``The cell transmission model. part i: A simple dynamic
   representation of highway traffic.'' July 1993, california PATH program.
 
 \bibitem{mocmaes}
-N.~H. . S.~R. Christian~Igel, ``Covariance matrix adaptation for
+N.~H. Christian~Igel and S.~Roth, ``Covariance matrix adaptation for
   multi-objective optimization,'' \emph{MIT Press, Evolutionnary Computation
   Volume 15, Number 1}, 2007.
 

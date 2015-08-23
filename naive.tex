@@ -1,25 +1,20 @@
 The box constraints applied to each knob are physical capacity limits imposed by the ramp they are associated with. They reflect that the maximum value of the ramp flow cannot exceed the capacity of the ramp.\\
 \\
-	$\forall i\in{K}$, the maximum $m_{i}$ of knob $i$ is defined by:
+$\forall i\in{K}$, the maximum $m_{i}$ of knob $i$ is defined by:
 	\\
+\begin{align*}
+	\forall t \in \tau,\ \ \ \ \ \ \ \ \ \ k_{i}.t_{i}(t)=\bar{r_{i}}(t)\leq\ [Capacity\ of\ the\ ramp\ associated\ to\ knob\ i]\\
 	\\
-	$\forall t \in \tau,$\\
-	$k_{i}.t_{i}(t)=\bar{r_{i}}(t)\leq\ \scriptstyle{[Capacity\ of\ the\ ramp\ associated\ to\ knob\ i]}$
-	\\
-	\\
-	$\Rightarrow m_{i}=\frac{[Capacity\ of\ the\ ramp\ associated\ to\ knob\ i]}{\max_{t} t_{i}(t)}$\\
-	\\
+	\Rightarrow m_{i}=\frac{[Capacity\ of\ the\ ramp\ associated\ to\ knob\ i]}{\max_{t} t_{i}(t)}
+\end{align*}
 	\\
 	We impose therefore: \\
-	\\
-	$\forall i\in{K},\forall p\in{\mathbb{N}},\ 0\leq k_{i}\leq m_{i}$\\
-%	$\Leftrightarrow  \vec{0}\leq \vec{k}\leq \vec{m},\ with\ \vec{m} =\begin{bmatrix}m_{1}\\m_{2}\\\vdots\\m_{\kappa}\end{bmatrix}$\\
-%	\color{red}Define $\leq$ for vectors ?\\
-%	 \color{red}Define these boundaries as a box $B$ ?\color{black}
-\\
-which is equivalent to :
+\begin{equation*}
+		\forall i\in{K},\ \ \ \ \ 0\leq k_{i}\leq m_{i}
+\end{equation*}
+which is equivalent to :\\
 \begin{equation}
-\label{eq:naive}
+	\label{eq:naive}
 	\vec{k}\in\mathscr{B}
 \end{equation}
 with $\mathscr{B}$ the hyper-cube ("box") defined by :\\
