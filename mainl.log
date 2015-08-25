@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.8.8)  23 AUG 2015 01:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.8.8)  25 AUG 2015 13:16
 entering extended mode
 **mainl.tex
 (C:\Users\felix\code\knobs\mainl.tex
@@ -1411,12 +1411,12 @@ Package pdftex.def Info: figures/PeMS_contour.png used on input line 11.
 (pdftex.def)             Requested size: 505.89pt x 254.46596pt.
  [17 <C:/Users/felix/code/knobs/figures/PeMS_contour.png>]) (C:\Users\felix\cod
 e\knobs\results_intro.tex
-<figures/results_array.png, id=163, 1187.18532pt x 977.90344pt>
+<figures/results_array.png, id=163, 1190.19656pt x 1012.5328pt>
 File: figures/results_array.png Graphic file (type png)
 
 <use figures/results_array.png>
 Package pdftex.def Info: figures/results_array.png used on input line 15.
-(pdftex.def)             Requested size: 505.89pt x 416.71512pt.
+(pdftex.def)             Requested size: 505.89pt x 430.37482pt.
  [18])
 (C:\Users\felix\code\knobs\typical_execution.tex
 <figures/results_figures/eprojexample.png, id=167, 875.52094pt x 450.18187pt>
@@ -1871,7 +1871,7 @@ les/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/hoekwater/rsfs/rsfs10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/hoekwater/stmary10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/hoekwater/stmary8.pfb>
-Output written on mainl.pdf (42 pages, 3500797 bytes).
+Output written on mainl.pdf (42 pages, 3499228 bytes).
 PDF statistics:
  419 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
