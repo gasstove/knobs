@@ -58,13 +58,14 @@
 		\includegraphics[width=4.5in]{figures/presentation_scheme.pdf}
 	\end{center}
 	\scriptsize{\begin{tabular}{llll}
-		$M=\llbracket 1,n \rrbracket$ & Mainline link indexes  & $(f_{i})_{i\in{M}}$ & Mainline links exit flows\\
-		$R\subset{M}$ & Ramp link indexes & $(d_{i})_{i\in{M}}$ & Mainline links densities\\
-		$T\subset{M}$ & Monitored mainline links & $(r_{i})_{i\in{R}}$ & Ramps exit flows\\
-		$K\subset{R}$ & Non-Monitored ramps & $\{\bar{f}_{0};(\bar{r}_{i})_{i\in{R}}\} $ & Flows inputted to the model\\
-		$G=(g_{i})_{i\in{\llbracket 1,\gamma \rrbracket}}$ & Knob group indexes  & $(\widetilde{f}_{i})_{i\in{T}}$ & Measured mainline exit flows\\
-		$\vec{k}=(k_{i_{1}},k_{i_{2}}...,k_{i_{\kappa}})$ & Knobs value vector & $(\widetilde{d}_{i})_{i\in{T}}$ & Measured mainline densities\\
-		$\sigma=(\sigma_{i_{1}},\sigma_{i_{2}}...,\sigma_{i_{\kappa}})$ & on/off-ramp indicator & $(\widetilde{r}_{i})_{i\in{(R\backslash K)}}$ & Measured ramps exit flows\\
+		$M=\llbracket 1,n \rrbracket$ & Mainline link indexes  & $(f_{i}(t))_{i\in{M}}$ & Mainline links exit flows\\
+		$R\subset{M}$ & Ramp link indexes & $(d_{i}(t))_{i\in{M}}$ & Mainline links densities\\
+		$T\subset{M}$ & Monitored mainline links & $(r_{i}(t))_{i\in{R}}$ & Ramps exit flows\\
+		$K\subset{R}$ & Non-Monitored ramps & $(\widetilde{f}_{i}(t))_{i\in{T}}$ & Measured mainline exit flows\\
+		$G=(g_{i})_{i\in{\llbracket 1,\gamma \rrbracket}}$ & Knob group indexes  & $(\widetilde{d}_{i}(t))_{i\in{T}}$ & Measured mainline densities\\
+		$\vec{k}=(k_{i_{1}},k_{i_{2}}...,k_{i_{\kappa}})$ & Knobs value vector  & $(\widetilde{r}_{i}(t))_{i\in{(R\backslash K)}}$ & Measured ramps exit flows\\
+		$\sigma=(\sigma_{i_{1}},\sigma_{i_{2}}...,\sigma_{i_{\kappa}})$ & on/off-ramp indicator & $\tau$, $D$ & Set of time-steps, Duration\\
+		
 	\end{tabular}} 
 \end{frame}
 
@@ -177,57 +178,99 @@
 
 \begin{frame}
 	\frametitle{Performance and error calculation}
-	\framesubtitle{Vehicles Mile Traveled (VMT)}
+	\framesubtitle{Vehicles Mile Traveled (VMT)~~~~~~~~~~(1)}
 	\begin{itemize}
 		\item Value computation from BeATS output and PeMS: 
 		\begin{equation*}
-			TVM(p)=\sum_{l\in{M}}\sum_{t}f^{(p)}_{l}(t)*length(l)
+			 VMT(\vec{k})=\sum_{i\in{T}}L_{i}\sum_{t\in \tau}f_{i}(t)
 		\end{equation*}
-		\item $\forall i\in{L}, f_{i}(midnight)\approx 0\Rightarrow$ TVM can be computed before BeATS:
-		\begin{tabular}{l}
-			Let $TVM^{ref}=TVM((1,...,1))$ outputed by BeATS\\
-			\\
-			\small{$TVM^{a\ priori}(k_{p})=TVM^{ref}+\sum_{i\in{K}}\biggl[\sigma_{i}.T_{i}.k_{i}.\sum_{j\in{M},j>i}length(j)\biggr]$}			
-		\end{tabular}
-		\item[$\rightarrow$] Same project \& penalize as KD, within $I^{global}$ :
-		\begin{tabular}{l}
-			minimize \small{$\ \ \ \ \ \norm{k_{p}-\underline{k_{p}}}_{2}$}\\
-			s.t.\\
-			\small{$TVM^{PeMS}.(1-I^{global})< TVM^{a\ priori}(k_{p})<TVM^{PeMS}.(1+I^{global})$}\\
-			\small{$k_{p}\in{[k^{naMin},k^{naMax}]}$}\\
-		\end{tabular}
-		\item Relative difference : $\tau_{p}(TVM)=100* \frac{TVM^{BeATS}(p)-TVM^{PeMS}(p)}{TVM^{PeMS}(p)}$
-	\end{itemize}
+		\item Error : 
+		\begin{equation*}
+			E_{VMT}(\vec{k})=\frac{|VMT(\vec{k})-\widetilde{VMT}|}{\widetilde{VMT}}
+		\end{equation*}
+ 	\end{itemize}
 \end{frame}
+
 
 \begin{frame}
 	\frametitle{Performance and error calculation}
-	\framesubtitle{Congestion Pattern matching (CP)}
-	\begin{itemize}
-		\item Principle : match the congested links and times into a box estimated from PeMS contour plot
-		\item Error computation from BeATS output:
+	\framesubtitle{Vehicles Mile Traveled (VMT)~~~~~~~~~~(2)}
+		Initial conditions hypothesis $\Rightarrow\ VMT$ can be computed a-priori.\\
+		~\\
+		~\\
+		$\Rightarrow$ new constraint:
+		\begin{equation*}
+		\widetilde{VMT}=VMT^{a\ priori}(\vec{k})=VMT^{ref}+\mathlarger{\sum\limits_{i\in K}}\biggl[\sigma_{i}.k_{i}.\Theta.	\sum\limits_{\underset{j>i}{j\in T}}L_{j}\biggr]\approx VMT(\vec{k})
+		\end{equation*}
+		with $VMT^{ref}=VMT((1,1,...,1))$ and $(L_{j})_{j\in M}$ the mainline links lengths.
+\end{frame}
+
+\begin{frame}
+	\centering
+	\frametitle{Performance and error calculation}
+	\framesubtitle{Congestion Pattern matching (CP)~~~~~~~~~~(1)}
+	\includegraphics[width=4in]{figures/beats_contour.png}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Performance and error calculation}
+	\framesubtitle{Congestion Pattern matching (CP)~~~~~~~~~~(2)}
 		\begin{itemize}
-			\item A congestion treshold is defined for each mainline link :
-			\begin{equation*} 
-				\frac{Link\ capacity}{Link\ freeflow\ speed}+\delta
-			\end{equation*}
-			\item The number of pixels of the contour plot that are in the wrong state is the error:
-			\begin{equation*}
-				CP(p)=\sum_{t\in{\frac{24h}{dt}}}\sum_{l\in{L}}\mathds{1}_{wrong\ congestion\ state\ links}
-			\end{equation*}
-			\end{itemize}
-		\item Relative difference : $\tau_{p}(CP)=100* \frac{CP(p)}{Total\ area\ of\ the\ boxes}$
-	\end{itemize}
+			\item A congestion density threshold is defined for each mainline link.
+			\item Error calculation: 
+				\begin{equation*}
+					E_{CP}(\vec{k})=\frac{\sum_{t\in{\tau}}\sum_{i\in{M}}\mathds{1}_{Wrong\ congestion\ state\ pixels}}{\sum_{t\in{\tau}}\sum_{i\in{M}}\mathds{1}_{Pixels\ supposed\ to\ be\ congested}}
+				\end{equation*}
+		\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+	\centering
+	\frametitle{Performance and error calculation}
+	\framesubtitle{Congestion Pattern matching (CP)~~~~~~~~~~(3)}
+	\includegraphics[width=4in]{figures/cp_example.png}
 \end{frame}
 
 
 
 \begin{frame}
 	\frametitle{Problem Formulation}
-	\framesubtitle{Optimization problem statement}
+	\framesubtitle{Fitness function}
 	\begin{itemize}
-	\item qsd
-	\end{itemize}
+		\item Components: 
+		\begin{itemize}
+			\item $\phi_{VHT}(\vec{k})=w_{1}.E_{VHT}(\vec{k}).\mathds{1}_{(E_{VHT}>U^{global})}$\\
+			\item $\phi_{VMT}(\vec{k})=w_{2}.E_{VMT}(\vec{k}).\mathds{1}_{(E_{VMT}>U^{global})}$\\
+			\item $\phi_{CP}(\vec{k})=w_{3}.E_{CP}(\vec{k}).\mathds{1}_{(E_{CP}>U^{global})}$\\	
+		\end{itemize}
+		~\\
+		\item Objective function: 
+		\begin{equation*}
+			\Phi:
+			\left|
+	  		\begin{array}{rcl}
+		    	\mathscr{B} & \longrightarrow &[0,100] \\
+		    	\vec{k} & \longmapsto &  \phi_{VHT}(\vec{k})+\phi_{VMT}(\vec{k})+\phi_{CP}(\vec{k}) \\
+		  	\end{array}
+			\right.
+		\end{equation*}
+	\end{itemize}			
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Problem Formulation}
+	\framesubtitle{Optimization problem statement}
+	\begin{align*}
+	&minimize\ \ \ \ \Phi(\vec{k}) \\
+	&s.t.\ \ \ \ 	\forall i\in \llbracket 1,\gamma \rrbracket,\ \Delta_{i}^{-}\leq |\sum\limits_{j\in g_{i}}\sigma_{j}.k_{j}.\Theta| \leq \Delta_{i}^{+} \nonumber\\
+	&and\ \widetilde{VMT}^{-}\leq\mathlarger{\sum\limits_{i\in K}}\biggl[\sigma_{i}.k_{i}.\Theta.	\sum\limits_{\underset{j>i}{j\in T}}L_{j}\biggr]+VMT^{ref}\leq \widetilde{VMT}^{+}\nonumber \\	
+	&and\ \vec{k} \in \mathscr{B} \nonumber
+	\end{align*}
 \end{frame}
 
 
@@ -235,9 +278,9 @@
 	\frametitle{Numerical method}
 	\framesubtitle{Requirements}
 	\begin{itemize}
-		\item Continuous search space: here, $\mathcal{S}=$12-D hypercube
-		\item Function to minimize : mix of correlated and uncorrelated functions with non-differentiable congestion effects
-		\item[$\rightarrow$]Continuous black-box imputation problem
+		\item Non-linear, non-convex black-box imputation problem in continuous domain
+		\item Need for adaptive method
+		\item Execution time does not matter
 	\end{itemize}
 \end{frame}
 
@@ -246,45 +289,68 @@
 	\frametitle{Numerical method}
 	\framesubtitle{Covariance Matrix Adaptation - Evolution Strategy (CMA-ES)}
 	\begin{itemize}
-		\item Most powerful evolutionary algorithms for single-objective real-valued optimization (very used) 
+		\item One of the most powerful evolutionary algorithms for single-objective real-valued optimization (very used) 
 		\item "Designed for difficult non-linear non-convex black-box optimisation problems in continuous domain"
 		\item "Typically applied to unconstrained or bounded constraint optimization problems, and search space dimensions between three and a hundred"
 		\item Does not presume existence of approximate gradients : feasible on our non-smooth problem
 		\item \em Adaptive \em algorithm : almost no parameter tuning $\rightarrow$ suitable to be used on several different freeways and days.
-		\item Time does not matter for this initial study : not the fastest ES but excellent solution quality 
-		\item Principle : 12*12 covariance matrix adapts the stochastic sampling direction and step size on-the-go 	
+		\item Time does not matter for this initial study : not the fastest ES but good solution quality 	
 	\end{itemize}
 \end{frame}
 
 
 \begin{frame}
 	\frametitle{Numerical method}
-	\framesubtitle{Constraints implementation (1)}
-	For the single-knob groups, we can refine the knob boundaries using these two uncertainties as a limit:
-\begin{equation*}
-	\begin{split}
-		k_{i}^{min}=max(\{min(\{\alpha.k_i^{*};k_{i}^{*}-\frac{I^{local}}{\sum_{t} t_{i}(t)}\});0\}) \\ 
-		k_{i}^{max}=min(\{max(\{\beta.k_i^{*};k_{i}^{*}+\frac{I^{local}}{\sum_{t} t_{i}(t))}\});\mu_{i}\})
-	\end{split}	
-\end{equation*}
+	\framesubtitle{Linear constraints implementation: Single knob groups equations}
+	$\forall\ i\in G\ s.t.\ Card(g_{i})=1,\ i.e.\ g_{i}=\{j\}\ :$
+\begin{equation}
+	\frac{\max{\big\{0;|\Delta_{i}^{-}|\big\}}}{\Theta}\leq k_{j} \leq \frac{\min{\big\{m_{j};|\Delta_{i}^{+}|\big\}}}{\Theta}
+\end{equation}
 \end{frame}
 
 
 \begin{frame}
 	\frametitle{Numerical method}
-	\framesubtitle{Constraints implementation (2)}
-	\framesubtitle{Refined boundaries on multiple-knob groups}
-Repairing : Here, we project the knobs of the group on a space delimited by the two "tolerance hyperplans" for $\Delta_{k}$:
-\begin{tabular}{l}
-\\
-Let $\overline{k_{p}}$ the knobs vector to be evaluated at iteration p before projection\\
-Let $J=\{j,card(g_{j}>1)\}$ and $\forall i\in{K},T_{i}=\sum_{t}t_{i}(t)$\\
-\\
-minimize $\ \ \ \ \ \norm{k_{p}-\overline{k_{p}}}_{2}$\\
-s.t.\\
-\small{$\forall j\in{J} \ \ min(\{\alpha.\Delta_{j};\Delta_{j}-I^{local}\})< \sum_{i\in{g_{j}}} \sigma_{i}.k_{i}.T_{i}<max(\{\beta.\Delta_{j};\Delta_{j}+I^{local}\})$}\\
-\small{$k\in{[k^{naMin},k^{naMax}]}$}\\
-\end{tabular}
+	\framesubtitle{Constraints implementation : multiple knob groups and $VMT^{a-priori}$ equations~~~~~~~~~(1)}
+	\begin{itemize}
+	 \item Linear constraints not implemented in CMA-ES source code $\Rightarrow$ project \& penalize.
+	 \item Projection: \\ 
+	 $minimize \ \ \ \ \ \ \norm{\vec{k}^{(p)}-\underline{\vec{k}}^{(p)}}_{2}$\\
+$s.t.\ \ \ \forall i\in{G}, \ \ \Delta_{i}^{-}< |\sum_{j\in{g_{i}}} \sigma_{j}.k_{j}.\Theta|<\Delta_{i}^{+}$\\
+$and\ \widetilde{VMT}^{-}\leq\mathlarger{\sum\limits_{i\in K}}\biggl[\sigma_{i}.k_{i}.\Theta.	\sum\limits_{\underset{j>i}{j\in T}}L_{j}\biggr]+VMT^{ref}\leq \widetilde{VMT}^{+}\nonumber $\\
+$and\ \ \ \ \vec{k}^{(p)}\in \mathscr{B}$\\
+	\end{itemize}\end{frame}
+
+
+\begin{frame}
+	\frametitle{Numerical method}
+	\framesubtitle{Constraints implementation : multiple knob groups and $VMT^{a-priori}$ equations~~~~~~~~~(2)}
+	\begin{figure}
+		\centering
+		\includegraphics[width=2.5in]{figures/proj.pdf}	
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Numerical method}
+	\framesubtitle{Constraints implementation : multiple knob groups and $VMT^{a-priori}$ equations~~~~~~~~~(3)}
+	\begin{itemize}
+	 \item Penalization:
+	 \begin{equation*}
+	E_{proj}(\underline{\vec{k}}^{(p)},\vec{k}^{(p)})=\frac{\norm{\vec{k}^{(p)}-\underline{\vec{k}}^{(p)}}_{2}}{\norm{\begin{bmatrix}m_{1}\\m_{2}\\\vdots\\m_{\kappa}\end{bmatrix}-\begin{bmatrix}0\\0\\\vdots\\0\end{bmatrix}}_{2}}
+	\end{equation*}
+	\item The fitness function becomes: 
+	\begin{equation*}
+		J:
+		\left|
+  		\begin{array}{rcl}
+    	\mathscr{B} & \longrightarrow &[0,100] \\
+    	\underline{\vec{k}}^{(p)} & \longmapsto &  \Phi(\vec{k}^{(p)})+w_{4}.E_{proj}(\underline{\vec{k}}^{(p)},\vec{k}^{(p)}) \\
+  	\end{array}
+	\right.
+	\end{equation*}
+	\end{itemize}
 \end{frame}
 
 
@@ -292,7 +358,15 @@ s.t.\\
 	\frametitle{Experiment settings}
 	\framesubtitle{Data}
 	\begin{itemize}
-	\item qsd
+		\item Freeway 210 East in Los Angeles, average of 5 Tuesdays in fall 2104.
+		\item  5-min measurements distributed as follows:
+		\begin{itemize}
+			\item 33/135 monitored mainline links
+			\item 26/28 monitored on-ramps
+			\item 15/25 monitored off-ramps
+		\end{itemize}
+		$\Rightarrow$ 12 knobs.
+		\item Duration: 24 hours i.e.  289 time-steps (5min).
 	\end{itemize}
 \end{frame}
 
@@ -300,7 +374,10 @@ s.t.\\
 	\frametitle{Experiment settings}
 	\framesubtitle{Model and simulator}
 	\begin{itemize}
-	\item qsd
+	\item Cell-transmission model\\
+	~\\
+	~\\
+	\item Simulator: BeATS
 	\end{itemize}
 \end{frame}
 
@@ -308,9 +385,12 @@ s.t.\\
 \begin{frame}
 	\frametitle{Experiment settings}
 	\framesubtitle{Implementation of congestion pattern}
-	\begin{itemize}
-	\item qsd
-	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4in]{figures/PeMS_contour.png}\\
+		~\\
+		$d_{i}^{*}=\frac{Link\ capacity}{Link\ free\ flow\ speed}+\delta$
+	\end{figure}
 \end{frame}
 
 
@@ -318,17 +398,84 @@ s.t.\\
 	\frametitle{Experiment results}
 	\framesubtitle{General observations}
 	\begin{itemize}
-	\item qsd
-	\end{itemize}
+		\item Always converges\\
+		~\\
+		\item Limited result quality\\
+		~\\
+		\item No uniqueness\\
+	\end{itemize}	
 \end{frame}
 
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{Overview}
+	\begin{figure}
+		\centering
+		\includegraphics[width=3in]{figures/results_array.png}
+	\end{figure}
+\end{frame}
+	
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{Typical execution}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/eprojexample.png}
+	\end{figure}
+\end{frame}
 
 \begin{frame}
 	\frametitle{Experiment results}
 	\framesubtitle{Typical execution}
-	\begin{itemize}
-	\item qsd
-	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/VHTexample.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{Typical execution}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/VMTexample.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{Typical execution}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/typicalcpexample.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{Typical execution}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/contributionsexample.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{Typical execution}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/typicalknobs.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{Typical execution}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/cmaesexample.png}
+	\end{figure}
 \end{frame}
 
 
@@ -336,38 +483,203 @@ s.t.\\
 \begin{frame}
 	\frametitle{Experiment results}
 	\framesubtitle{Effect of $U^{mul}$}
-	\begin{itemize}
-	\item qsd
-	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/umul.png}
+	\end{figure}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{$U^{mul}=25\% $}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/Umul/cp_Umul_25_lambda_11.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{$U^{mul}=25\% $}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/Umul/13_2_too_tight_contour.png}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{$U^{mul}=25\% $}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/Umul/bad_vht.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{$U^{mul}=50\% $}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/Umul/cp_Umul_50_lambda_11.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{$U^{mul}=75\% $}
+	\framesubtitle{Effect of $U^{mul}$}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/Umul/cp_Umul_75_lambda_11.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{$U^{mul}=100\% $}
+	\framesubtitle{Effect of $U^{mul}$}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/Umul/cp_Umul_100_lambda_11.png}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{$U^{mul}=25\% $}
+	\framesubtitle{Effect of $U^{mul}$}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/Umul/knobs_Umul_25_lambda_11.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{$U^{mul}=25\%$}
+	\framesubtitle{Effect of $U^{mul}$}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/Umul/knobs_Umul_50_lambda_11.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{$U^{mul}=25\%$}
+	\framesubtitle{Effect of $U^{mul}$}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/Umul/knobs_Umul_75_lambda_11.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{Effect of $U^{mul}$}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/Umul/knobs_Umul_100_lambda_11.png}
+	\end{figure}
+\end{frame}
 
 
 \begin{frame}
 	\frametitle{Experiment results}
 	\framesubtitle{Effect of $U^{add}$}
-	\begin{itemize}
-	\item qsd
-	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/Uadd.png}
+	\end{figure}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{Effect of $U^{add}$}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/Uadd/cp_Uadd_25_lambda_11.png}
+	\end{figure}
+\end{frame}
 
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{Effect of $U^{add}$}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/Uadd/cp_Uadd_5_lambda_11.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{Effect of $U^{add}$}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/Uadd/cp_Uadd_10_lambda_11.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{Effect of $U^{add}$}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/Uadd/knobs_Uadd_25_lambda_11.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{Effect of $U^{add}$}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/Uadd/knobs_Uadd_5_lambda_11.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{Effect of $U^{add}$}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/Uadd/knobs_Uadd_10_lambda_11.png}
+	\end{figure}
+\end{frame}
 
 \begin{frame}
 	\frametitle{Experiment results}
 	\framesubtitle{Effects of $\sigma$}
-	\begin{itemize}
-	\item qsd
-	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4in]{figures/sigma.png}
+	\end{figure}
 \end{frame}
 
 
 \begin{frame}
 	\frametitle{Experiment results}
 	\framesubtitle{Effects of $\lambda$}
-	\begin{itemize}
-	\item qsd
-	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/lambda/cp_lambda_all.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{Effects of $\lambda$}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/lambda/knobs_lambda_all.png}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Experiment results}
+	\framesubtitle{Effects of $\lambda$}
+	\begin{figure}
+		\centering
+		\includegraphics[width=4.5in]{figures/results_figures/lambda/knobs_lambda_all_genmean.png}
+	\end{figure}
 \end{frame}
 
 
@@ -375,7 +687,12 @@ s.t.\\
 	\frametitle{Further work}
 	\framesubtitle{Next steps and ideas}
 	\begin{itemize}
-	\item qsd
+		\item Modulate the templates shapes
+		\item More accurate knob boundaries
+		\item New constraints/objectives
+		\item MO-CMAES
+		\item Parallelization
+		\item Wider loop with fundamental diagrams
 	\end{itemize}
 \end{frame}
 

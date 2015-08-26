@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.8.8)  25 AUG 2015 13:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.8.8)  26 AUG 2015 16:13
 entering extended mode
 **mainl.tex
 (C:\Users\felix\code\knobs\mainl.tex
@@ -1415,10 +1415,34 @@ e\knobs\results_intro.tex
 File: figures/results_array.png Graphic file (type png)
 
 <use figures/results_array.png>
-Package pdftex.def Info: figures/results_array.png used on input line 15.
+Package pdftex.def Info: figures/results_array.png used on input line 19.
 (pdftex.def)             Requested size: 505.89pt x 430.37482pt.
- [18])
-(C:\Users\felix\code\knobs\typical_execution.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--21
+
+ []
+
+[18]) (C:\Users\felix\code\knobs\typical_execution.tex
 <figures/results_figures/eprojexample.png, id=167, 875.52094pt x 450.18187pt>
 File: figures/results_figures/eprojexample.png Graphic file (type png)
 
@@ -1871,7 +1895,7 @@ les/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/hoekwater/rsfs/rsfs10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/hoekwater/stmary10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/hoekwater/stmary8.pfb>
-Output written on mainl.pdf (42 pages, 3499228 bytes).
+Output written on mainl.pdf (42 pages, 3499415 bytes).
 PDF statistics:
  419 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
