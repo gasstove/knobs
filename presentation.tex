@@ -115,8 +115,10 @@
 	\begin{tabular}{l}
 		Let $(t_{i}(t))_{i\in{K}}$ the templates:\\
 		\\
+		$\forall t \in \tau,$\\
+		$k_{i}.t_{i}(t)=\bar{r_{i}}(t)\leq\ [Capacity\ of\ the\ ramp\ associated\ to\ knob\ i]$\\
+		\\		
 		$m_{i}=\frac{[Capacity\ of\ ramp\ associated\ to\ k_{i}]}{\max_{t} t_{i}(t)}$\\
-		\\
 		\\
 		\\
 		$\forall i\in{K},\ \ \ \ \ 0\leq k_{i}\leq m_{i} \ \ \ \ \Leftrightarrow \ \ \ \ \ \vec{k}\in\mathscr{B}$
@@ -149,8 +151,8 @@
 		~\\
 		\item $\forall i \in {\llbracket 1,\gamma \rrbracket}$, let the most permissive flow demands:\\
 		~\\
-		$\Delta_{i}^{-}=\max{\{|\Delta_{i}|-U^{add};|\Delta_{i}|.(1-U^{mul})\}}$\\
-		$\Delta_{i}^{+}=\min{\{|\Delta_{i}|+U^{add};|\Delta_{i}|.(1+U^{mul})\}}$\\
+		$\Delta_{i}^{-}=\min{\{|\Delta_{i}|-U^{add};|\Delta_{i}|.(1-U^{mul})\}}$\\
+		$\Delta_{i}^{+}=\max{\{|\Delta_{i}|+U^{add};|\Delta_{i}|.(1+U^{mul})\}}$\\
 		~\\
 		\item Loosened constraints: 
 			\begin{equation*}
